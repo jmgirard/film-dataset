@@ -1,0 +1,78 @@
+---
+title: "Prepare Ratings"
+---
+
+```{r}
+#| message: false
+
+library(tidyverse)
+library(readxl)
+```
+
+```{r}
+#| echo: true
+
+# Find all rating files
+carma_files <- 
+  dir(
+    path = "./data/Carma_Rating_Results", 
+    pattern = "*.xlsx", 
+    full.names = TRUE
+  )
+```
+
+```{r}
+#| echo: true
+
+# Read in all rating files
+carma_raw <- 
+  map_dfr(
+    .x = carma_files, 
+    .f = read_xlsx, 
+    skip = 7, 
+    .name_repair = ~str_remove_all(., "[:space:]"), 
+    .id = "Video"
+  ) |> 
+  select(
+    Video, 
+    Second, 
+    starts_with("MW")
+  ) |> 
+  mutate(
+    Video = parse_integer(Video),
+    Second = as.integer(Second),
+    Film = factor(
+      Video, 
+      levels = seq_along(carma_files), 
+      labels = str_extract(
+        string = basename(carma_files), 
+        pattern = "[^_]+"
+      )
+    ),
+    .before = 1
+  )
+```
+
+```{r}
+#| echo: true
+
+# Reshape and sort data
+carma_tidy <- 
+  carma_raw |> 
+  pivot_longer(
+    cols = starts_with("MW"), 
+    names_to = "Rater", 
+    values_to = "Rating",
+    names_transform = parse_number
+  ) |> 
+  mutate(Rater = as.integer(Rater)) |> 
+  arrange(Video, Rater, Second) |> 
+  select(Film, Video, Rater, Second, Rating)
+```
+
+```{r}
+#| echo: true
+
+# Write data as a compressed RDS file
+write_rds(carma_tidy, file = "./data/ratings_tidy.rds", compress = "gz")
+```

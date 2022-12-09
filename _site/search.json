@@ -1,0 +1,16 @@
+[
+  {
+    "objectID": "prep_ratings.html",
+    "href": "prep_ratings.html",
+    "title": "Prepare Ratings",
+    "section": "",
+    "text": "library(tidyverse)\nlibrary(readxl)\n\n\n# Find all rating files\ncarma_files <- \n  dir(\n    path = \"./data/Carma_Rating_Results\", \n    pattern = \"*.xlsx\", \n    full.names = TRUE\n  )\n\n\n# Read in all rating files\ncarma_raw <- \n  map_dfr(\n    .x = carma_files, \n    .f = read_xlsx, \n    skip = 7, \n    .name_repair = ~str_remove_all(., \"[:space:]\"), \n    .id = \"Video\"\n  ) |> \n  select(\n    Video, \n    Second, \n    starts_with(\"MW\")\n  ) |> \n  mutate(\n    Video = parse_integer(Video),\n    Second = as.integer(Second),\n    Film = factor(\n      Video, \n      levels = seq_along(carma_files), \n      labels = str_extract(\n        string = basename(carma_files), \n        pattern = \"[^_]+\"\n      )\n    ),\n    .before = 1\n  )\n\n\n# Reshape and sort data\ncarma_tidy <- \n  carma_raw |> \n  pivot_longer(\n    cols = starts_with(\"MW\"), \n    names_to = \"Rater\", \n    values_to = \"Rating\",\n    names_transform = parse_number\n  ) |> \n  mutate(Rater = as.integer(Rater)) |> \n  arrange(Video, Rater, Second) |> \n  select(Film, Video, Rater, Second, Rating)\n\n\n# Write data as a compressed RDS file\nwrite_rds(carma_tidy, file = \"./data/ratings_tidy.rds\", compress = \"gz\")"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site\n\n1 + 1\n\n[1] 2"
+  }
+]
