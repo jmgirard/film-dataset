@@ -1,0 +1,130 @@
+---
+title: "Database Overview"
+---
+
+```{r}
+#| echo: false
+#| message: false
+
+library(tidyverse)
+library(readxl)
+library(ggbeeswarm)
+library(knitr)
+library(kableExtra)
+```
+
+```{r}
+#| echo: false
+
+ratings <- 
+  read_rds("./data/ratings_tidy.rds") |>
+  drop_na(Rating) |> 
+  rename(Abbrev = Film) |> 
+  mutate(Abbrev = str_remove_all(Abbrev, "'"))
+
+films <- read_xlsx("./data/film_info.xlsx")
+```
+
+## Clip Information
+
+The database currently includes `r nrow(films)` video clips, each drawn from a different English-language film and ranging from `r min(films$Duration)` to `r max(films$Duration)` seconds in duration (Mdn=`r median(films$Duration)`, MAD=`r round(mad(films$Duration), digits = 1)`). The figure below shows the distribution of the clips' durations. The table below presents each clip's abbreviation, source film title (and release year), as well as starting and stopping timestamp in HH:MM:SS format, and duration in seconds.
+
+```{r}
+#| echo: false
+#| fig.width: 5
+#| fig.height: 2
+
+films |> 
+  ggplot(aes(x = Duration, y = "")) + 
+  geom_boxplot() +
+  geom_quasirandom(groupOnX = FALSE, color = "firebrick") +
+  scale_y_discrete() +
+  scale_x_continuous(
+    limits = c(90, 450), 
+    breaks = seq(0, 480, 60),
+    expand = c(0, 0)
+  ) +
+  labs(title = "Distribution of Clip Durations (in seconds)", y = NULL, x = NULL) +
+  theme(panel.grid.major.y = element_blank(), axis.ticks.y = element_blank())
+```
+
+```{r}
+#| echo: false
+
+films |> 
+  arrange(Abbrev) |> 
+  kable(digits = 2) |> 
+  kable_styling()
+```
+
+## Valence Ratings
+
+```{r}
+#| echo: false
+
+clip_summary <- 
+  ratings |>
+  group_by(Abbrev) |> 
+  summarize(
+    Raters = n_distinct(Rater),
+    Mean = mean(Rating),
+    SD   = sd(Rating),
+    p0   = min(Rating),
+    p25  = quantile(Rating, probs = 0.25),
+    p50  = median(Rating),
+    p75  = quantile(Rating, probs = 0.75),
+    p100 = max(Rating)
+  ) 
+```
+
+Each clip was continuously rated on its emotional valence at a frequency of 1 Hz and using a scale ranging from -4 (very negative) to 4 (very positive). The number of participants rating each clip ranged from `r min(clip_summary$Raters)` to `r max(clip_summary$Raters)` (Mdn=`r median(clip_summary$Raters)`, MAD=`r round(mad(clip_summary$Raters), digits = 1)`). The table below provides the number of raters and duration per clip as well as a summary of the valence ratings distribution across raters (i.e., mean, standard deviation, and quartiles).
+
+```{r}
+#| echo: false
+#| fig.width: 5
+#| fig.height: 2
+
+clip_summary |> 
+  ggplot(aes(x = Raters, y = "")) + 
+  geom_boxplot() +
+  geom_quasirandom(groupOnX = FALSE, color = "firebrick") +
+  scale_y_discrete() +
+  scale_x_continuous(
+    limits = c(25, 37),
+    breaks = seq(0, 40, 2),
+    expand = c(0, 0)
+  ) +
+  labs(title = "Distribution of the Number of Raters per Clip", y = NULL, x = NULL) +
+  theme(panel.grid.major.y = element_blank(), axis.ticks.y = element_blank())
+```
+
+```{r}
+#| echo: false
+#| fig.width: 5
+#| fig.height: 4
+
+ggplot(ratings, aes(x = Rating)) + 
+  geom_histogram(breaks = seq(-4, 4, 1/3), color = "white") +
+  labs(title = "Distribution of Valence Ratings")
+```
+
+```{r}
+#| echo: false
+
+clip_summary |> 
+  mutate(across(Mean:p100, ~sprintf("%.02f", .))) |> 
+  kable(digits = 2, align = c("l", rep("r", 9))) |> 
+  kable_styling()
+```
+
+```{r}
+#| fig.height: 6
+#| fig.width: 7
+
+ratings |> 
+  mutate(Rater = fct_reorder(.f = factor(Rater), .x = Rating, na.rm = TRUE)) |> 
+  ggplot(aes(x = Rating, y = Rater)) + 
+  geom_boxplot()
+```
+
+Examine distribution of ratings per video (across seconds and raters)

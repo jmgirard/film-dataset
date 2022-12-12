@@ -9,6 +9,8 @@ library(tidyverse)
 library(readxl)
 ```
 
+## Prepare continuous (CARMA) ratings
+
 ```{r}
 #| echo: true
 
@@ -76,3 +78,12 @@ carma_tidy <-
 # Write data as a compressed RDS file
 write_rds(carma_tidy, file = "./data/ratings_tidy.rds", compress = "gz")
 ```
+
+## Prepare holistic ratings
+
+```{r}
+#| echo: true
+
+redcap_raw <- read_xlsx("./data/redcap_cleaned.xlsx") |> print()
+```
+

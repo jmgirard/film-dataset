@@ -1,0 +1,85 @@
+---
+title: "Clip Info: Akeelah"
+---
+
+```{r}
+#| echo: false
+#| message: false
+
+library(tidyverse)
+library(readxl)
+library(ggbeeswarm)
+library(knitr)
+library(kableExtra)
+```
+
+```{r}
+#| echo: false
+
+ratings <- 
+  read_rds("./data/ratings_tidy.rds") |>
+  drop_na(Rating) |> 
+  rename(Abbrev = Film) |> 
+  mutate(Abbrev = str_remove_all(Abbrev, "'")) |> 
+  filter(Abbrev == "Akeelah")
+
+films <- 
+  read_xlsx("./data/film_info.xlsx") |> 
+  filter(Abbrev == "Akeelah")
+```
+
+## Clip Information
+
+```{r}
+#| echo: false
+
+films |> 
+  kable() |> 
+  kable_styling()
+```
+
+## Valence Ratings
+
+### Variance Decomposition
+
+
+### Inter-Rater Reliability
+
+
+### Time Series
+
+```{r}
+#| echo: false
+
+ggplot(ratings, aes(x = Second, y = Rating)) +
+  stat_summary(
+    geom = "ribbon",
+    fun.data = "median_hilow",
+    fun.args = list(conf.int = .9),
+    fill = "#440154"
+  ) +
+  stat_summary(
+    geom = "ribbon",
+    fun.data = "median_hilow",
+    fun.args = list(conf.int = .7),
+    fill = "#21908c"
+  ) +
+  stat_summary(
+    geom = "ribbon",
+    fun.data = "median_hilow",
+    fun.args = list(conf.int = .5),
+    fill = "#fde725"
+  ) +
+  geom_hline(yintercept = 0, color = "grey", linewidth = 3/4) +
+  stat_summary(
+    geom = "line", 
+    fun = median, 
+    na.rm = TRUE, 
+    linewidth = 3/4
+  ) +
+  scale_x_continuous(breaks = seq(0, 180, 30), expand = c(0, 0)) +
+  scale_y_continuous(expand = c(0, 0)) +
+  coord_cartesian(ylim = c(-4, 4), xlim = c(0, 165)) +
+  labs(y = "Valence Rating", x = "Second")
+```
+
