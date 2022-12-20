@@ -39,6 +39,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="site_libs/quarto-contrib/videojs/video.min.js"></script>
+<link href="site_libs/quarto-contrib/videojs/video-js.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -108,11 +110,12 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#film-information" id="toc-film-information" class="nav-link active" data-scroll-target="#film-information">Film Information</a></li>
   <li><a href="#clip-information" id="toc-clip-information" class="nav-link" data-scroll-target="#clip-information">Clip Information</a></li>
   <li><a href="#holistic-ratings" id="toc-holistic-ratings" class="nav-link" data-scroll-target="#holistic-ratings">Holistic Ratings</a></li>
-  <li><a href="#continuous-valence-ratings" id="toc-continuous-valence-ratings" class="nav-link" data-scroll-target="#continuous-valence-ratings">Continuous Valence Ratings</a>
+  <li><a href="#continuous-ratings" id="toc-continuous-ratings" class="nav-link" data-scroll-target="#continuous-ratings">Continuous Ratings</a>
   <ul class="collapse">
   <li><a href="#inter-rater-reliability" id="toc-inter-rater-reliability" class="nav-link" data-scroll-target="#inter-rater-reliability">Inter-Rater Reliability</a></li>
   <li><a href="#time-series" id="toc-time-series" class="nav-link" data-scroll-target="#time-series">Time Series</a></li>
   </ul></li>
+  <li><a href="#watch-clip" id="toc-watch-clip" class="nav-link" data-scroll-target="#watch-clip">Watch Clip</a></li>
   </ul>
 </nav>
     </div>
@@ -191,9 +194,17 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="holistic-ratings" class="level2">
 <h2 class="anchored" data-anchor-id="holistic-ratings">Holistic Ratings</h2>
+<p>A total of 35 participants watched this film clip and then provided holistic ratings on how the entire clip made them feel. These holistic ratings were completed using five positive emotion scales (i.e., <em>alert</em>, <em>determined</em>, <em>enthusiastic</em>, <em>excited</em>, <em>inspired</em>) and five negative emotion scales (i.e., <em>afraid</em>, <em>distressed</em>, <em>nervous</em>, <em>scared</em>, <em>upset</em>), each rated on an ordinal scale from 0 to 4.</p>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="akeelah_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid" style="width:100.0%"></p>
+</div>
+</div>
+<p>As seen in the figure above, participants rated all positive emotion scales higher than all negative emotion scales. Ratings of <em>inspired</em>, <em>excited</em>, and <em>enthusiastic</em> were particularly high. Among the negative emotion scales, ratings on <em>nervous</em> were relatively high.</p>
 </section>
-<section id="continuous-valence-ratings" class="level2">
-<h2 class="anchored" data-anchor-id="continuous-valence-ratings">Continuous Valence Ratings</h2>
+<section id="continuous-ratings" class="level2">
+<h2 class="anchored" data-anchor-id="continuous-ratings">Continuous Ratings</h2>
+<p>A total of 35 participants watched this film clip and used the <a href="https://carma.jmgirard.com">CARMA software</a> to provide continuous (i.e., second-by-second) ratings of how it made them feel. These continuous ratings were made on a single emotional <em>valence</em> scale ranging from -4 (very negative) to 4 (very positive).</p>
 <section id="inter-rater-reliability" class="level3">
 <h3 class="anchored" data-anchor-id="inter-rater-reliability">Inter-Rater Reliability</h3>
 <div class="cell">
@@ -202,26 +213,31 @@ ul.task-list li input[type="checkbox"] {
 <p>A Bayesian generalizability study was used to decompose the variance in ratings of this video clip into the following components: subject variance (in average ratings of each second, across raters), rater variance (in average ratings from each rater, across seconds), and residual variance (including second-by-rater interactions and measurement error). Subject variance was estimated at 1.32, 95% ETI: [1.11, 1.72]; rater variance was estimated at 0.42 [0.28, 0.77]; and residual variance was estimated at 0.54 [0.52, 0.56]. See the figure below for the posterior distributions of each component.</p>
 <div class="cell">
 <div class="cell-output-display">
-<p><img src="akeelah_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid" width="480"></p>
+<p><img src="akeelah_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid" style="width:100.0%"></p>
 </div>
 </div>
 <p>From these variance components, we can estimate inter-rater reliability of the ratings. There are many formulations of the two-way intraclass correlation (ICC), but the most relevant to our purposes here is the balanced average-measures consistency formulation or ICC(C,k). Inter-rater reliability under this formulation was estimated as 0.988, 95% ETI: [0.985, 0.991]. See the middle of the second row in the figure below for the posterior distribution of this formulation.</p>
 <div class="cell">
 <div class="cell-output-display">
-<p><img src="akeelah_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid" width="480"></p>
+<p><img src="akeelah_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid" style="width:100.0%"></p>
 </div>
 </div>
 </section>
 <section id="time-series" class="level3">
 <h3 class="anchored" data-anchor-id="time-series">Time Series</h3>
+<p>We can plot the distribution of all valence ratings per second of the film clip to get a sense of how its emotional tone changes over time. The solid black line represents the mean of all ratings and the yellow, green, and purple ribbons represent the central 50%, 70%, and 90% of the ratings, respectively.</p>
 <div class="cell">
 <div class="cell-output-display">
-<p><img src="akeelah_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid" width="672"></p>
+<p><img src="akeelah_files/figure-html/unnamed-chunk-8-1.png" class="img-fluid" style="width:100.0%"></p>
 </div>
 </div>
-
-
 </section>
+</section>
+<section id="watch-clip" class="level2">
+<h2 class="anchored" data-anchor-id="watch-clip">Watch Clip</h2>
+<div class="quarto-video"><video id="video_shortcode_videojs_video1" class="video-js vjs-default-skin vjs-fluid" controls="" preload="auto" data-setup="{}" title="Akeelah Clip"><source src="https://filmdataset.s3.us-east-2.amazonaws.com/Clips/Akeelah.mp4"></video></div>
+
+
 </section>
 
 </main> <!-- /main -->
@@ -359,6 +375,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
+<script>videojs(video_shortcode_videojs_video1);</script>
 
 
 

@@ -7,11 +7,17 @@ title: "Akeelah and the Bee"
 #| message: false
 
 library(tidyverse)
+library(lubridate)
 library(readxl)
 library(varde)
 library(ggbeeswarm)
 library(knitr)
 library(kableExtra)
+
+s_to_mmss <- function(s) {
+  p <- seconds_to_period(s)
+  sprintf("%02d:%02d", minute(p), second(p))
+}
 ```
 
 ## Film Information
@@ -48,6 +54,13 @@ ratings <-
 films <- 
   read_xlsx("./data/film_info.xlsx") |> 
   filter(Abbrev == "Akeelah")
+
+panas <- 
+  read_rds("./data/panas_tidy.rds") |> 
+  drop_na(val) |> 
+  rename(Abbrev = clip) |> 
+  mutate(Abbrev = str_remove_all(Abbrev, "'"), val = val - 1) |> 
+  filter(Abbrev == "Akeelah")
 ```
 
 ```{r}
@@ -60,9 +73,41 @@ films |>
 
 ## Holistic Ratings
 
+A total of `r length(unique(panas$rater))` participants watched this film clip and then provided holistic ratings on how the entire clip made them feel. These holistic ratings were completed using five positive emotion scales (i.e., *alert*, *determined*, *enthusiastic*, *excited*, *inspired*) and five negative emotion scales (i.e., *afraid*, *distressed*, *nervous*, *scared*, *upset*), each rated on an ordinal scale from 0 to 4.
+
+```{r}
+#| echo: false
+#| message: false
+#| fig-width: 7
+#| fig-height: 4
+#| out-width: "100%"
+
+pa <- c("Inspired", "Excited", "Enthusiastic", "Determined", "Alert")
+na <- c("Nervous", "Afraid", "Distressed", "Scared", "Upset")
+
+panas |> 
+  mutate(
+    valence = case_when(
+      scale %in% pa ~ "Positive",
+      scale %in% na ~ "Negative"
+    )
+  ) |> 
+  ggplot(
+    aes(x = val, y = fct_reorder(scale, val, .fun = mean), fill = valence)
+  ) + 
+  stat_summary(geom = "col", fun = mean, orientation = "y") +
+  stat_summary(geom = "pointrange", fun.data = mean_cl_boot, linewidth = 0.6) +
+  scale_x_continuous(limits = c(0, 4)) +
+  labs(y = NULL, x = "Average Rating with 95% CI", fill = "Scale") +
+  theme(legend.position = "top")
+```
+
+As seen in the figure above, participants rated all positive emotion scales higher than all negative emotion scales. Ratings of *inspired*, *excited*, and *enthusiastic* were particularly high. Among the negative emotion scales, ratings of *nervous* were relatively high.
 
 
-## Continuous Valence Ratings
+## Continuous Ratings
+
+A total of `r length(unique(panas$rater))` participants watched this film clip and used the [CARMA software](https://carma.jmgirard.com) to provide continuous (i.e., second-by-second) ratings of how it made them feel. These continuous ratings were made on a single emotional *valence* scale ranging from -4 (very negative) to 4 (very positive).
 
 ### Inter-Rater Reliability
 
@@ -86,8 +131,10 @@ A Bayesian generalizability study was used to decompose the variance in ratings 
 
 ```{r}
 #| echo: false
-#| fig-width: 5
+#| fig-width: 7
 #| fig-height: 2
+#| out-width: "100%"
+
 plot(icc_res, components = "var")
 ```
 
@@ -96,16 +143,23 @@ From these variance components, we can estimate inter-rater reliability of the r
 
 ```{r}
 #| echo: false
-#| fig-width: 5
+#| fig-width: 7
 #| fig-height: 4
+#| out-width: "100%"
+
 plot(icc_res, components = "icc")
 ```
 
 
 ### Time Series
 
+We can plot the distribution of all valence ratings per second of the film clip to get a sense of how its emotional tone changes over time. The solid black line represents the mean of all ratings and the yellow, green, and purple ribbons represent the central 50%, 70%, and 90% of the ratings, respectively.
+
 ```{r}
 #| echo: false
+#| fig-width: 7
+#| fig-height: 5
+#| out-width: "100%"
 
 ggplot(ratings, aes(x = Second, y = Rating)) +
   stat_summary(
@@ -129,13 +183,20 @@ ggplot(ratings, aes(x = Second, y = Rating)) +
   geom_hline(yintercept = 0, color = "grey", linewidth = 3/4) +
   stat_summary(
     geom = "line", 
-    fun = median, 
+    fun = mean, 
     na.rm = TRUE, 
     linewidth = 3/4
   ) +
-  scale_x_continuous(breaks = seq(0, 180, 30), expand = c(0, 0)) +
+  scale_x_continuous(
+    breaks = seq(0, 180, 30), 
+    expand = c(0, 0),
+    labels = s_to_mmss
+  ) +
   scale_y_continuous(expand = c(0, 0)) +
   coord_cartesian(ylim = c(-4, 4), xlim = c(0, 165)) +
-  labs(y = "Valence Rating", x = "Second")
+  labs(y = "Valence Rating", x = NULL)
 ```
 
+## Watch Clip
+
+{{< video https://filmdataset.s3.us-east-2.amazonaws.com/Clips/Akeelah.mp4 title="Akeelah Clip" >}}

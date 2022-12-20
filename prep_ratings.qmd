@@ -84,6 +84,48 @@ write_rds(carma_tidy, file = "./data/ratings_tidy.rds", compress = "gz")
 ```{r}
 #| echo: true
 
-redcap_raw <- read_xlsx("./data/redcap_cleaned.xlsx") |> print()
+redcap_raw <- 
+  read_xlsx("./data/redcap_cleaned.xlsx") |>
+  separate(
+    participant_id, 
+    into = c("rater", "session"), 
+    sep = "[_\\s]", 
+    extra = "merge"
+  ) |> 
+  select(-starts_with("clip")) |> 
+  pivot_longer(
+    -c(rater, session), 
+    names_to = "var", 
+    values_to = "val"
+  ) |> 
+  separate(
+    var, 
+    into = c("clip", "scale"), 
+    sep = "_", 
+    extra = "merge"
+  ) |> 
+  filter(
+    scale %in% c(
+      "inspired", "alert", "excited", "enthusiastic", "determined", 
+      "afraid", "upset", "nervous", "scared", "distressed"
+    )
+  ) |> 
+  group_by(rater, clip, scale) |> 
+  summarize(
+    val = do.call("coalesce", as.list(val)),
+    .groups = "drop"
+  ) |> 
+  mutate(
+    scale = str_to_title(scale),
+    clip = factor(clip, levels = c("aatb", "bs", "cmiyc", "dos", "f", "fg", "gm", "gwh", "ks", "lb", "lb2", "lms", "m", "mi", "ms", "ncom", "pf", "poh", "pt", "sn", "sotl", "z"),
+                  labels = c("Akeelah", "BealeStreet", "CatchMe", "DaysSummer", "Fences", "ForrestGump", "GreenMile", "GoodWill", "KingsSpeech", "LadyBird", "LegallyBlonde", "LittleMiss", "Moonlight", "Miracle", "MarriageStory", "NoCountry", "PulpFiction", "Happyness", "ParentTrap", "SocialNetwork", "Silence", "Zodiac")),
+  ) |> 
+  print()
 ```
 
+```{r}
+#| echo: true
+
+# Write data as a compressed RDS file
+write_rds(redcap_raw, file = "./data/panas_tidy.rds", compress = "gz")
+```
