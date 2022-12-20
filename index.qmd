@@ -2,10 +2,19 @@
 title: "film-dataset"
 ---
 
-This is a Quarto website.
+This is the webpage for the film-dataset. Within you can find information about the dataset as a whole, about each film clip in the dataset, and about the dataset collection methodology. You can also download the clips and deidentified data for your own research.
 
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+**Jeffrey M. Girard**, PhD<br />
+Department of Psychology<br />
+University of Kansas<br />
+<jmgirard@ku.edu>
 
-```{r}
-1 + 1
-```
+**Einat Liebenthal**, DSc<br />
+McLean Hospital<br />
+Harvard Medical School<br />
+<eliebenthal@mclean.harvard.edu>
+
+**Yanmei Tie**, PhD, MS<br />
+Brigam and Women's Hospital<br />
+Harvard Medical School<br />
+<ytie@bwh.harvard.edu>

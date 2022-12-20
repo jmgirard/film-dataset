@@ -146,13 +146,20 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./index.html">
- <span class="menu-text">Home</span></a>
+    <a class="nav-link active" href="./overview.html" aria-current="page">
+ <span class="menu-text">Overview</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./about.html">
- <span class="menu-text">About</span></a>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-film-clips" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Film Clips</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-film-clips">    
+        <li>
+    <a class="dropdown-item" href="./akeelah.html">
+ <span class="dropdown-text">Akeelah</span></a>
   </li>  
+    </ul>
+  </li>
 </ul>
               <div id="quarto-search" class="" title="Search"></div>
           </div> <!-- /navcollapse -->
@@ -203,6 +210,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h2 class="anchored" data-anchor-id="clip-information">Clip Information</h2>
 <p>The database currently includes 22 video clips, each drawn from a different English-language film and ranging from 130 to 425 seconds in duration (Mdn=238, MAD=96.4). The figure below shows the distribution of the clips’ durations. The table below presents each clip’s abbreviation, source film title (and release year), as well as starting and stopping timestamp in HH:MM:SS format, and duration in seconds.</p>
 <div class="cell">
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: The `groupOnX` argument of `geom_quasirandom()` is deprecated as of ggbeeswarm
+0.7.1.
+ℹ ggplot2 now handles this case automatically.</code></pre>
+</div>
 <div class="cell-output-display">
 <p><img src="overview_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid" width="480"></p>
 </div>
@@ -663,10 +675,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>ratings <span class="sc">|&gt;</span> </span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">Rater =</span> <span class="fu">fct_reorder</span>(<span class="at">.f =</span> <span class="fu">factor</span>(Rater), <span class="at">.x =</span> Rating, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)) <span class="sc">|&gt;</span> </span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> Rating, <span class="at">y =</span> Rater)) <span class="sc">+</span> </span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>ratings <span class="sc">|&gt;</span> </span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">Rater =</span> <span class="fu">fct_reorder</span>(<span class="at">.f =</span> <span class="fu">factor</span>(Rater), <span class="at">.x =</span> Rating, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)) <span class="sc">|&gt;</span> </span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> Rating, <span class="at">y =</span> Rater)) <span class="sc">+</span> </span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <p><img src="overview_files/figure-html/unnamed-chunk-9-1.png" class="img-fluid" width="672"></p>
 </div>

@@ -5,10 +5,12 @@ website:
   title: "film-dataset"
   navbar:
     left:
-      - href: index.qmd
-        text: Home
-      - about.qmd
-
+      - text: "Overview"
+        href: overview.qmd
+      - text: "Film Clips"
+        menu:
+          - text: "Akeelah"
+            href: akeelah.qmd
 format:
   html:
     theme: cosmo
