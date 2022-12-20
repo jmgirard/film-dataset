@@ -37,7 +37,7 @@ The database currently includes `r nrow(films)` video clips, each drawn from a d
 films |> 
   ggplot(aes(x = Duration, y = "")) + 
   geom_boxplot() +
-  geom_quasirandom(groupOnX = FALSE, color = "firebrick") +
+  geom_quasirandom(color = "firebrick") +
   scale_y_discrete() +
   scale_x_continuous(
     limits = c(90, 450), 
@@ -87,7 +87,7 @@ Each clip was continuously rated on its emotional valence at a frequency of 1 Hz
 clip_summary |> 
   ggplot(aes(x = Raters, y = "")) + 
   geom_boxplot() +
-  geom_quasirandom(groupOnX = FALSE, color = "firebrick") +
+  geom_quasirandom(color = "firebrick") +
   scale_y_discrete() +
   scale_x_continuous(
     limits = c(25, 37),
@@ -118,13 +118,16 @@ clip_summary |>
 ```
 
 ```{r}
+#| echo: false
 #| fig.height: 6
 #| fig.width: 7
+#| out-width: "100%"
 
 ratings |> 
-  mutate(Rater = fct_reorder(.f = factor(Rater), .x = Rating, na.rm = TRUE)) |> 
-  ggplot(aes(x = Rating, y = Rater)) + 
-  geom_boxplot()
+  mutate(Abbrev = fct_reorder(.f = factor(Abbrev), .x = Rating, .fun = median, na.rm = TRUE)) |> 
+  ggplot(aes(x = Rating, y = Abbrev)) + 
+  geom_boxplot() +
+  labs(y = NULL)
 ```
 
 Examine distribution of ratings per video (across seconds and raters)
