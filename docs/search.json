@@ -1,0 +1,86 @@
+[
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site\n\n1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "akeelah.html#film-information",
+    "href": "akeelah.html#film-information",
+    "title": "Akeelah and the Bee",
+    "section": "Film Information",
+    "text": "Film Information\n\n\nAkeelah and the Bee is a 2006 American drama film written and directed by Doug Atchison. It tells the story of Akeelah Anderson (Keke Palmer), an 11-year-old girl who participates in the Scripps National Spelling Bee, her mother (Angela Bassett), her schoolmates, and her coach, Dr. Joshua Larabee (Laurence Fishburne). The cast also features Curtis Armstrong, J.R. Villarreal, Sean Michael Afable, Erica Hubbard, Lee Thompson Young, Julito McCullum, Sahara Garey, Eddie Steeples, and Tzi Ma.\n\nThe credits for the film read, “A Lionsgate, 2929 Productions and Starbucks Entertainment presentation of an Out of the Blue and Reactor Films production in association with Cinema Gypsy Productions.”\n\n\n\n\n\n\n\nAll information in this section came directly from Wikipedia."
+  },
+  {
+    "objectID": "akeelah.html#clip-information",
+    "href": "akeelah.html#clip-information",
+    "title": "Akeelah and the Bee",
+    "section": "Clip Information",
+    "text": "Clip Information\nTextual description of what happens in the clip…\n\n\n\n\n\n\n\n \n  \n    Abbrev \n    Film \n    Clip_Start \n    Clip_Stop \n    Duration \n  \n \n\n  \n    Akeelah \n    Akeelah and the Bee (2006) \n    NA \n    NA \n    164"
+  },
+  {
+    "objectID": "akeelah.html#holistic-ratings",
+    "href": "akeelah.html#holistic-ratings",
+    "title": "Akeelah and the Bee",
+    "section": "Holistic Ratings",
+    "text": "Holistic Ratings\nA total of 35 participants watched this film clip and then provided holistic ratings on how the entire clip made them feel. These holistic ratings were completed using five positive emotion scales (i.e., alert, determined, enthusiastic, excited, inspired) and five negative emotion scales (i.e., afraid, distressed, nervous, scared, upset), each rated on an ordinal scale from 0 to 4.\n\n\n\n\n\nAs seen in the figure above, participants rated all positive emotion scales higher than all negative emotion scales. Ratings of inspired, excited, and enthusiastic were particularly high. Among the negative emotion scales, ratings of nervous were relatively high."
+  },
+  {
+    "objectID": "akeelah.html#continuous-ratings",
+    "href": "akeelah.html#continuous-ratings",
+    "title": "Akeelah and the Bee",
+    "section": "Continuous Ratings",
+    "text": "Continuous Ratings\nA total of 35 participants watched this film clip and used the CARMA software to provide continuous (i.e., second-by-second) ratings of how it made them feel. These continuous ratings were made on a single emotional valence scale ranging from -4 (very negative) to 4 (very positive).\n\nInter-Rater Reliability\n\n\n\nA Bayesian generalizability study was used to decompose the variance in ratings of this video clip into the following components: subject variance (in average ratings of each second, across raters), rater variance (in average ratings from each rater, across seconds), and residual variance (including second-by-rater interactions and measurement error). Subject variance was estimated at 1.32, 95% ETI: [1.11, 1.72]; rater variance was estimated at 0.42 [0.28, 0.77]; and residual variance was estimated at 0.54 [0.52, 0.56]. See the figure below for the posterior distributions of each component.\n\n\n\n\n\nFrom these variance components, we can estimate inter-rater reliability of the ratings. There are many formulations of the two-way intraclass correlation (ICC), but the most relevant to our purposes here is the balanced average-measures consistency formulation or ICC(C,k). Inter-rater reliability under this formulation was estimated as 0.988, 95% ETI: [0.985, 0.991]. See the middle of the second row in the figure below for the posterior distribution of this formulation.\n\n\n\n\n\n\n\nTime Series\nWe can plot the distribution of all valence ratings per second of the film clip to get a sense of how its emotional tone changes over time. The solid black line represents the mean of all ratings and the yellow, green, and purple ribbons represent the central 50%, 70%, and 90% of the ratings, respectively."
+  },
+  {
+    "objectID": "akeelah.html#watch-clip",
+    "href": "akeelah.html#watch-clip",
+    "title": "Akeelah and the Bee",
+    "section": "Watch Clip",
+    "text": "Watch Clip"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "film-dataset",
+    "section": "",
+    "text": "This is the webpage for the film-dataset. Within you can find information about the dataset as a whole, about each film clip in the dataset, and about the dataset collection methodology. You can also download the clips and deidentified data for your own research.\nJeffrey M. Girard, PhD Department of Psychology University of Kansas jmgirard@ku.edu\nEinat Liebenthal, DSc McLean Hospital Harvard Medical School eliebenthal@mclean.harvard.edu\nYanmei Tie, PhD, MS Brigam and Women’s Hospital Harvard Medical School ytie@bwh.harvard.edu"
+  },
+  {
+    "objectID": "overview.html#clip-information",
+    "href": "overview.html#clip-information",
+    "title": "Database Overview",
+    "section": "Clip Information",
+    "text": "Clip Information\nThe database currently includes 22 video clips, each drawn from a different English-language film and ranging from 130 to 425 seconds in duration (Mdn=238, MAD=96.4). The figure below shows the distribution of the clips’ durations. The table below presents each clip’s abbreviation, source film title (and release year), as well as starting and stopping timestamp in HH:MM:SS format, and duration in seconds.\n\n\nWarning: The `groupOnX` argument of `geom_quasirandom()` is deprecated as of ggbeeswarm\n0.7.1.\nℹ ggplot2 now handles this case automatically.\n\n\n\n\n\n\n\n\n\n \n  \n    Abbrev \n    Film \n    Clip_Start \n    Clip_Stop \n    Duration \n  \n \n\n  \n    Akeelah \n    Akeelah and the Bee (2006) \n    NA \n    NA \n    164 \n  \n  \n    BealeStreet \n    If Beale Street Could Talk (2018) \n    NA \n    NA \n    162 \n  \n  \n    CatchMe \n    Catch Me If You Can (2002) \n    NA \n    NA \n    274 \n  \n  \n    DaysOfSummer \n    500 Days of Summer (2009) \n    NA \n    NA \n    132 \n  \n  \n    Fences \n    Fences (2016) \n    NA \n    NA \n    134 \n  \n  \n    ForrestGump \n    Forrest Gump (1994) \n    NA \n    NA \n    218 \n  \n  \n    GoodWillHunting \n    Good Will Hunting (1997) \n    NA \n    NA \n    150 \n  \n  \n    GreenMile \n    The Green Mile (1999) \n    NA \n    NA \n    239 \n  \n  \n    Happyness \n    The Pursuit of Happyness (2006) \n    NA \n    NA \n    237 \n  \n  \n    KingsSpeech \n    The King's Speech (2010) \n    NA \n    NA \n    425 \n  \n  \n    LadyBird \n    Lady Bird (2017) \n    NA \n    NA \n    232 \n  \n  \n    LegallyBlonde \n    Legally Blonde (2001) \n    NA \n    NA \n    414 \n  \n  \n    LittleMissSunshine \n    Little Miss Sunshine (2006) \n    NA \n    NA \n    130 \n  \n  \n    MarriageStory \n    Marriage Story (2019) \n    NA \n    NA \n    240 \n  \n  \n    Miracle \n    Miracle (2004) \n    NA \n    NA \n    341 \n  \n  \n    Moonlight \n    Moonlight (2016) \n    NA \n    NA \n    234 \n  \n  \n    NoCountry \n    No Country for Old Men (2007) \n    NA \n    NA \n    262 \n  \n  \n    ParentTrap \n    The Parent Trap (1998) \n    NA \n    NA \n    425 \n  \n  \n    PulpFiction \n    Pulp Fiction (1994) \n    NA \n    NA \n    233 \n  \n  \n    Silence \n    Silence (2016) \n    NA \n    NA \n    274 \n  \n  \n    SocialNetwork \n    The Social Network (2010) \n    NA \n    NA \n    294 \n  \n  \n    Zodiac \n    Zodiac (2007) \n    NA \n    NA \n    315"
+  },
+  {
+    "objectID": "overview.html#valence-ratings",
+    "href": "overview.html#valence-ratings",
+    "title": "Database Overview",
+    "section": "Valence Ratings",
+    "text": "Valence Ratings\n\n\n\nEach clip was continuously rated on its emotional valence at a frequency of 1 Hz and using a scale ranging from -4 (very negative) to 4 (very positive). The number of participants rating each clip ranged from 27 to 36 (Mdn=30, MAD=1.5). The table below provides the number of raters and duration per clip as well as a summary of the valence ratings distribution across raters (i.e., mean, standard deviation, and quartiles).\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n \n  \n    Abbrev \n    Raters \n    Mean \n    SD \n    p0 \n    p25 \n    p50 \n    p75 \n    p100 \n  \n \n\n  \n    Akeelah \n    33 \n    1.66 \n    1.52 \n    -2.03 \n    0.40 \n    1.60 \n    2.81 \n    4.00 \n  \n  \n    BealeStreet \n    30 \n    0.57 \n    1.35 \n    -4.00 \n    -0.20 \n    0.55 \n    1.42 \n    4.00 \n  \n  \n    CatchMe \n    36 \n    0.33 \n    1.45 \n    -3.20 \n    -0.80 \n    0.44 \n    1.40 \n    4.00 \n  \n  \n    DaysOfSummer \n    31 \n    0.38 \n    1.25 \n    -3.40 \n    -0.40 \n    0.35 \n    1.20 \n    3.60 \n  \n  \n    Fences \n    30 \n    -2.09 \n    1.39 \n    -4.00 \n    -3.22 \n    -2.28 \n    -1.02 \n    2.00 \n  \n  \n    ForrestGump \n    32 \n    -0.44 \n    1.61 \n    -4.00 \n    -1.60 \n    -0.60 \n    0.81 \n    4.00 \n  \n  \n    GoodWillHunting \n    29 \n    0.12 \n    1.50 \n    -4.00 \n    -0.75 \n    0.23 \n    1.01 \n    4.00 \n  \n  \n    GreenMile \n    30 \n    -2.71 \n    1.42 \n    -4.00 \n    -4.00 \n    -3.19 \n    -2.14 \n    3.00 \n  \n  \n    Happyness \n    32 \n    1.50 \n    1.52 \n    -2.91 \n    0.43 \n    1.52 \n    2.72 \n    4.00 \n  \n  \n    KingsSpeech \n    29 \n    0.77 \n    1.75 \n    -4.00 \n    -0.60 \n    0.99 \n    2.09 \n    4.00 \n  \n  \n    LadyBird \n    29 \n    0.23 \n    1.44 \n    -4.00 \n    -0.80 \n    0.00 \n    1.12 \n    4.00 \n  \n  \n    LegallyBlonde \n    30 \n    1.33 \n    1.35 \n    -3.10 \n    0.46 \n    1.38 \n    2.25 \n    4.00 \n  \n  \n    LittleMissSunshine \n    29 \n    -0.17 \n    1.50 \n    -4.00 \n    -1.11 \n    -0.24 \n    0.77 \n    4.00 \n  \n  \n    MarriageStory \n    29 \n    -1.97 \n    1.76 \n    -4.00 \n    -3.36 \n    -2.35 \n    -1.00 \n    4.00 \n  \n  \n    Miracle \n    30 \n    1.16 \n    1.57 \n    -2.15 \n    0.00 \n    1.03 \n    2.55 \n    4.00 \n  \n  \n    Moonlight \n    30 \n    1.41 \n    1.27 \n    -1.80 \n    0.40 \n    1.20 \n    2.40 \n    4.00 \n  \n  \n    NoCountry \n    29 \n    -1.08 \n    1.35 \n    -4.00 \n    -2.04 \n    -1.17 \n    -0.33 \n    4.00 \n  \n  \n    ParentTrap \n    33 \n    2.06 \n    1.28 \n    -2.41 \n    1.20 \n    2.20 \n    3.00 \n    4.00 \n  \n  \n    PulpFiction \n    32 \n    0.44 \n    1.38 \n    -2.80 \n    -0.60 \n    0.40 \n    1.36 \n    4.00 \n  \n  \n    Silence \n    31 \n    -1.14 \n    1.42 \n    -4.00 \n    -2.16 \n    -1.04 \n    -0.02 \n    3.20 \n  \n  \n    SocialNetwork \n    27 \n    -0.33 \n    1.79 \n    -4.00 \n    -1.70 \n    -0.40 \n    1.13 \n    4.00 \n  \n  \n    Zodiac \n    29 \n    -0.75 \n    1.58 \n    -4.00 \n    -1.96 \n    -0.60 \n    0.20 \n    3.80 \n  \n\n\n\n\n\n\nratings |> \n  mutate(Rater = fct_reorder(.f = factor(Rater), .x = Rating, na.rm = TRUE)) |> \n  ggplot(aes(x = Rating, y = Rater)) + \n  geom_boxplot()\n\n\n\n\nExamine distribution of ratings per video (across seconds and raters)"
+  },
+  {
+    "objectID": "prep_ratings.html",
+    "href": "prep_ratings.html",
+    "title": "Prepare Ratings",
+    "section": "",
+    "text": "library(tidyverse)\nlibrary(readxl)"
+  },
+  {
+    "objectID": "prep_ratings.html#prepare-continuous-carma-ratings",
+    "href": "prep_ratings.html#prepare-continuous-carma-ratings",
+    "title": "Prepare Ratings",
+    "section": "Prepare continuous (CARMA) ratings",
+    "text": "Prepare continuous (CARMA) ratings\n\n# Find all rating files\ncarma_files <- \n  dir(\n    path = \"./data/Carma_Rating_Results\", \n    pattern = \"*.xlsx\", \n    full.names = TRUE\n  )\n\n\n# Read in all rating files\ncarma_raw <- \n  map_dfr(\n    .x = carma_files, \n    .f = read_xlsx, \n    skip = 7, \n    .name_repair = ~str_remove_all(., \"[:space:]\"), \n    .id = \"Video\"\n  ) |> \n  select(\n    Video, \n    Second, \n    starts_with(\"MW\")\n  ) |> \n  mutate(\n    Video = parse_integer(Video),\n    Second = as.integer(Second),\n    Film = factor(\n      Video, \n      levels = seq_along(carma_files), \n      labels = str_extract(\n        string = basename(carma_files), \n        pattern = \"[^_]+\"\n      )\n    ),\n    .before = 1\n  )\n\n\n# Reshape and sort data\ncarma_tidy <- \n  carma_raw |> \n  pivot_longer(\n    cols = starts_with(\"MW\"), \n    names_to = \"Rater\", \n    values_to = \"Rating\",\n    names_transform = parse_number\n  ) |> \n  mutate(Rater = as.integer(Rater)) |> \n  arrange(Video, Rater, Second) |> \n  select(Film, Video, Rater, Second, Rating)\n\n\n# Write data as a compressed RDS file\nwrite_rds(carma_tidy, file = \"./data/ratings_tidy.rds\", compress = \"gz\")"
+  },
+  {
+    "objectID": "prep_ratings.html#prepare-holistic-ratings",
+    "href": "prep_ratings.html#prepare-holistic-ratings",
+    "title": "Prepare Ratings",
+    "section": "Prepare holistic ratings",
+    "text": "Prepare holistic ratings\n\nredcap_raw <- \n  read_xlsx(\"./data/redcap_cleaned.xlsx\") |>\n  separate(\n    participant_id, \n    into = c(\"rater\", \"session\"), \n    sep = \"[_\\\\s]\", \n    extra = \"merge\"\n  ) |> \n  select(-starts_with(\"clip\")) |> \n  pivot_longer(\n    -c(rater, session), \n    names_to = \"var\", \n    values_to = \"val\"\n  ) |> \n  separate(\n    var, \n    into = c(\"clip\", \"scale\"), \n    sep = \"_\", \n    extra = \"merge\"\n  ) |> \n  filter(\n    scale %in% c(\n      \"inspired\", \"alert\", \"excited\", \"enthusiastic\", \"determined\", \n      \"afraid\", \"upset\", \"nervous\", \"scared\", \"distressed\"\n    )\n  ) |> \n  group_by(rater, clip, scale) |> \n  summarize(\n    val = do.call(\"coalesce\", as.list(val)),\n    .groups = \"drop\"\n  ) |> \n  mutate(\n    scale = str_to_title(scale),\n    clip = factor(clip, levels = c(\"aatb\", \"bs\", \"cmiyc\", \"dos\", \"f\", \"fg\", \"gm\", \"gwh\", \"ks\", \"lb\", \"lb2\", \"lms\", \"m\", \"mi\", \"ms\", \"ncom\", \"pf\", \"poh\", \"pt\", \"sn\", \"sotl\", \"z\"),\n                  labels = c(\"Akeelah\", \"BealeStreet\", \"CatchMe\", \"DaysSummer\", \"Fences\", \"ForrestGump\", \"GreenMile\", \"GoodWill\", \"KingsSpeech\", \"LadyBird\", \"LegallyBlonde\", \"LittleMiss\", \"Moonlight\", \"Miracle\", \"MarriageStory\", \"NoCountry\", \"PulpFiction\", \"Happyness\", \"ParentTrap\", \"SocialNetwork\", \"Silence\", \"Zodiac\")),\n  ) |> \n  print()\n\n# A tibble: 7,920 × 4\n   rater clip    scale          val\n   <chr> <fct>   <chr>        <dbl>\n 1 MW1   Akeelah Afraid           1\n 2 MW1   Akeelah Alert            4\n 3 MW1   Akeelah Determined       4\n 4 MW1   Akeelah Distressed       1\n 5 MW1   Akeelah Enthusiastic     4\n 6 MW1   Akeelah Excited          4\n 7 MW1   Akeelah Inspired         5\n 8 MW1   Akeelah Nervous          1\n 9 MW1   Akeelah Scared           1\n10 MW1   Akeelah Upset            1\n# … with 7,910 more rows\n\n\n\n# Write data as a compressed RDS file\nwrite_rds(redcap_raw, file = \"./data/panas_tidy.rds\", compress = \"gz\")"
+  }
+]
