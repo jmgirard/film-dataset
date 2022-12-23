@@ -5,7 +5,7 @@ project:
 website:
   title: "film-dataset"
   navbar:
-    left:
+    right:
       - text: "Overview"
         href: overview.qmd
       - text: "Film Clips"
@@ -20,6 +20,10 @@ website:
             href: DaysSummer.qmd
           - text: "[Fences] Fences"
             href: Fences.qmd
+          - text: "[ForrestGump] Forrest Gump"
+            href: ForrestGump.qmd
+          - text: "[GoodWill] Good Will Hunting"
+            href: GoodWill.qmd
 format:
   html:
     theme: cosmo

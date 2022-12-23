@@ -67,6 +67,19 @@ create_holistic_plot(holistic_df)
 
 A total of `r length(unique(valence_df$Rater))` participants watched this film clip and used the [CARMA software](https://carma.jmgirard.com) to provide continuous (i.e., second-by-second) ratings of how it made them feel. These continuous ratings were made on a single emotional *valence* scale ranging from -4 (very negative) to 4 (very positive).
 
+### Time Series
+
+We can plot the distribution of all valence ratings per second of the film clip to get a sense of how its emotional tone changes over time. The solid black line represents the mean of all ratings and the yellow, green, and purple ribbons represent the central 50%, 70%, and 90% of the ratings, respectively.
+
+```{r}
+#| echo: false
+#| fig-width: 7
+#| fig-height: 5
+#| out-width: "100%"
+
+create_valence_plot(valence_df)
+```
+
 ### Inter-Rater Reliability
 
 ```{r}
@@ -96,17 +109,4 @@ From these variance components, we can estimate inter-rater reliability of the r
 #| out-width: "100%"
 
 plot(icc_res, components = "icc")
-```
-
-### Time Series
-
-We can plot the distribution of all valence ratings per second of the film clip to get a sense of how its emotional tone changes over time. The solid black line represents the mean of all ratings and the yellow, green, and purple ribbons represent the central 50%, 70%, and 90% of the ratings, respectively.
-
-```{r}
-#| echo: false
-#| fig-width: 7
-#| fig-height: 5
-#| out-width: "100%"
-
-create_valence_plot(valence_df)
 ```

@@ -1,7 +1,7 @@
 ---
-title: "Akeelah and the Bee"
+title: "Forrest Gump"
 params:
-  abbrev: "AkeelahBee"
+  abbrev: "ForrestGump"
 ---
 
 ```{r}
@@ -18,18 +18,16 @@ source("./R/functions.R")
 
 ::: columns
 ::: {.column width="70%"}
-***Akeelah and the Bee*** is a 2006 American drama film written and directed by Doug Atchison. It tells the story of Akeelah Anderson (Keke Palmer), an 11-year-old girl who participates in the Scripps National Spelling Bee, her mother (Angela Bassett), her schoolmates, and her coach, Dr. Joshua Larabee (Laurence Fishburne). The cast also features Curtis Armstrong, J.R. Villarreal, Sean Michael Afable, Erica Hubbard, Lee Thompson Young, Julito McCullum, Sahara Garey, Eddie Steeples, and Tzi Ma.\
-
-The credits for the film read, "A Lionsgate, 2929 Productions and Starbucks Entertainment presentation of an Out of the Blue and Reactor Films production in association with Cinema Gypsy Productions."
+***Forrest Gump*** is a 1994 American comedy-drama film directed by Robert Zemeckis and written by Eric Roth. It is based on the 1986 novel of the same name by Winston Groom and stars Tom Hanks, Robin Wright, Gary Sinise, Mykelti Williamson and Sally Field. The film follows several decades in the life of a slow-witted and kindhearted Alabama man named Forrest Gump (Hanks) and his experiences in the 20th-century United States. The film differs substantially from the novel.
 :::
 ::: {.column width="10%"}
 :::
 ::: {.column width="20%" .poster}
-![](./img/AkeelahBee_poster.jpg)
+![](./img/ForrestGump_poster.jpg)
 :::
 :::
 
-> All information in this section came directly from [Wikipedia](https://en.wikipedia.org/wiki/Akeelah_and_the_Bee).
+> All information in this section came directly from [Wikipedia](https://en.wikipedia.org/wiki/Forrest_Gump).
 
 ## Clip Information
 
@@ -112,7 +110,3 @@ From these variance components, we can estimate inter-rater reliability of the r
 
 plot(icc_res, components = "icc")
 ```
-
-<!-- ## Watch Clip -->
-
-<!-- {{< video https://filmdataset.s3.us-east-2.amazonaws.com/Clips/Akeelah.mp4 title="AkeelahBee Clip" >}} -->

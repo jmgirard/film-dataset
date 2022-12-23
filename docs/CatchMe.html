@@ -81,7 +81,7 @@ ul.task-list li input[type="checkbox"] {
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav navbar-nav-scroll me-auto">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
     <a class="nav-link" href="./overview.html">
  <span class="menu-text">Overview</span></a>
@@ -90,7 +90,7 @@ ul.task-list li input[type="checkbox"] {
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-film-clips" role="button" data-bs-toggle="dropdown" aria-expanded="false">
  <span class="menu-text">Film Clips</span>
     </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-film-clips">    
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-film-clips">    
         <li>
     <a class="dropdown-item" href="./AkeelahBee.html">
  <span class="dropdown-text">[AkeelahBee] Akeelah and the Bee</span></a>
@@ -110,6 +110,14 @@ ul.task-list li input[type="checkbox"] {
         <li>
     <a class="dropdown-item" href="./Fences.html">
  <span class="dropdown-text">[Fences] Fences</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./ForrestGump.html">
+ <span class="dropdown-text">[ForrestGump] Forrest Gump</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./GoodWill.html">
+ <span class="dropdown-text">[GoodWill] Good Will Hunting</span></a>
   </li>  
     </ul>
   </li>
@@ -133,8 +141,8 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#holistic-ratings" id="toc-holistic-ratings" class="nav-link" data-scroll-target="#holistic-ratings">Holistic Ratings</a></li>
   <li><a href="#continuous-ratings" id="toc-continuous-ratings" class="nav-link" data-scroll-target="#continuous-ratings">Continuous Ratings</a>
   <ul class="collapse">
-  <li><a href="#inter-rater-reliability" id="toc-inter-rater-reliability" class="nav-link" data-scroll-target="#inter-rater-reliability">Inter-Rater Reliability</a></li>
   <li><a href="#time-series" id="toc-time-series" class="nav-link" data-scroll-target="#time-series">Time Series</a></li>
+  <li><a href="#inter-rater-reliability" id="toc-inter-rater-reliability" class="nav-link" data-scroll-target="#inter-rater-reliability">Inter-Rater Reliability</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -222,6 +230,15 @@ ul.task-list li input[type="checkbox"] {
 <section id="continuous-ratings" class="level2">
 <h2 class="anchored" data-anchor-id="continuous-ratings">Continuous Ratings</h2>
 <p>A total of 36 participants watched this film clip and used the <a href="https://carma.jmgirard.com">CARMA software</a> to provide continuous (i.e., second-by-second) ratings of how it made them feel. These continuous ratings were made on a single emotional <em>valence</em> scale ranging from -4 (very negative) to 4 (very positive).</p>
+<section id="time-series" class="level3">
+<h3 class="anchored" data-anchor-id="time-series">Time Series</h3>
+<p>We can plot the distribution of all valence ratings per second of the film clip to get a sense of how its emotional tone changes over time. The solid black line represents the mean of all ratings and the yellow, green, and purple ribbons represent the central 50%, 70%, and 90% of the ratings, respectively.</p>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="CatchMe_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid" style="width:100.0%"></p>
+</div>
+</div>
+</section>
 <section id="inter-rater-reliability" class="level3">
 <h3 class="anchored" data-anchor-id="inter-rater-reliability">Inter-Rater Reliability</h3>
 <div class="cell">
@@ -230,19 +247,10 @@ ul.task-list li input[type="checkbox"] {
 <p>A Bayesian generalizability study was used to decompose the variance in ratings of this video clip into the following components: timepoint variance (in average ratings of each second, across raters), rater variance (in average ratings from each rater, across seconds), and residual variance (including second-by-rater interactions and measurement error). Timepoint variance was estimated at 0.76, 95% ETI: [0.65, 0.92]; rater variance was estimated at 0.36 [0.24, 0.64]; and residual variance was estimated at 0.99 [0.96, 1.02]. See the figure below for the posterior distributions of each component.</p>
 <div class="cell">
 <div class="cell-output-display">
-<p><img src="CatchMe_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid" style="width:100.0%"></p>
-</div>
-</div>
-<p>From these variance components, we can estimate inter-rater reliability of the ratings. There are many formulations of the two-way intraclass correlation (ICC), but the most relevant to our purposes here is the balanced average-measures consistency formulation or ICC(C,k). Inter-rater reliability under this formulation was estimated as 0.966, 95% ETI: [0.959, 0.971]. See the middle of the second row in the figure below for the posterior distribution of this formulation.</p>
-<div class="cell">
-<div class="cell-output-display">
 <p><img src="CatchMe_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid" style="width:100.0%"></p>
 </div>
 </div>
-</section>
-<section id="time-series" class="level3">
-<h3 class="anchored" data-anchor-id="time-series">Time Series</h3>
-<p>We can plot the distribution of all valence ratings per second of the film clip to get a sense of how its emotional tone changes over time. The solid black line represents the mean of all ratings and the yellow, green, and purple ribbons represent the central 50%, 70%, and 90% of the ratings, respectively.</p>
+<p>From these variance components, we can estimate inter-rater reliability of the ratings. There are many formulations of the two-way intraclass correlation (ICC), but the most relevant to our purposes here is the balanced average-measures consistency formulation or ICC(C,k). Inter-rater reliability under this formulation was estimated as 0.966, 95% ETI: [0.959, 0.971]. See the middle of the second row in the figure below for the posterior distribution of this formulation.</p>
 <div class="cell">
 <div class="cell-output-display">
 <p><img src="CatchMe_files/figure-html/unnamed-chunk-8-1.png" class="img-fluid" style="width:100.0%"></p>
