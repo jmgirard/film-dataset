@@ -124,7 +124,7 @@ create_valence_plot <- function(valence_df) {
       linewidth = 3/4
     ) +
     ggplot2::scale_x_continuous(
-      breaks = seq(0, 300, 30), 
+      breaks = seq(0, 10*2*30, 30), 
       expand = c(0, 0),
       labels = s_to_mmss
     ) +

@@ -24,6 +24,14 @@ website:
             href: ForrestGump.qmd
           - text: "[GoodWill] Good Will Hunting"
             href: GoodWill.qmd
+          - text: "[GreenMile] The Green Mile"
+            href: GreenMile.qmd
+          - text: "[KingsSpeech] The King's Speech"
+            href: KingsSpeech.qmd
+          - text: "[LadyBird] Lady Bird"
+            href: LadyBird.qmd
+          - text: "[PursuitHappyness] The Pursuit of Happyness"
+            href: PursuitHappyness.qmd
 format:
   html:
     theme: cosmo
