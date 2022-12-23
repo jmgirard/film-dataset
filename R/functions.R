@@ -124,7 +124,7 @@ create_valence_plot <- function(valence_df) {
       linewidth = 3/4
     ) +
     ggplot2::scale_x_continuous(
-      breaks = seq(0, 180, 30), 
+      breaks = seq(0, 300, 30), 
       expand = c(0, 0),
       labels = s_to_mmss
     ) +
@@ -132,8 +132,7 @@ create_valence_plot <- function(valence_df) {
       expand = c(0, 0)
     ) +
     ggplot2::coord_cartesian(
-      ylim = c(-4, 4), 
-      xlim = c(0, 165)
+      ylim = c(-4, 4)
     ) +
     ggplot2::labs(
       y = "Valence Rating", 

@@ -18,6 +18,8 @@ website:
             href: CatchMe.qmd
           - text: "[DaysSummer] 500 Days of Summer"
             href: DaysSummer.qmd
+          - text: "[Fences] Fences"
+            href: Fences.qmd
 format:
   html:
     theme: cosmo

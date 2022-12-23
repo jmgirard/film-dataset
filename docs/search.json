@@ -126,6 +126,34 @@
     "text": "Continuous Ratings\nA total of 31 participants watched this film clip and used the CARMA software to provide continuous (i.e., second-by-second) ratings of how it made them feel. These continuous ratings were made on a single emotional valence scale ranging from -4 (very negative) to 4 (very positive).\n\nInter-Rater Reliability\n\n\n\nA Bayesian generalizability study was used to decompose the variance in ratings of this video clip into the following components: timepoint variance (in average ratings of each second, across raters), rater variance (in average ratings from each rater, across seconds), and residual variance (including second-by-rater interactions and measurement error). Timepoint variance was estimated at 0.18, 95% ETI: [0.15, 0.26]; rater variance was estimated at 0.58 [0.37, 1.06]; and residual variance was estimated at 0.82 [0.79, 0.86]. See the figure below for the posterior distributions of each component.\n\n\n\n\n\nFrom these variance components, we can estimate inter-rater reliability of the ratings. There are many formulations of the two-way intraclass correlation (ICC), but the most relevant to our purposes here is the balanced average-measures consistency formulation or ICC(C,k). Inter-rater reliability under this formulation was estimated as 0.883, 95% ETI: [0.846, 0.906]. See the middle of the second row in the figure below for the posterior distribution of this formulation.\n\n\n\n\n\n\n\nTime Series\nWe can plot the distribution of all valence ratings per second of the film clip to get a sense of how its emotional tone changes over time. The solid black line represents the mean of all ratings and the yellow, green, and purple ribbons represent the central 50%, 70%, and 90% of the ratings, respectively."
   },
   {
+    "objectID": "Fences.html#film-information",
+    "href": "Fences.html#film-information",
+    "title": "Fences",
+    "section": "Film Information",
+    "text": "Film Information\n\n\nFences is a 2016 American period drama film starring, produced and directed by Denzel Washington and written by August Wilson, based on his Pulitzer Prize-winning 1985 play of the same name. Wilson was in Pittsburgh, Pennsylvania, and originally wanted to pursue being a poet, but later found passion for being a playwright. In addition to Washington, the film also stars Viola Davis, Stephen McKinley Henderson, Jovan Adepo, Russell Hornsby, Mykelti Williamson, and Saniyya Sidney.\n\n\n\n\n\n\n\nAll information in this section came directly from Wikipedia."
+  },
+  {
+    "objectID": "Fences.html#clip-information",
+    "href": "Fences.html#clip-information",
+    "title": "Fences",
+    "section": "Clip Information",
+    "text": "Clip Information\nTextual description of what happens in the clip…\n\n\n\n\n\n\n\n \n  \n    Abbrev \n    Film \n    Clip_Start \n    Clip_Stop \n    Duration \n  \n \n\n  \n    Fences \n    Fences (2016) \n    NA \n    NA \n    134"
+  },
+  {
+    "objectID": "Fences.html#holistic-ratings",
+    "href": "Fences.html#holistic-ratings",
+    "title": "Fences",
+    "section": "Holistic Ratings",
+    "text": "Holistic Ratings\nA total of 34 participants watched this film clip and then provided holistic ratings on how the entire clip made them feel. These holistic ratings were completed using five positive emotion scales (i.e., alert, determined, enthusiastic, excited, inspired) and five negative emotion scales (i.e., afraid, distressed, nervous, scared, upset), each rated on an ordinal scale from 0 to 4."
+  },
+  {
+    "objectID": "Fences.html#continuous-ratings",
+    "href": "Fences.html#continuous-ratings",
+    "title": "Fences",
+    "section": "Continuous Ratings",
+    "text": "Continuous Ratings\nA total of 30 participants watched this film clip and used the CARMA software to provide continuous (i.e., second-by-second) ratings of how it made them feel. These continuous ratings were made on a single emotional valence scale ranging from -4 (very negative) to 4 (very positive).\n\nInter-Rater Reliability\n\n\n\nA Bayesian generalizability study was used to decompose the variance in ratings of this video clip into the following components: timepoint variance (in average ratings of each second, across raters), rater variance (in average ratings from each rater, across seconds), and residual variance (including second-by-rater interactions and measurement error). Timepoint variance was estimated at 0.56, 95% ETI: [0.45, 0.73]; rater variance was estimated at 0.78 [0.52, 1.49]; and residual variance was estimated at 0.59 [0.56, 0.62]. See the figure below for the posterior distributions of each component.\n\n\n\n\n\nFrom these variance components, we can estimate inter-rater reliability of the ratings. There are many formulations of the two-way intraclass correlation (ICC), but the most relevant to our purposes here is the balanced average-measures consistency formulation or ICC(C,k). Inter-rater reliability under this formulation was estimated as 0.967, 95% ETI: [0.958, 0.974]. See the middle of the second row in the figure below for the posterior distribution of this formulation.\n\n\n\n\n\n\n\nTime Series\nWe can plot the distribution of all valence ratings per second of the film clip to get a sense of how its emotional tone changes over time. The solid black line represents the mean of all ratings and the yellow, green, and purple ribbons represent the central 50%, 70%, and 90% of the ratings, respectively."
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "film-dataset",
