@@ -36,6 +36,8 @@ website:
             href: LittleMiss.qmd
           - text: "[MarriageStory] Marriage Story"
             href: MarriageStory.qmd
+          - text: "[Miracle] Miracle"
+            href: Miracle.qmd
           - text: "[PursuitHappyness] The Pursuit of Happyness"
             href: PursuitHappyness.qmd
 format:
