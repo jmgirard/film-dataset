@@ -43,7 +43,7 @@ carma_raw <-
   mutate(
     Video = parse_integer(Video),
     Second = as.integer(Second),
-    Film = factor(
+    Abbrev = factor(
       Video, 
       levels = seq_along(carma_files), 
       labels = str_extract(
@@ -69,14 +69,15 @@ carma_tidy <-
   ) |> 
   mutate(Rater = as.integer(Rater)) |> 
   arrange(Video, Rater, Second) |> 
-  select(Film, Video, Rater, Second, Rating)
+  select(Abbrev, Rater, Second, Rating) |> 
+  print()
 ```
 
 ```{r}
 #| echo: true
 
 # Write data as a compressed RDS file
-write_rds(carma_tidy, file = "./data/ratings_tidy.rds", compress = "gz")
+write_rds(carma_tidy, file = "./data/valence_ratings.rds", compress = "gz")
 ```
 
 ## Prepare holistic ratings
@@ -85,41 +86,44 @@ write_rds(carma_tidy, file = "./data/ratings_tidy.rds", compress = "gz")
 #| echo: true
 
 redcap_raw <- 
-  read_xlsx("./data/redcap_cleaned.xlsx") |>
+  read_xlsx("./data/holistic_ratings_raw.xlsx") |>
   separate(
     participant_id, 
-    into = c("rater", "session"), 
+    into = c("Rater", "Session"), 
     sep = "[_\\s]", 
     extra = "merge"
   ) |> 
   select(-starts_with("clip")) |> 
   pivot_longer(
-    -c(rater, session), 
+    -c(Rater, Session), 
     names_to = "var", 
-    values_to = "val"
+    values_to = "Rating"
   ) |> 
   separate(
     var, 
-    into = c("clip", "scale"), 
+    into = c("Abbrev", "Scale"), 
     sep = "_", 
     extra = "merge"
   ) |> 
   filter(
-    scale %in% c(
+    Scale %in% c(
       "inspired", "alert", "excited", "enthusiastic", "determined", 
       "afraid", "upset", "nervous", "scared", "distressed"
     )
   ) |> 
-  group_by(rater, clip, scale) |> 
+  group_by(Rater, Abbrev, Scale) |> 
   summarize(
-    val = do.call("coalesce", as.list(val)),
+    Rating = do.call("coalesce", as.list(Rating)),
     .groups = "drop"
   ) |> 
   mutate(
-    scale = str_to_title(scale),
-    clip = factor(clip, levels = c("aatb", "bs", "cmiyc", "dos", "f", "fg", "gm", "gwh", "ks", "lb", "lb2", "lms", "m", "mi", "ms", "ncom", "pf", "poh", "pt", "sn", "sotl", "z"),
-                  labels = c("Akeelah", "BealeStreet", "CatchMe", "DaysSummer", "Fences", "ForrestGump", "GreenMile", "GoodWill", "KingsSpeech", "LadyBird", "LegallyBlonde", "LittleMiss", "Moonlight", "Miracle", "MarriageStory", "NoCountry", "PulpFiction", "Happyness", "ParentTrap", "SocialNetwork", "Silence", "Zodiac")),
+    Rater = as.integer(parse_number(Rater)),
+    Scale = str_to_title(Scale),
+    Abbrev = factor(Abbrev, levels = c("aatb", "bs", "cmiyc", "dos", "f", "fg", "gm", "gwh", "ks", "lb", "lb2", "lms", "m", "mi", "ms", "ncom", "pf", "poh", "pt", "sn", "sotl", "z"),
+                  labels = c("AkeelahBee", "BealeStreet", "CatchMe", "DaysSummer", "Fences", "ForrestGump", "GreenMile", "GoodWill", "KingsSpeech", "LadyBird", "LegallyBlonde", "LittleMiss", "Moonlight", "Miracle", "MarriageStory", "NoCountry", "PulpFiction", "PursuitHappyness", "ParentTrap", "SocialNetwork", "Silence", "Zodiac")),
+    Rating = Rating - 1
   ) |> 
+  select(Abbrev, Rater, Scale, Rating) |> 
   print()
 ```
 
@@ -127,5 +131,5 @@ redcap_raw <-
 #| echo: true
 
 # Write data as a compressed RDS file
-write_rds(redcap_raw, file = "./data/panas_tidy.rds", compress = "gz")
+write_rds(redcap_raw, file = "./data/holistic_ratings.rds", compress = "gz")
 ```

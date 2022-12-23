@@ -16,25 +16,27 @@ library(kableExtra)
 ```{r}
 #| echo: false
 
-ratings <- 
-  read_rds("./data/ratings_tidy.rds") |>
-  drop_na(Rating) |> 
-  rename(Abbrev = Film) |> 
-  mutate(Abbrev = str_remove_all(Abbrev, "'"))
+info_df <- read_xlsx("./data/film_info.xlsx")
 
-films <- read_xlsx("./data/film_info.xlsx")
+valence_df <- 
+  read_rds("./data/valence_ratings.rds") |>
+  drop_na(Rating)
+
+holistic_df <- 
+  read_rds("./data/holistic_ratings.rds") |> 
+  drop_na(Rating)
 ```
 
 ## Clip Information
 
-The database currently includes `r nrow(films)` video clips, each drawn from a different English-language film and ranging from `r min(films$Duration)` to `r max(films$Duration)` seconds in duration (Mdn=`r median(films$Duration)`, MAD=`r round(mad(films$Duration), digits = 1)`). The figure below shows the distribution of the clips' durations. The table below presents each clip's abbreviation, source film title (and release year), as well as starting and stopping timestamp in HH:MM:SS format, and duration in seconds.
+The database currently includes `r nrow(info_df)` video clips, each drawn from a different English-language film and ranging from `r min(info_df$Duration)` to `r max(info_df$Duration)` seconds in duration (Mdn=`r median(info_df$Duration)`, MAD=`r round(mad(info_df$Duration), digits = 1)`). The figure below shows the distribution of the clips' durations. The table below presents each clip's abbreviation, source film title (and release year), as well as starting and stopping timestamp in HH:MM:SS format, and duration in seconds.
 
 ```{r}
 #| echo: false
 #| fig.width: 5
 #| fig.height: 2
 
-films |> 
+info_df |> 
   ggplot(aes(x = Duration, y = "")) + 
   geom_boxplot() +
   geom_quasirandom(color = "firebrick") +
@@ -51,7 +53,7 @@ films |>
 ```{r}
 #| echo: false
 
-films |> 
+info_df |> 
   arrange(Abbrev) |> 
   kable(digits = 2) |> 
   kable_styling()
@@ -63,9 +65,9 @@ films |>
 #| echo: false
 
 clip_summary <- 
-  ratings |>
+  valence_df |>
   group_by(Abbrev) |> 
-  summarize(
+  dplyr::summarize(
     Raters = n_distinct(Rater),
     Mean = mean(Rating),
     SD   = sd(Rating),
@@ -103,7 +105,7 @@ clip_summary |>
 #| fig.width: 5
 #| fig.height: 4
 
-ggplot(ratings, aes(x = Rating)) + 
+ggplot(valence_df, aes(x = Rating)) + 
   geom_histogram(breaks = seq(-4, 4, 1/3), color = "white") +
   labs(title = "Distribution of Valence Ratings")
 ```
@@ -123,7 +125,7 @@ clip_summary |>
 #| fig.width: 7
 #| out-width: "100%"
 
-ratings |> 
+valence_df |> 
   mutate(Abbrev = fct_reorder(.f = factor(Abbrev), .x = Rating, .fun = median, na.rm = TRUE)) |> 
   ggplot(aes(x = Rating, y = Abbrev)) + 
   geom_boxplot() +

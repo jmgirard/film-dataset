@@ -152,8 +152,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-film-clips">    
         <li>
-    <a class="dropdown-item" href="./akeelah.html">
- <span class="dropdown-text">Akeelah</span></a>
+    <a class="dropdown-item" href="./AkeelahBee.html">
+ <span class="dropdown-text">Akeelah and the Bee</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./BealeStreet.html">
+ <span class="dropdown-text">If Beale Street Could Talk</span></a>
   </li>  
     </ul>
   </li>
@@ -230,7 +234,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
 <span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>    <span class="at">Video =</span> <span class="fu">parse_integer</span>(Video),</span>
 <span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>    <span class="at">Second =</span> <span class="fu">as.integer</span>(Second),</span>
-<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>    <span class="at">Film =</span> <span class="fu">factor</span>(</span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>    <span class="at">Abbrev =</span> <span class="fu">factor</span>(</span>
 <span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>      Video, </span>
 <span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>      <span class="at">levels =</span> <span class="fu">seq_along</span>(carma_files), </span>
 <span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>      <span class="at">labels =</span> <span class="fu">str_extract</span>(</span>
@@ -253,73 +257,93 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span> </span>
 <span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">Rater =</span> <span class="fu">as.integer</span>(Rater)) <span class="sc">|&gt;</span> </span>
 <span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(Video, Rater, Second) <span class="sc">|&gt;</span> </span>
-<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(Film, Video, Rater, Second, Rating)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(Abbrev, Rater, Second, Rating) <span class="sc">|&gt;</span> </span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 199,044 × 4
+   Abbrev     Rater Second Rating
+   &lt;fct&gt;      &lt;int&gt;  &lt;int&gt;  &lt;dbl&gt;
+ 1 AkeelahBee     1      1   -0.4
+ 2 AkeelahBee     1      2   -0.4
+ 3 AkeelahBee     1      3   -0.4
+ 4 AkeelahBee     1      4    0  
+ 5 AkeelahBee     1      5    0  
+ 6 AkeelahBee     1      6    0  
+ 7 AkeelahBee     1      7    0  
+ 8 AkeelahBee     1      8    0  
+ 9 AkeelahBee     1      9    0  
+10 AkeelahBee     1     10    0  
+# … with 199,034 more rows</code></pre>
+</div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Write data as a compressed RDS file</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">write_rds</span>(carma_tidy, <span class="at">file =</span> <span class="st">"./data/ratings_tidy.rds"</span>, <span class="at">compress =</span> <span class="st">"gz"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Write data as a compressed RDS file</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="fu">write_rds</span>(carma_tidy, <span class="at">file =</span> <span class="st">"./data/valence_ratings.rds"</span>, <span class="at">compress =</span> <span class="st">"gz"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="prepare-holistic-ratings" class="level2">
 <h2 class="anchored" data-anchor-id="prepare-holistic-ratings">Prepare holistic ratings</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>redcap_raw <span class="ot">&lt;-</span> </span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">read_xlsx</span>(<span class="st">"./data/redcap_cleaned.xlsx"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">separate</span>(</span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>    participant_id, </span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">into =</span> <span class="fu">c</span>(<span class="st">"rater"</span>, <span class="st">"session"</span>), </span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">sep =</span> <span class="st">"[_</span><span class="sc">\\</span><span class="st">s]"</span>, </span>
-<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">extra =</span> <span class="st">"merge"</span></span>
-<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span> </span>
-<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span><span class="fu">starts_with</span>(<span class="st">"clip"</span>)) <span class="sc">|&gt;</span> </span>
-<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(</span>
-<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>    <span class="sc">-</span><span class="fu">c</span>(rater, session), </span>
-<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">names_to =</span> <span class="st">"var"</span>, </span>
-<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">values_to =</span> <span class="st">"val"</span></span>
-<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span> </span>
-<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">separate</span>(</span>
-<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a>    var, </span>
-<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a>    <span class="at">into =</span> <span class="fu">c</span>(<span class="st">"clip"</span>, <span class="st">"scale"</span>), </span>
-<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a>    <span class="at">sep =</span> <span class="st">"_"</span>, </span>
-<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a>    <span class="at">extra =</span> <span class="st">"merge"</span></span>
-<span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span> </span>
-<span id="cb6-21"><a href="#cb6-21" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(</span>
-<span id="cb6-22"><a href="#cb6-22" aria-hidden="true" tabindex="-1"></a>    scale <span class="sc">%in%</span> <span class="fu">c</span>(</span>
-<span id="cb6-23"><a href="#cb6-23" aria-hidden="true" tabindex="-1"></a>      <span class="st">"inspired"</span>, <span class="st">"alert"</span>, <span class="st">"excited"</span>, <span class="st">"enthusiastic"</span>, <span class="st">"determined"</span>, </span>
-<span id="cb6-24"><a href="#cb6-24" aria-hidden="true" tabindex="-1"></a>      <span class="st">"afraid"</span>, <span class="st">"upset"</span>, <span class="st">"nervous"</span>, <span class="st">"scared"</span>, <span class="st">"distressed"</span></span>
-<span id="cb6-25"><a href="#cb6-25" aria-hidden="true" tabindex="-1"></a>    )</span>
-<span id="cb6-26"><a href="#cb6-26" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span> </span>
-<span id="cb6-27"><a href="#cb6-27" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(rater, clip, scale) <span class="sc">|&gt;</span> </span>
-<span id="cb6-28"><a href="#cb6-28" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(</span>
-<span id="cb6-29"><a href="#cb6-29" aria-hidden="true" tabindex="-1"></a>    <span class="at">val =</span> <span class="fu">do.call</span>(<span class="st">"coalesce"</span>, <span class="fu">as.list</span>(val)),</span>
-<span id="cb6-30"><a href="#cb6-30" aria-hidden="true" tabindex="-1"></a>    <span class="at">.groups =</span> <span class="st">"drop"</span></span>
-<span id="cb6-31"><a href="#cb6-31" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span> </span>
-<span id="cb6-32"><a href="#cb6-32" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
-<span id="cb6-33"><a href="#cb6-33" aria-hidden="true" tabindex="-1"></a>    <span class="at">scale =</span> <span class="fu">str_to_title</span>(scale),</span>
-<span id="cb6-34"><a href="#cb6-34" aria-hidden="true" tabindex="-1"></a>    <span class="at">clip =</span> <span class="fu">factor</span>(clip, <span class="at">levels =</span> <span class="fu">c</span>(<span class="st">"aatb"</span>, <span class="st">"bs"</span>, <span class="st">"cmiyc"</span>, <span class="st">"dos"</span>, <span class="st">"f"</span>, <span class="st">"fg"</span>, <span class="st">"gm"</span>, <span class="st">"gwh"</span>, <span class="st">"ks"</span>, <span class="st">"lb"</span>, <span class="st">"lb2"</span>, <span class="st">"lms"</span>, <span class="st">"m"</span>, <span class="st">"mi"</span>, <span class="st">"ms"</span>, <span class="st">"ncom"</span>, <span class="st">"pf"</span>, <span class="st">"poh"</span>, <span class="st">"pt"</span>, <span class="st">"sn"</span>, <span class="st">"sotl"</span>, <span class="st">"z"</span>),</span>
-<span id="cb6-35"><a href="#cb6-35" aria-hidden="true" tabindex="-1"></a>                  <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"Akeelah"</span>, <span class="st">"BealeStreet"</span>, <span class="st">"CatchMe"</span>, <span class="st">"DaysSummer"</span>, <span class="st">"Fences"</span>, <span class="st">"ForrestGump"</span>, <span class="st">"GreenMile"</span>, <span class="st">"GoodWill"</span>, <span class="st">"KingsSpeech"</span>, <span class="st">"LadyBird"</span>, <span class="st">"LegallyBlonde"</span>, <span class="st">"LittleMiss"</span>, <span class="st">"Moonlight"</span>, <span class="st">"Miracle"</span>, <span class="st">"MarriageStory"</span>, <span class="st">"NoCountry"</span>, <span class="st">"PulpFiction"</span>, <span class="st">"Happyness"</span>, <span class="st">"ParentTrap"</span>, <span class="st">"SocialNetwork"</span>, <span class="st">"Silence"</span>, <span class="st">"Zodiac"</span>)),</span>
-<span id="cb6-36"><a href="#cb6-36" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span> </span>
-<span id="cb6-37"><a href="#cb6-37" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>redcap_raw <span class="ot">&lt;-</span> </span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">read_xlsx</span>(<span class="st">"./data/holistic_ratings_raw.xlsx"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">separate</span>(</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>    participant_id, </span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">into =</span> <span class="fu">c</span>(<span class="st">"Rater"</span>, <span class="st">"Session"</span>), </span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">sep =</span> <span class="st">"[_</span><span class="sc">\\</span><span class="st">s]"</span>, </span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">extra =</span> <span class="st">"merge"</span></span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span> </span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span><span class="fu">starts_with</span>(<span class="st">"clip"</span>)) <span class="sc">|&gt;</span> </span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(</span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>    <span class="sc">-</span><span class="fu">c</span>(Rater, Session), </span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">names_to =</span> <span class="st">"var"</span>, </span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">values_to =</span> <span class="st">"Rating"</span></span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span> </span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">separate</span>(</span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a>    var, </span>
+<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a>    <span class="at">into =</span> <span class="fu">c</span>(<span class="st">"Abbrev"</span>, <span class="st">"Scale"</span>), </span>
+<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a>    <span class="at">sep =</span> <span class="st">"_"</span>, </span>
+<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a>    <span class="at">extra =</span> <span class="st">"merge"</span></span>
+<span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span> </span>
+<span id="cb7-21"><a href="#cb7-21" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(</span>
+<span id="cb7-22"><a href="#cb7-22" aria-hidden="true" tabindex="-1"></a>    Scale <span class="sc">%in%</span> <span class="fu">c</span>(</span>
+<span id="cb7-23"><a href="#cb7-23" aria-hidden="true" tabindex="-1"></a>      <span class="st">"inspired"</span>, <span class="st">"alert"</span>, <span class="st">"excited"</span>, <span class="st">"enthusiastic"</span>, <span class="st">"determined"</span>, </span>
+<span id="cb7-24"><a href="#cb7-24" aria-hidden="true" tabindex="-1"></a>      <span class="st">"afraid"</span>, <span class="st">"upset"</span>, <span class="st">"nervous"</span>, <span class="st">"scared"</span>, <span class="st">"distressed"</span></span>
+<span id="cb7-25"><a href="#cb7-25" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb7-26"><a href="#cb7-26" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span> </span>
+<span id="cb7-27"><a href="#cb7-27" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(Rater, Abbrev, Scale) <span class="sc">|&gt;</span> </span>
+<span id="cb7-28"><a href="#cb7-28" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(</span>
+<span id="cb7-29"><a href="#cb7-29" aria-hidden="true" tabindex="-1"></a>    <span class="at">Rating =</span> <span class="fu">do.call</span>(<span class="st">"coalesce"</span>, <span class="fu">as.list</span>(Rating)),</span>
+<span id="cb7-30"><a href="#cb7-30" aria-hidden="true" tabindex="-1"></a>    <span class="at">.groups =</span> <span class="st">"drop"</span></span>
+<span id="cb7-31"><a href="#cb7-31" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span> </span>
+<span id="cb7-32"><a href="#cb7-32" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb7-33"><a href="#cb7-33" aria-hidden="true" tabindex="-1"></a>    <span class="at">Rater =</span> <span class="fu">as.integer</span>(<span class="fu">parse_number</span>(Rater)),</span>
+<span id="cb7-34"><a href="#cb7-34" aria-hidden="true" tabindex="-1"></a>    <span class="at">Scale =</span> <span class="fu">str_to_title</span>(Scale),</span>
+<span id="cb7-35"><a href="#cb7-35" aria-hidden="true" tabindex="-1"></a>    <span class="at">Abbrev =</span> <span class="fu">factor</span>(Abbrev, <span class="at">levels =</span> <span class="fu">c</span>(<span class="st">"aatb"</span>, <span class="st">"bs"</span>, <span class="st">"cmiyc"</span>, <span class="st">"dos"</span>, <span class="st">"f"</span>, <span class="st">"fg"</span>, <span class="st">"gm"</span>, <span class="st">"gwh"</span>, <span class="st">"ks"</span>, <span class="st">"lb"</span>, <span class="st">"lb2"</span>, <span class="st">"lms"</span>, <span class="st">"m"</span>, <span class="st">"mi"</span>, <span class="st">"ms"</span>, <span class="st">"ncom"</span>, <span class="st">"pf"</span>, <span class="st">"poh"</span>, <span class="st">"pt"</span>, <span class="st">"sn"</span>, <span class="st">"sotl"</span>, <span class="st">"z"</span>),</span>
+<span id="cb7-36"><a href="#cb7-36" aria-hidden="true" tabindex="-1"></a>                  <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"AkeelahBee"</span>, <span class="st">"BealeStreet"</span>, <span class="st">"CatchMe"</span>, <span class="st">"DaysSummer"</span>, <span class="st">"Fences"</span>, <span class="st">"ForrestGump"</span>, <span class="st">"GreenMile"</span>, <span class="st">"GoodWill"</span>, <span class="st">"KingsSpeech"</span>, <span class="st">"LadyBird"</span>, <span class="st">"LegallyBlonde"</span>, <span class="st">"LittleMiss"</span>, <span class="st">"Moonlight"</span>, <span class="st">"Miracle"</span>, <span class="st">"MarriageStory"</span>, <span class="st">"NoCountry"</span>, <span class="st">"PulpFiction"</span>, <span class="st">"PursuitHappyness"</span>, <span class="st">"ParentTrap"</span>, <span class="st">"SocialNetwork"</span>, <span class="st">"Silence"</span>, <span class="st">"Zodiac"</span>)),</span>
+<span id="cb7-37"><a href="#cb7-37" aria-hidden="true" tabindex="-1"></a>    <span class="at">Rating =</span> Rating <span class="sc">-</span> <span class="dv">1</span></span>
+<span id="cb7-38"><a href="#cb7-38" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span> </span>
+<span id="cb7-39"><a href="#cb7-39" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(Abbrev, Rater, Scale, Rating) <span class="sc">|&gt;</span> </span>
+<span id="cb7-40"><a href="#cb7-40" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 7,920 × 4
-   rater clip    scale          val
-   &lt;chr&gt; &lt;fct&gt;   &lt;chr&gt;        &lt;dbl&gt;
- 1 MW1   Akeelah Afraid           1
- 2 MW1   Akeelah Alert            4
- 3 MW1   Akeelah Determined       4
- 4 MW1   Akeelah Distressed       1
- 5 MW1   Akeelah Enthusiastic     4
- 6 MW1   Akeelah Excited          4
- 7 MW1   Akeelah Inspired         5
- 8 MW1   Akeelah Nervous          1
- 9 MW1   Akeelah Scared           1
-10 MW1   Akeelah Upset            1
+   Abbrev     Rater Scale        Rating
+   &lt;fct&gt;      &lt;int&gt; &lt;chr&gt;         &lt;dbl&gt;
+ 1 AkeelahBee     1 Afraid            0
+ 2 AkeelahBee     1 Alert             3
+ 3 AkeelahBee     1 Determined        3
+ 4 AkeelahBee     1 Distressed        0
+ 5 AkeelahBee     1 Enthusiastic      3
+ 6 AkeelahBee     1 Excited           3
+ 7 AkeelahBee     1 Inspired          4
+ 8 AkeelahBee     1 Nervous           0
+ 9 AkeelahBee     1 Scared            0
+10 AkeelahBee     1 Upset             0
 # … with 7,910 more rows</code></pre>
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Write data as a compressed RDS file</span></span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="fu">write_rds</span>(redcap_raw, <span class="at">file =</span> <span class="st">"./data/panas_tidy.rds"</span>, <span class="at">compress =</span> <span class="st">"gz"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Write data as a compressed RDS file</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="fu">write_rds</span>(redcap_raw, <span class="at">file =</span> <span class="st">"./data/holistic_ratings.rds"</span>, <span class="at">compress =</span> <span class="st">"gz"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 
 

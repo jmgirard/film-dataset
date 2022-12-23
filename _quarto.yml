@@ -10,8 +10,10 @@ website:
         href: overview.qmd
       - text: "Film Clips"
         menu:
-          - text: "Akeelah"
-            href: akeelah.qmd
+          - text: "Akeelah and the Bee"
+            href: AkeelahBee.qmd
+          - text: "If Beale Street Could Talk"
+            href: BealeStreet.qmd
 format:
   html:
     theme: cosmo
