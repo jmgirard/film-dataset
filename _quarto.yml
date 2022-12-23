@@ -30,6 +30,12 @@ website:
             href: KingsSpeech.qmd
           - text: "[LadyBird] Lady Bird"
             href: LadyBird.qmd
+          - text: "[LegallyBlonde] Legally Blonde"
+            href: LegallyBlonde.qmd
+          - text: "[LittleMiss] Little Miss Sunshine"
+            href: LittleMiss.qmd
+          - text: "[MarriageStory] Marriage Story"
+            href: MarriageStory.qmd
           - text: "[PursuitHappyness] The Pursuit of Happyness"
             href: PursuitHappyness.qmd
 format:

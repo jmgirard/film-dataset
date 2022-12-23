@@ -1,5 +1,446 @@
 [
   {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site\n\n1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "AkeelahBee.html#film-information",
+    "href": "AkeelahBee.html#film-information",
+    "title": "Akeelah and the Bee",
+    "section": "Film Information",
+    "text": "Film Information\n\n\nAkeelah and the Bee is a 2006 American drama film written and directed by Doug Atchison. It tells the story of Akeelah Anderson (Keke Palmer), an 11-year-old girl who participates in the Scripps National Spelling Bee, her mother (Angela Bassett), her schoolmates, and her coach, Dr. Joshua Larabee (Laurence Fishburne). The cast also features Curtis Armstrong, J.R. Villarreal, Sean Michael Afable, Erica Hubbard, Lee Thompson Young, Julito McCullum, Sahara Garey, Eddie Steeples, and Tzi Ma.\n\nThe credits for the film read, “A Lionsgate, 2929 Productions and Starbucks Entertainment presentation of an Out of the Blue and Reactor Films production in association with Cinema Gypsy Productions.”\n\n\n\n\n\n\n\nAll information in this section came directly from Wikipedia."
+  },
+  {
+    "objectID": "AkeelahBee.html#clip-information",
+    "href": "AkeelahBee.html#clip-information",
+    "title": "Akeelah and the Bee",
+    "section": "Clip Information",
+    "text": "Clip Information\nTextual description of what happens in the clip…\n\n\n\n\n\n\n\n \n  \n    Abbrev \n    Film \n    Clip_Start \n    Clip_Stop \n    Duration \n  \n \n\n  \n    AkeelahBee \n    Akeelah and the Bee (2006) \n    01:42:23 \n    01:45:07 \n    164"
+  },
+  {
+    "objectID": "AkeelahBee.html#holistic-ratings",
+    "href": "AkeelahBee.html#holistic-ratings",
+    "title": "Akeelah and the Bee",
+    "section": "Holistic Ratings",
+    "text": "Holistic Ratings\nA total of 35 participants watched this film clip and then provided holistic ratings on how the entire clip made them feel. These holistic ratings were completed using five positive emotion scales (i.e., alert, determined, enthusiastic, excited, inspired) and five negative emotion scales (i.e., afraid, distressed, nervous, scared, upset), each rated on an ordinal scale from 0 to 4."
+  },
+  {
+    "objectID": "AkeelahBee.html#continuous-ratings",
+    "href": "AkeelahBee.html#continuous-ratings",
+    "title": "Akeelah and the Bee",
+    "section": "Continuous Ratings",
+    "text": "Continuous Ratings\nA total of 33 participants watched this film clip and used the CARMA software to provide continuous (i.e., second-by-second) ratings of how it made them feel. These continuous ratings were made on a single emotional valence scale ranging from -4 (very negative) to 4 (very positive).\n\nTime Series\nWe can plot the distribution of all valence ratings per second of the film clip to get a sense of how its emotional tone changes over time. The solid black line represents the mean of all ratings and the yellow, green, and purple ribbons represent the central 50%, 70%, and 90% of the ratings, respectively.\n\n\n\n\n\n\n\nInter-Rater Reliability\n\n\n\nA Bayesian generalizability study was used to decompose the variance in ratings of this video clip into the following components: timepoint variance (in average ratings of each second, across raters), rater variance (in average ratings from each rater, across seconds), and residual variance (including second-by-rater interactions and measurement error). Timepoint variance was estimated at 1.31, 95% ETI: [1.1, 1.73]; rater variance was estimated at 0.4 [0.28, 0.79]; and residual variance was estimated at 0.54 [0.52, 0.56]. See the figure below for the posterior distributions of each component.\n\n\n\n\n\nFrom these variance components, we can estimate inter-rater reliability of the ratings. There are many formulations of the two-way intraclass correlation (ICC), but the most relevant to our purposes here is the balanced average-measures consistency formulation or ICC(C,k). Inter-rater reliability under this formulation was estimated as 0.989, 95% ETI: [0.985, 0.991]. See the middle of the second row in the figure below for the posterior distribution of this formulation."
+  },
+  {
+    "objectID": "BealeStreet.html#film-information",
+    "href": "BealeStreet.html#film-information",
+    "title": "If Beale Street Could Talk",
+    "section": "Film Information",
+    "text": "Film Information\n\n\nIf Beale Street Could Talk is a 2018 American romantic drama film written and directed by Barry Jenkins and based on James Baldwin’s 1974 novel of the same name. It stars an ensemble cast that includes KiKi Layne, Stephan James, Colman Domingo, Teyonah Parris, Michael Beach, Dave Franco, Diego Luna, Pedro Pascal, Ed Skrein, Brian Tyree Henry, and Regina King. The film follows a young woman who, with her family’s support, seeks to clear the name of her wrongly charged lover and prove his innocence before the birth of their child.\n\n\n\n\n\n\n\nAll information in this section came directly from Wikipedia."
+  },
+  {
+    "objectID": "BealeStreet.html#clip-information",
+    "href": "BealeStreet.html#clip-information",
+    "title": "If Beale Street Could Talk",
+    "section": "Clip Information",
+    "text": "Clip Information\nTextual description of what happens in the clip…\n\n\n\n\n\n\n\n \n  \n    Abbrev \n    Film \n    Clip_Start \n    Clip_Stop \n    Duration \n  \n \n\n  \n    BealeStreet \n    If Beale Street Could Talk (2018) \n    NA \n    NA \n    162"
+  },
+  {
+    "objectID": "BealeStreet.html#holistic-ratings",
+    "href": "BealeStreet.html#holistic-ratings",
+    "title": "If Beale Street Could Talk",
+    "section": "Holistic Ratings",
+    "text": "Holistic Ratings\nA total of 32 participants watched this film clip and then provided holistic ratings on how the entire clip made them feel. These holistic ratings were completed using five positive emotion scales (i.e., alert, determined, enthusiastic, excited, inspired) and five negative emotion scales (i.e., afraid, distressed, nervous, scared, upset), each rated on an ordinal scale from 0 to 4."
+  },
+  {
+    "objectID": "BealeStreet.html#continuous-ratings",
+    "href": "BealeStreet.html#continuous-ratings",
+    "title": "If Beale Street Could Talk",
+    "section": "Continuous Ratings",
+    "text": "Continuous Ratings\nA total of 30 participants watched this film clip and used the CARMA software to provide continuous (i.e., second-by-second) ratings of how it made them feel. These continuous ratings were made on a single emotional valence scale ranging from -4 (very negative) to 4 (very positive).\n\nTime Series\nWe can plot the distribution of all valence ratings per second of the film clip to get a sense of how its emotional tone changes over time. The solid black line represents the mean of all ratings and the yellow, green, and purple ribbons represent the central 50%, 70%, and 90% of the ratings, respectively.\n\n\n\n\n\n\n\nInter-Rater Reliability\n\n\n\nA Bayesian generalizability study was used to decompose the variance in ratings of this video clip into the following components: timepoint variance (in average ratings of each second, across raters), rater variance (in average ratings from each rater, across seconds), and residual variance (including second-by-rater interactions and measurement error). Timepoint variance was estimated at 0.2, 95% ETI: [0.15, 0.26]; rater variance was estimated at 0.59 [0.39, 1.15]; and residual variance was estimated at 1.04 [1, 1.08]. See the figure below for the posterior distributions of each component.\n\n\n\n\n\nFrom these variance components, we can estimate inter-rater reliability of the ratings. There are many formulations of the two-way intraclass correlation (ICC), but the most relevant to our purposes here is the balanced average-measures consistency formulation or ICC(C,k). Inter-rater reliability under this formulation was estimated as 0.853, 95% ETI: [0.816, 0.882]. See the middle of the second row in the figure below for the posterior distribution of this formulation."
+  },
+  {
+    "objectID": "CatchMe.html#film-information",
+    "href": "CatchMe.html#film-information",
+    "title": "Catch Me If You Can",
+    "section": "Film Information",
+    "text": "Film Information\n\n\nCatch Me If You Can is a 2002 American biographical crime comedy-drama film directed and produced by Steven Spielberg and starring Leonardo DiCaprio and Tom Hanks with Christopher Walken, Martin Sheen, Nathalie Baye, Amy Adams and James Brolin in supporting roles. The screenplay by Jeff Nathanson is based on the “autobiography” of Frank Abagnale, who claims that before his 19th birthday, he successfully performed cons worth millions of dollars by posing as a Pan American World Airways pilot, a Georgia doctor, and a Louisiana parish prosecutor. The truth of his story is questionable.\n\n\n\n\n\n\n\nAll information in this section came directly from Wikipedia."
+  },
+  {
+    "objectID": "CatchMe.html#clip-information",
+    "href": "CatchMe.html#clip-information",
+    "title": "Catch Me If You Can",
+    "section": "Clip Information",
+    "text": "Clip Information\nTextual description of what happens in the clip…\n\n\n\n\n\n\n\n \n  \n    Abbrev \n    Film \n    Clip_Start \n    Clip_Stop \n    Duration \n  \n \n\n  \n    CatchMe \n    Catch Me If You Can (2002) \n    NA \n    NA \n    274"
+  },
+  {
+    "objectID": "CatchMe.html#holistic-ratings",
+    "href": "CatchMe.html#holistic-ratings",
+    "title": "Catch Me If You Can",
+    "section": "Holistic Ratings",
+    "text": "Holistic Ratings\nA total of 36 participants watched this film clip and then provided holistic ratings on how the entire clip made them feel. These holistic ratings were completed using five positive emotion scales (i.e., alert, determined, enthusiastic, excited, inspired) and five negative emotion scales (i.e., afraid, distressed, nervous, scared, upset), each rated on an ordinal scale from 0 to 4."
+  },
+  {
+    "objectID": "CatchMe.html#continuous-ratings",
+    "href": "CatchMe.html#continuous-ratings",
+    "title": "Catch Me If You Can",
+    "section": "Continuous Ratings",
+    "text": "Continuous Ratings\nA total of 36 participants watched this film clip and used the CARMA software to provide continuous (i.e., second-by-second) ratings of how it made them feel. These continuous ratings were made on a single emotional valence scale ranging from -4 (very negative) to 4 (very positive).\n\nTime Series\nWe can plot the distribution of all valence ratings per second of the film clip to get a sense of how its emotional tone changes over time. The solid black line represents the mean of all ratings and the yellow, green, and purple ribbons represent the central 50%, 70%, and 90% of the ratings, respectively.\n\n\n\n\n\n\n\nInter-Rater Reliability\n\n\n\nA Bayesian generalizability study was used to decompose the variance in ratings of this video clip into the following components: timepoint variance (in average ratings of each second, across raters), rater variance (in average ratings from each rater, across seconds), and residual variance (including second-by-rater interactions and measurement error). Timepoint variance was estimated at 0.76, 95% ETI: [0.65, 0.92]; rater variance was estimated at 0.36 [0.24, 0.64]; and residual variance was estimated at 0.99 [0.96, 1.02]. See the figure below for the posterior distributions of each component.\n\n\n\n\n\nFrom these variance components, we can estimate inter-rater reliability of the ratings. There are many formulations of the two-way intraclass correlation (ICC), but the most relevant to our purposes here is the balanced average-measures consistency formulation or ICC(C,k). Inter-rater reliability under this formulation was estimated as 0.966, 95% ETI: [0.959, 0.971]. See the middle of the second row in the figure below for the posterior distribution of this formulation."
+  },
+  {
+    "objectID": "DaysSummer.html#film-information",
+    "href": "DaysSummer.html#film-information",
+    "title": "500 Days of Summer",
+    "section": "Film Information",
+    "text": "Film Information\n\n\n500 Days of Summer is a 2009 American romantic comedy-drama film directed by Marc Webb from a screenplay written by Scott Neustadter and Michael H. Weber, and produced by Mark Waters. The film stars Joseph Gordon-Levitt and Zooey Deschanel and employs a nonlinear narrative structure, with the story based upon its male protagonist and his memories of a failed relationship.\n\n\n\n\n\n\n\nAll information in this section came directly from Wikipedia."
+  },
+  {
+    "objectID": "DaysSummer.html#clip-information",
+    "href": "DaysSummer.html#clip-information",
+    "title": "500 Days of Summer",
+    "section": "Clip Information",
+    "text": "Clip Information\nTextual description of what happens in the clip…\n\n\n\n\n\n\n\n \n  \n    Abbrev \n    Film \n    Clip_Start \n    Clip_Stop \n    Duration \n  \n \n\n  \n    DaysSummer \n    500 Days of Summer (2009) \n    NA \n    NA \n    132"
+  },
+  {
+    "objectID": "DaysSummer.html#holistic-ratings",
+    "href": "DaysSummer.html#holistic-ratings",
+    "title": "500 Days of Summer",
+    "section": "Holistic Ratings",
+    "text": "Holistic Ratings\nA total of 34 participants watched this film clip and then provided holistic ratings on how the entire clip made them feel. These holistic ratings were completed using five positive emotion scales (i.e., alert, determined, enthusiastic, excited, inspired) and five negative emotion scales (i.e., afraid, distressed, nervous, scared, upset), each rated on an ordinal scale from 0 to 4."
+  },
+  {
+    "objectID": "DaysSummer.html#continuous-ratings",
+    "href": "DaysSummer.html#continuous-ratings",
+    "title": "500 Days of Summer",
+    "section": "Continuous Ratings",
+    "text": "Continuous Ratings\nA total of 31 participants watched this film clip and used the CARMA software to provide continuous (i.e., second-by-second) ratings of how it made them feel. These continuous ratings were made on a single emotional valence scale ranging from -4 (very negative) to 4 (very positive).\n\nTime Series\nWe can plot the distribution of all valence ratings per second of the film clip to get a sense of how its emotional tone changes over time. The solid black line represents the mean of all ratings and the yellow, green, and purple ribbons represent the central 50%, 70%, and 90% of the ratings, respectively.\n\n\n\n\n\n\n\nInter-Rater Reliability\n\n\n\nA Bayesian generalizability study was used to decompose the variance in ratings of this video clip into the following components: timepoint variance (in average ratings of each second, across raters), rater variance (in average ratings from each rater, across seconds), and residual variance (including second-by-rater interactions and measurement error). Timepoint variance was estimated at 0.18, 95% ETI: [0.15, 0.26]; rater variance was estimated at 0.58 [0.37, 1.06]; and residual variance was estimated at 0.82 [0.79, 0.86]. See the figure below for the posterior distributions of each component.\n\n\n\n\n\nFrom these variance components, we can estimate inter-rater reliability of the ratings. There are many formulations of the two-way intraclass correlation (ICC), but the most relevant to our purposes here is the balanced average-measures consistency formulation or ICC(C,k). Inter-rater reliability under this formulation was estimated as 0.883, 95% ETI: [0.846, 0.906]. See the middle of the second row in the figure below for the posterior distribution of this formulation."
+  },
+  {
+    "objectID": "Fences.html#film-information",
+    "href": "Fences.html#film-information",
+    "title": "Fences",
+    "section": "Film Information",
+    "text": "Film Information\n\n\nFences is a 2016 American period drama film starring, produced and directed by Denzel Washington and written by August Wilson, based on his Pulitzer Prize-winning 1985 play of the same name. Wilson was in Pittsburgh, Pennsylvania, and originally wanted to pursue being a poet, but later found passion for being a playwright. In addition to Washington, the film also stars Viola Davis, Stephen McKinley Henderson, Jovan Adepo, Russell Hornsby, Mykelti Williamson, and Saniyya Sidney.\n\n\n\n\n\n\n\nAll information in this section came directly from Wikipedia."
+  },
+  {
+    "objectID": "Fences.html#clip-information",
+    "href": "Fences.html#clip-information",
+    "title": "Fences",
+    "section": "Clip Information",
+    "text": "Clip Information\nTextual description of what happens in the clip…\n\n\n\n\n\n\n\n \n  \n    Abbrev \n    Film \n    Clip_Start \n    Clip_Stop \n    Duration \n  \n \n\n  \n    Fences \n    Fences (2016) \n    NA \n    NA \n    134"
+  },
+  {
+    "objectID": "Fences.html#holistic-ratings",
+    "href": "Fences.html#holistic-ratings",
+    "title": "Fences",
+    "section": "Holistic Ratings",
+    "text": "Holistic Ratings\nA total of 34 participants watched this film clip and then provided holistic ratings on how the entire clip made them feel. These holistic ratings were completed using five positive emotion scales (i.e., alert, determined, enthusiastic, excited, inspired) and five negative emotion scales (i.e., afraid, distressed, nervous, scared, upset), each rated on an ordinal scale from 0 to 4."
+  },
+  {
+    "objectID": "Fences.html#continuous-ratings",
+    "href": "Fences.html#continuous-ratings",
+    "title": "Fences",
+    "section": "Continuous Ratings",
+    "text": "Continuous Ratings\nA total of 30 participants watched this film clip and used the CARMA software to provide continuous (i.e., second-by-second) ratings of how it made them feel. These continuous ratings were made on a single emotional valence scale ranging from -4 (very negative) to 4 (very positive).\n\nTime Series\nWe can plot the distribution of all valence ratings per second of the film clip to get a sense of how its emotional tone changes over time. The solid black line represents the mean of all ratings and the yellow, green, and purple ribbons represent the central 50%, 70%, and 90% of the ratings, respectively.\n\n\n\n\n\n\n\nInter-Rater Reliability\n\n\n\nA Bayesian generalizability study was used to decompose the variance in ratings of this video clip into the following components: timepoint variance (in average ratings of each second, across raters), rater variance (in average ratings from each rater, across seconds), and residual variance (including second-by-rater interactions and measurement error). Timepoint variance was estimated at 0.56, 95% ETI: [0.45, 0.73]; rater variance was estimated at 0.78 [0.52, 1.49]; and residual variance was estimated at 0.59 [0.56, 0.62]. See the figure below for the posterior distributions of each component.\n\n\n\n\n\nFrom these variance components, we can estimate inter-rater reliability of the ratings. There are many formulations of the two-way intraclass correlation (ICC), but the most relevant to our purposes here is the balanced average-measures consistency formulation or ICC(C,k). Inter-rater reliability under this formulation was estimated as 0.967, 95% ETI: [0.958, 0.974]. See the middle of the second row in the figure below for the posterior distribution of this formulation."
+  },
+  {
+    "objectID": "ForrestGump.html#film-information",
+    "href": "ForrestGump.html#film-information",
+    "title": "Forrest Gump",
+    "section": "Film Information",
+    "text": "Film Information\n\n\nForrest Gump is a 1994 American comedy-drama film directed by Robert Zemeckis and written by Eric Roth. It is based on the 1986 novel of the same name by Winston Groom and stars Tom Hanks, Robin Wright, Gary Sinise, Mykelti Williamson and Sally Field. The film follows several decades in the life of a slow-witted and kindhearted Alabama man named Forrest Gump (Hanks) and his experiences in the 20th-century United States. The film differs substantially from the novel.\n\n\n\n\n\n\n\nAll information in this section came directly from Wikipedia."
+  },
+  {
+    "objectID": "ForrestGump.html#clip-information",
+    "href": "ForrestGump.html#clip-information",
+    "title": "Forrest Gump",
+    "section": "Clip Information",
+    "text": "Clip Information\nTextual description of what happens in the clip…\n\n\n\n\n\n\n\n \n  \n    Abbrev \n    Film \n    Clip_Start \n    Clip_Stop \n    Duration \n  \n \n\n  \n    ForrestGump \n    Forrest Gump (1994) \n    NA \n    NA \n    218"
+  },
+  {
+    "objectID": "ForrestGump.html#holistic-ratings",
+    "href": "ForrestGump.html#holistic-ratings",
+    "title": "Forrest Gump",
+    "section": "Holistic Ratings",
+    "text": "Holistic Ratings\nA total of 34 participants watched this film clip and then provided holistic ratings on how the entire clip made them feel. These holistic ratings were completed using five positive emotion scales (i.e., alert, determined, enthusiastic, excited, inspired) and five negative emotion scales (i.e., afraid, distressed, nervous, scared, upset), each rated on an ordinal scale from 0 to 4."
+  },
+  {
+    "objectID": "ForrestGump.html#continuous-ratings",
+    "href": "ForrestGump.html#continuous-ratings",
+    "title": "Forrest Gump",
+    "section": "Continuous Ratings",
+    "text": "Continuous Ratings\nA total of 32 participants watched this film clip and used the CARMA software to provide continuous (i.e., second-by-second) ratings of how it made them feel. These continuous ratings were made on a single emotional valence scale ranging from -4 (very negative) to 4 (very positive).\n\nTime Series\nWe can plot the distribution of all valence ratings per second of the film clip to get a sense of how its emotional tone changes over time. The solid black line represents the mean of all ratings and the yellow, green, and purple ribbons represent the central 50%, 70%, and 90% of the ratings, respectively.\n\n\n\n\n\n\n\nInter-Rater Reliability\n\n\n\nA Bayesian generalizability study was used to decompose the variance in ratings of this video clip into the following components: timepoint variance (in average ratings of each second, across raters), rater variance (in average ratings from each rater, across seconds), and residual variance (including second-by-rater interactions and measurement error). Timepoint variance was estimated at 0.24, 95% ETI: [0.2, 0.31]; rater variance was estimated at 0.97 [0.66, 1.83]; and residual variance was estimated at 1.36 [1.32, 1.41]. See the figure below for the posterior distributions of each component.\n\n\n\n\n\nFrom these variance components, we can estimate inter-rater reliability of the ratings. There are many formulations of the two-way intraclass correlation (ICC), but the most relevant to our purposes here is the balanced average-measures consistency formulation or ICC(C,k). Inter-rater reliability under this formulation was estimated as 0.855, 95% ETI: [0.823, 0.88]. See the middle of the second row in the figure below for the posterior distribution of this formulation."
+  },
+  {
+    "objectID": "GoodWill.html#film-information",
+    "href": "GoodWill.html#film-information",
+    "title": "Good Will Hunting",
+    "section": "Film Information",
+    "text": "Film Information\n\n\nGood Will Hunting is a 1997 American psychological drama film directed by Gus Van Sant, and written by Ben Affleck and Matt Damon. It stars Robin Williams, Damon, Affleck, Stellan Skarsgård and Minnie Driver.\n\n\n\n\n\n\n\nAll information in this section came directly from Wikipedia."
+  },
+  {
+    "objectID": "GoodWill.html#clip-information",
+    "href": "GoodWill.html#clip-information",
+    "title": "Good Will Hunting",
+    "section": "Clip Information",
+    "text": "Clip Information\nTextual description of what happens in the clip…\n\n\n\n\n\n\n\n \n  \n    Abbrev \n    Film \n    Clip_Start \n    Clip_Stop \n    Duration \n  \n \n\n  \n    GoodWill \n    Good Will Hunting (1997) \n    NA \n    NA \n    150"
+  },
+  {
+    "objectID": "GoodWill.html#holistic-ratings",
+    "href": "GoodWill.html#holistic-ratings",
+    "title": "Good Will Hunting",
+    "section": "Holistic Ratings",
+    "text": "Holistic Ratings\nA total of 33 participants watched this film clip and then provided holistic ratings on how the entire clip made them feel. These holistic ratings were completed using five positive emotion scales (i.e., alert, determined, enthusiastic, excited, inspired) and five negative emotion scales (i.e., afraid, distressed, nervous, scared, upset), each rated on an ordinal scale from 0 to 4."
+  },
+  {
+    "objectID": "GoodWill.html#continuous-ratings",
+    "href": "GoodWill.html#continuous-ratings",
+    "title": "Good Will Hunting",
+    "section": "Continuous Ratings",
+    "text": "Continuous Ratings\nA total of 29 participants watched this film clip and used the CARMA software to provide continuous (i.e., second-by-second) ratings of how it made them feel. These continuous ratings were made on a single emotional valence scale ranging from -4 (very negative) to 4 (very positive).\n\nTime Series\nWe can plot the distribution of all valence ratings per second of the film clip to get a sense of how its emotional tone changes over time. The solid black line represents the mean of all ratings and the yellow, green, and purple ribbons represent the central 50%, 70%, and 90% of the ratings, respectively.\n\n\n\n\n\n\n\nInter-Rater Reliability\n\n\n\nA Bayesian generalizability study was used to decompose the variance in ratings of this video clip into the following components: timepoint variance (in average ratings of each second, across raters), rater variance (in average ratings from each rater, across seconds), and residual variance (including second-by-rater interactions and measurement error). Timepoint variance was estimated at 0.4, 95% ETI: [0.31, 0.51]; rater variance was estimated at 1.07 [0.7, 2.11]; and residual variance was estimated at 0.8 [0.77, 0.84]. See the figure below for the posterior distributions of each component.\n\n\n\n\n\nFrom these variance components, we can estimate inter-rater reliability of the ratings. There are many formulations of the two-way intraclass correlation (ICC), but the most relevant to our purposes here is the balanced average-measures consistency formulation or ICC(C,k). Inter-rater reliability under this formulation was estimated as 0.937, 95% ETI: [0.919, 0.949]. See the middle of the second row in the figure below for the posterior distribution of this formulation."
+  },
+  {
+    "objectID": "GreenMile.html#film-information",
+    "href": "GreenMile.html#film-information",
+    "title": "The Green Mile",
+    "section": "Film Information",
+    "text": "Film Information\n\n\nThe Green Mile is a 1999 American fantasy drama film written and directed by Frank Darabont and based on Stephen King’s 1996 novel of the same name. It stars Tom Hanks as a death row prison guard during the Great Depression who witnesses supernatural events following the arrival of an enigmatic convict (Michael Clarke Duncan) at his facility. David Morse, Bonnie Hunt, Sam Rockwell, and James Cromwell appear in supporting roles.\n\n\n\n\n\n\n\nAll information in this section came directly from Wikipedia."
+  },
+  {
+    "objectID": "GreenMile.html#clip-information",
+    "href": "GreenMile.html#clip-information",
+    "title": "The Green Mile",
+    "section": "Clip Information",
+    "text": "Clip Information\nTextual description of what happens in the clip…\n\n\n\n\n\n\n\n \n  \n    Abbrev \n    Film \n    Clip_Start \n    Clip_Stop \n    Duration \n  \n \n\n  \n    GreenMile \n    The Green Mile (1999) \n    NA \n    NA \n    239"
+  },
+  {
+    "objectID": "GreenMile.html#holistic-ratings",
+    "href": "GreenMile.html#holistic-ratings",
+    "title": "The Green Mile",
+    "section": "Holistic Ratings",
+    "text": "Holistic Ratings\nA total of 33 participants watched this film clip and then provided holistic ratings on how the entire clip made them feel. These holistic ratings were completed using five positive emotion scales (i.e., alert, determined, enthusiastic, excited, inspired) and five negative emotion scales (i.e., afraid, distressed, nervous, scared, upset), each rated on an ordinal scale from 0 to 4."
+  },
+  {
+    "objectID": "GreenMile.html#continuous-ratings",
+    "href": "GreenMile.html#continuous-ratings",
+    "title": "The Green Mile",
+    "section": "Continuous Ratings",
+    "text": "Continuous Ratings\nA total of 30 participants watched this film clip and used the CARMA software to provide continuous (i.e., second-by-second) ratings of how it made them feel. These continuous ratings were made on a single emotional valence scale ranging from -4 (very negative) to 4 (very positive).\n\nTime Series\nWe can plot the distribution of all valence ratings per second of the film clip to get a sense of how its emotional tone changes over time. The solid black line represents the mean of all ratings and the yellow, green, and purple ribbons represent the central 50%, 70%, and 90% of the ratings, respectively.\n\n\n\n\n\n\n\nInter-Rater Reliability\n\n\n\nA Bayesian generalizability study was used to decompose the variance in ratings of this video clip into the following components: timepoint variance (in average ratings of each second, across raters), rater variance (in average ratings from each rater, across seconds), and residual variance (including second-by-rater interactions and measurement error). Timepoint variance was estimated at 0.49, 95% ETI: [0.42, 0.61]; rater variance was estimated at 0.91 [0.6, 1.73]; and residual variance was estimated at 0.63 [0.61, 0.65]. See the figure below for the posterior distributions of each component.\n\n\n\n\n\nFrom these variance components, we can estimate inter-rater reliability of the ratings. There are many formulations of the two-way intraclass correlation (ICC), but the most relevant to our purposes here is the balanced average-measures consistency formulation or ICC(C,k). Inter-rater reliability under this formulation was estimated as 0.96, 95% ETI: [0.952, 0.967]. See the middle of the second row in the figure below for the posterior distribution of this formulation."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "film-dataset",
+    "section": "",
+    "text": "This is the webpage for the film-dataset. Within you can find information about the dataset as a whole, about each film clip in the dataset, and about the dataset collection methodology. You can also download the clips and deidentified data for your own research.\nJeffrey M. Girard, PhD Department of Psychology University of Kansas jmgirard@ku.edu\nEinat Liebenthal, DSc McLean Hospital Harvard Medical School eliebenthal@mclean.harvard.edu\nYanmei Tie, PhD, MS Brigam and Women’s Hospital Harvard Medical School ytie@bwh.harvard.edu"
+  },
+  {
+    "objectID": "KingsSpeech.html#film-information",
+    "href": "KingsSpeech.html#film-information",
+    "title": "The King’s Speech",
+    "section": "Film Information",
+    "text": "Film Information\n\n\nThe King’s Speech is a 2010 British historical drama film directed by Tom Hooper and written by David Seidler. Colin Firth plays the future King George VI who, to cope with a stammer, sees Lionel Logue, an Australian speech and language therapist played by Geoffrey Rush. The men become friends as they work together, and after his brother abdicates the throne, the new king relies on Logue to help him make his first wartime radio broadcast upon Britain’s declaration of war on Germany in 1939.\n\n\n\n\n\n\n\nAll information in this section came directly from Wikipedia."
+  },
+  {
+    "objectID": "KingsSpeech.html#clip-information",
+    "href": "KingsSpeech.html#clip-information",
+    "title": "The King’s Speech",
+    "section": "Clip Information",
+    "text": "Clip Information\nTextual description of what happens in the clip…\n\n\n\n\n\n\n\n \n  \n    Abbrev \n    Film \n    Clip_Start \n    Clip_Stop \n    Duration \n  \n \n\n  \n    KingsSpeech \n    The King's Speech (2010) \n    NA \n    NA \n    425"
+  },
+  {
+    "objectID": "KingsSpeech.html#holistic-ratings",
+    "href": "KingsSpeech.html#holistic-ratings",
+    "title": "The King’s Speech",
+    "section": "Holistic Ratings",
+    "text": "Holistic Ratings\nA total of 31 participants watched this film clip and then provided holistic ratings on how the entire clip made them feel. These holistic ratings were completed using five positive emotion scales (i.e., alert, determined, enthusiastic, excited, inspired) and five negative emotion scales (i.e., afraid, distressed, nervous, scared, upset), each rated on an ordinal scale from 0 to 4."
+  },
+  {
+    "objectID": "KingsSpeech.html#continuous-ratings",
+    "href": "KingsSpeech.html#continuous-ratings",
+    "title": "The King’s Speech",
+    "section": "Continuous Ratings",
+    "text": "Continuous Ratings\nA total of 29 participants watched this film clip and used the CARMA software to provide continuous (i.e., second-by-second) ratings of how it made them feel. These continuous ratings were made on a single emotional valence scale ranging from -4 (very negative) to 4 (very positive).\n\nTime Series\nWe can plot the distribution of all valence ratings per second of the film clip to get a sense of how its emotional tone changes over time. The solid black line represents the mean of all ratings and the yellow, green, and purple ribbons represent the central 50%, 70%, and 90% of the ratings, respectively.\n\n\n\n\n\n\n\nInter-Rater Reliability\n\n\n\nA Bayesian generalizability study was used to decompose the variance in ratings of this video clip into the following components: timepoint variance (in average ratings of each second, across raters), rater variance (in average ratings from each rater, across seconds), and residual variance (including second-by-rater interactions and measurement error). Timepoint variance was estimated at 0.43, 95% ETI: [0.38, 0.5]; rater variance was estimated at 1.43 [0.97, 2.86]; and residual variance was estimated at 1.14 [1.12, 1.18]. See the figure below for the posterior distributions of each component.\n\n\n\n\n\nFrom these variance components, we can estimate inter-rater reliability of the ratings. There are many formulations of the two-way intraclass correlation (ICC), but the most relevant to our purposes here is the balanced average-measures consistency formulation or ICC(C,k). Inter-rater reliability under this formulation was estimated as 0.916, 95% ETI: [0.905, 0.927]. See the middle of the second row in the figure below for the posterior distribution of this formulation."
+  },
+  {
+    "objectID": "LadyBird.html#film-information",
+    "href": "LadyBird.html#film-information",
+    "title": "Lady Bird",
+    "section": "Film Information",
+    "text": "Film Information\n\n\nLady Bird is a 2017 American coming-of-age comedy-drama film written and directed by Greta Gerwig in her solo directorial debut. Set in Sacramento, California from fall 2002 to fall 2003, the film tells the story of a high school senior and her strained relationship with her mother. It stars Saoirse Ronan in the title role with Laurie Metcalf, Tracy Letts, Lucas Hedges, Timothée Chalamet, Beanie Feldstein, Stephen McKinley Henderson, and Lois Smith in supporting roles.\n\n\n\n\n\n\n\nAll information in this section came directly from Wikipedia."
+  },
+  {
+    "objectID": "LadyBird.html#clip-information",
+    "href": "LadyBird.html#clip-information",
+    "title": "Lady Bird",
+    "section": "Clip Information",
+    "text": "Clip Information\nTextual description of what happens in the clip…\n\n\n\n\n\n\n\n \n  \n    Abbrev \n    Film \n    Clip_Start \n    Clip_Stop \n    Duration \n  \n \n\n  \n    LadyBird \n    Lady Bird (2017) \n    NA \n    NA \n    232"
+  },
+  {
+    "objectID": "LadyBird.html#holistic-ratings",
+    "href": "LadyBird.html#holistic-ratings",
+    "title": "Lady Bird",
+    "section": "Holistic Ratings",
+    "text": "Holistic Ratings\nA total of 32 participants watched this film clip and then provided holistic ratings on how the entire clip made them feel. These holistic ratings were completed using five positive emotion scales (i.e., alert, determined, enthusiastic, excited, inspired) and five negative emotion scales (i.e., afraid, distressed, nervous, scared, upset), each rated on an ordinal scale from 0 to 4."
+  },
+  {
+    "objectID": "LadyBird.html#continuous-ratings",
+    "href": "LadyBird.html#continuous-ratings",
+    "title": "Lady Bird",
+    "section": "Continuous Ratings",
+    "text": "Continuous Ratings\nA total of 29 participants watched this film clip and used the CARMA software to provide continuous (i.e., second-by-second) ratings of how it made them feel. These continuous ratings were made on a single emotional valence scale ranging from -4 (very negative) to 4 (very positive).\n\nTime Series\nWe can plot the distribution of all valence ratings per second of the film clip to get a sense of how its emotional tone changes over time. The solid black line represents the mean of all ratings and the yellow, green, and purple ribbons represent the central 50%, 70%, and 90% of the ratings, respectively.\n\n\n\n\n\n\n\nInter-Rater Reliability\n\n\n\nA Bayesian generalizability study was used to decompose the variance in ratings of this video clip into the following components: timepoint variance (in average ratings of each second, across raters), rater variance (in average ratings from each rater, across seconds), and residual variance (including second-by-rater interactions and measurement error). Timepoint variance was estimated at 0.48, 95% ETI: [0.4, 0.6]; rater variance was estimated at 0.43 [0.29, 0.86]; and residual variance was estimated at 1.16 [1.13, 1.2]. See the figure below for the posterior distributions of each component.\n\n\n\n\n\nFrom these variance components, we can estimate inter-rater reliability of the ratings. There are many formulations of the two-way intraclass correlation (ICC), but the most relevant to our purposes here is the balanced average-measures consistency formulation or ICC(C,k). Inter-rater reliability under this formulation was estimated as 0.925, 95% ETI: [0.909, 0.937]. See the middle of the second row in the figure below for the posterior distribution of this formulation."
+  },
+  {
+    "objectID": "LegallyBlonde.html#film-information",
+    "href": "LegallyBlonde.html#film-information",
+    "title": "Legally Blonde",
+    "section": "Film Information",
+    "text": "Film Information\n\n\nLegally Blonde is a 2001 American comedy film directed by Robert Luketic in his feature-length directorial debut, and scripted by Karen McCullah Lutz and Kirsten Smith from Amanda Brown’s 2001 novel of the same name. It stars Reese Witherspoon, Luke Wilson, Selma Blair, Matthew Davis, Victor Garber, and Jennifer Coolidge. The story follows Elle Woods (Witherspoon), a sorority girl who attempts to win back her ex-boyfriend Warner Huntington III (Davis) by getting a Juris Doctor degree at Harvard Law School, and in the process, overcomes stereotypes against blondes and triumphs as a successful lawyer.\n\n\n\n\n\n\n\nAll information in this section came directly from Wikipedia."
+  },
+  {
+    "objectID": "LegallyBlonde.html#clip-information",
+    "href": "LegallyBlonde.html#clip-information",
+    "title": "Legally Blonde",
+    "section": "Clip Information",
+    "text": "Clip Information\nTextual description of what happens in the clip…\n\n\n\n\n\n\n\n \n  \n    Abbrev \n    Film \n    Clip_Start \n    Clip_Stop \n    Duration \n  \n \n\n  \n    LegallyBlonde \n    Legally Blonde (2001) \n    NA \n    NA \n    414"
+  },
+  {
+    "objectID": "LegallyBlonde.html#holistic-ratings",
+    "href": "LegallyBlonde.html#holistic-ratings",
+    "title": "Legally Blonde",
+    "section": "Holistic Ratings",
+    "text": "Holistic Ratings\nA total of 32 participants watched this film clip and then provided holistic ratings on how the entire clip made them feel. These holistic ratings were completed using five positive emotion scales (i.e., alert, determined, enthusiastic, excited, inspired) and five negative emotion scales (i.e., afraid, distressed, nervous, scared, upset), each rated on an ordinal scale from 0 to 4."
+  },
+  {
+    "objectID": "LegallyBlonde.html#continuous-ratings",
+    "href": "LegallyBlonde.html#continuous-ratings",
+    "title": "Legally Blonde",
+    "section": "Continuous Ratings",
+    "text": "Continuous Ratings\nA total of 30 participants watched this film clip and used the CARMA software to provide continuous (i.e., second-by-second) ratings of how it made them feel. These continuous ratings were made on a single emotional valence scale ranging from -4 (very negative) to 4 (very positive).\n\nTime Series\nWe can plot the distribution of all valence ratings per second of the film clip to get a sense of how its emotional tone changes over time. The solid black line represents the mean of all ratings and the yellow, green, and purple ribbons represent the central 50%, 70%, and 90% of the ratings, respectively.\n\n\n\n\n\n\n\nInter-Rater Reliability\n\n\n\nA Bayesian generalizability study was used to decompose the variance in ratings of this video clip into the following components: timepoint variance (in average ratings of each second, across raters), rater variance (in average ratings from each rater, across seconds), and residual variance (including second-by-rater interactions and measurement error). Timepoint variance was estimated at 0.38, 95% ETI: [0.33, 0.44]; rater variance was estimated at 0.69 [0.46, 1.33]; and residual variance was estimated at 0.76 [0.74, 0.78]. See the figure below for the posterior distributions of each component.\n\n\n\n\n\nFrom these variance components, we can estimate inter-rater reliability of the ratings. There are many formulations of the two-way intraclass correlation (ICC), but the most relevant to our purposes here is the balanced average-measures consistency formulation or ICC(C,k). Inter-rater reliability under this formulation was estimated as 0.937, 95% ETI: [0.928, 0.945]. See the middle of the second row in the figure below for the posterior distribution of this formulation."
+  },
+  {
+    "objectID": "LittleMiss.html#film-information",
+    "href": "LittleMiss.html#film-information",
+    "title": "Little Miss Sunshine",
+    "section": "Film Information",
+    "text": "Film Information\n\n\nLittle Miss Sunshine is a 2006 American tragicomedy road film and the feature film directorial debut of the husband–wife team of Jonathan Dayton and Valerie Faris. The screenplay was written by first-time writer Michael Arndt. The film stars Greg Kinnear, Steve Carell, Toni Collette, Paul Dano, Abigail Breslin, and Alan Arkin, as members of a family taking the youngest to compete in a child beauty pageant.\n\n\n\n\n\n\n\nAll information in this section came directly from Wikipedia."
+  },
+  {
+    "objectID": "LittleMiss.html#clip-information",
+    "href": "LittleMiss.html#clip-information",
+    "title": "Little Miss Sunshine",
+    "section": "Clip Information",
+    "text": "Clip Information\nTextual description of what happens in the clip…\n\n\n\n\n\n\n\n \n  \n    Abbrev \n    Film \n    Clip_Start \n    Clip_Stop \n    Duration \n  \n \n\n  \n    LittleMiss \n    Little Miss Sunshine (2006) \n    NA \n    NA \n    130"
+  },
+  {
+    "objectID": "LittleMiss.html#holistic-ratings",
+    "href": "LittleMiss.html#holistic-ratings",
+    "title": "Little Miss Sunshine",
+    "section": "Holistic Ratings",
+    "text": "Holistic Ratings\nA total of 34 participants watched this film clip and then provided holistic ratings on how the entire clip made them feel. These holistic ratings were completed using five positive emotion scales (i.e., alert, determined, enthusiastic, excited, inspired) and five negative emotion scales (i.e., afraid, distressed, nervous, scared, upset), each rated on an ordinal scale from 0 to 4."
+  },
+  {
+    "objectID": "LittleMiss.html#continuous-ratings",
+    "href": "LittleMiss.html#continuous-ratings",
+    "title": "Little Miss Sunshine",
+    "section": "Continuous Ratings",
+    "text": "Continuous Ratings\nA total of 29 participants watched this film clip and used the CARMA software to provide continuous (i.e., second-by-second) ratings of how it made them feel. These continuous ratings were made on a single emotional valence scale ranging from -4 (very negative) to 4 (very positive).\n\nTime Series\nWe can plot the distribution of all valence ratings per second of the film clip to get a sense of how its emotional tone changes over time. The solid black line represents the mean of all ratings and the yellow, green, and purple ribbons represent the central 50%, 70%, and 90% of the ratings, respectively.\n\n\n\n\n\n\n\nInter-Rater Reliability\n\n\n\nA Bayesian generalizability study was used to decompose the variance in ratings of this video clip into the following components: timepoint variance (in average ratings of each second, across raters), rater variance (in average ratings from each rater, across seconds), and residual variance (including second-by-rater interactions and measurement error). Timepoint variance was estimated at 0.18, 95% ETI: [0.14, 0.25]; rater variance was estimated at 1.29 [0.88, 2.57]; and residual variance was estimated at 0.75 [0.72, 0.79]. See the figure below for the posterior distributions of each component.\n\n\n\n\n\nFrom these variance components, we can estimate inter-rater reliability of the ratings. There are many formulations of the two-way intraclass correlation (ICC), but the most relevant to our purposes here is the balanced average-measures consistency formulation or ICC(C,k). Inter-rater reliability under this formulation was estimated as 0.877, 95% ETI: [0.845, 0.906]. See the middle of the second row in the figure below for the posterior distribution of this formulation."
+  },
+  {
+    "objectID": "MarriageStory.html#film-information",
+    "href": "MarriageStory.html#film-information",
+    "title": "Marriage Story",
+    "section": "Film Information",
+    "text": "Film Information\n\n\nMarriage Story is a 2019 drama film written and directed by Noah Baumbach, who also produced the film with David Heyman. It stars Scarlett Johansson and Adam Driver as a warring couple going through a coast-to-coast divorce. Laura Dern, Alan Alda, Ray Liotta, Julie Hagerty, and Merritt Wever appear in supporting roles.\n\n\n\n\n\n\n\nAll information in this section came directly from Wikipedia."
+  },
+  {
+    "objectID": "MarriageStory.html#clip-information",
+    "href": "MarriageStory.html#clip-information",
+    "title": "Marriage Story",
+    "section": "Clip Information",
+    "text": "Clip Information\nTextual description of what happens in the clip…\n\n\n\n\n\n\n\n \n  \n    Abbrev \n    Film \n    Clip_Start \n    Clip_Stop \n    Duration \n  \n \n\n  \n    MarriageStory \n    Marriage Story (2019) \n    NA \n    NA \n    240"
+  },
+  {
+    "objectID": "MarriageStory.html#holistic-ratings",
+    "href": "MarriageStory.html#holistic-ratings",
+    "title": "Marriage Story",
+    "section": "Holistic Ratings",
+    "text": "Holistic Ratings\nA total of 32 participants watched this film clip and then provided holistic ratings on how the entire clip made them feel. These holistic ratings were completed using five positive emotion scales (i.e., alert, determined, enthusiastic, excited, inspired) and five negative emotion scales (i.e., afraid, distressed, nervous, scared, upset), each rated on an ordinal scale from 0 to 4."
+  },
+  {
+    "objectID": "MarriageStory.html#continuous-ratings",
+    "href": "MarriageStory.html#continuous-ratings",
+    "title": "Marriage Story",
+    "section": "Continuous Ratings",
+    "text": "Continuous Ratings\nA total of 29 participants watched this film clip and used the CARMA software to provide continuous (i.e., second-by-second) ratings of how it made them feel. These continuous ratings were made on a single emotional valence scale ranging from -4 (very negative) to 4 (very positive).\n\nTime Series\nWe can plot the distribution of all valence ratings per second of the film clip to get a sense of how its emotional tone changes over time. The solid black line represents the mean of all ratings and the yellow, green, and purple ribbons represent the central 50%, 70%, and 90% of the ratings, respectively.\n\n\n\n\n\n\n\nInter-Rater Reliability\n\n\n\nA Bayesian generalizability study was used to decompose the variance in ratings of this video clip into the following components: timepoint variance (in average ratings of each second, across raters), rater variance (in average ratings from each rater, across seconds), and residual variance (including second-by-rater interactions and measurement error). Timepoint variance was estimated at 0.42, 95% ETI: [0.34, 0.51]; rater variance was estimated at 1.73 [1.21, 3.45]; and residual variance was estimated at 0.9 [0.87, 0.93]. See the figure below for the posterior distributions of each component.\n\n\n\n\n\nFrom these variance components, we can estimate inter-rater reliability of the ratings. There are many formulations of the two-way intraclass correlation (ICC), but the most relevant to our purposes here is the balanced average-measures consistency formulation or ICC(C,k). Inter-rater reliability under this formulation was estimated as 0.931, 95% ETI: [0.917, 0.942]. See the middle of the second row in the figure below for the posterior distribution of this formulation."
+  },
+  {
+    "objectID": "Miracle.html#film-information",
+    "href": "Miracle.html#film-information",
+    "title": "Miracle",
+    "section": "Film Information",
+    "text": "Film Information\n\n\nMiracle is a 2004 American sports film about the United States men’s ice hockey team, led by head coach Herb Brooks, portrayed by Kurt Russell, who won the gold medal in the 1980 Winter Olympics. The American team’s victory over the heavily favored Soviet professionals in the medal round was dubbed the “Miracle on Ice”. Miracle was directed by Gavin O’Connor and written by Eric Guggenheim and Mike Rich.\n\n\n\n\n\n\n\nAll information in this section came directly from Wikipedia."
+  },
+  {
+    "objectID": "Miracle.html#clip-information",
+    "href": "Miracle.html#clip-information",
+    "title": "Miracle",
+    "section": "Clip Information",
+    "text": "Clip Information\nTextual description of what happens in the clip…\n\n\n\n\n\n\n\n \n  \n    Abbrev \n    Film \n    Clip_Start \n    Clip_Stop \n    Duration \n  \n \n\n  \n    Miracle \n    Miracle (2004) \n    NA \n    NA \n    341"
+  },
+  {
+    "objectID": "Miracle.html#holistic-ratings",
+    "href": "Miracle.html#holistic-ratings",
+    "title": "Miracle",
+    "section": "Holistic Ratings",
+    "text": "Holistic Ratings\nA total of 33 participants watched this film clip and then provided holistic ratings on how the entire clip made them feel. These holistic ratings were completed using five positive emotion scales (i.e., alert, determined, enthusiastic, excited, inspired) and five negative emotion scales (i.e., afraid, distressed, nervous, scared, upset), each rated on an ordinal scale from 0 to 4."
+  },
+  {
+    "objectID": "Miracle.html#continuous-ratings",
+    "href": "Miracle.html#continuous-ratings",
+    "title": "Miracle",
+    "section": "Continuous Ratings",
+    "text": "Continuous Ratings\nA total of 30 participants watched this film clip and used the CARMA software to provide continuous (i.e., second-by-second) ratings of how it made them feel. These continuous ratings were made on a single emotional valence scale ranging from -4 (very negative) to 4 (very positive).\n\nTime Series\nWe can plot the distribution of all valence ratings per second of the film clip to get a sense of how its emotional tone changes over time. The solid black line represents the mean of all ratings and the yellow, green, and purple ribbons represent the central 50%, 70%, and 90% of the ratings, respectively.\n\n\n\n\n\n\n\nInter-Rater Reliability\n\n\n\nA Bayesian generalizability study was used to decompose the variance in ratings of this video clip into the following components: timepoint variance (in average ratings of each second, across raters), rater variance (in average ratings from each rater, across seconds), and residual variance (including second-by-rater interactions and measurement error). Timepoint variance was estimated at 1.56, 95% ETI: [1.38, 1.86]; rater variance was estimated at 0.38 [0.26, 0.74]; and residual variance was estimated at 0.51 [0.49, 0.52]. See the figure below for the posterior distributions of each component.\n\n\n\n\n\nFrom these variance components, we can estimate inter-rater reliability of the ratings. There are many formulations of the two-way intraclass correlation (ICC), but the most relevant to our purposes here is the balanced average-measures consistency formulation or ICC(C,k). Inter-rater reliability under this formulation was estimated as 0.99, 95% ETI: [0.988, 0.991]. See the middle of the second row in the figure below for the posterior distribution of this formulation."
+  },
+  {
+    "objectID": "overview.html#clip-information",
+    "href": "overview.html#clip-information",
+    "title": "Database Overview",
+    "section": "Clip Information",
+    "text": "Clip Information\nThe database currently includes 22 video clips, each drawn from a different English-language film and ranging from 130 to 425 seconds in duration (Mdn=238, MAD=96.4). The figure below shows the distribution of the clips’ durations. The table below presents each clip’s abbreviation, source film title (and release year), as well as starting and stopping timestamp in HH:MM:SS format, and duration in seconds.\n\n\n\n\n\n\n\n\n\n \n  \n    Abbrev \n    Film \n    Clip_Start \n    Clip_Stop \n    Duration \n  \n \n\n  \n    AkeelahBee \n    Akeelah and the Bee (2006) \n    01:42:23 \n    01:45:07 \n    164 \n  \n  \n    BealeStreet \n    If Beale Street Could Talk (2018) \n    NA \n    NA \n    162 \n  \n  \n    CatchMe \n    Catch Me If You Can (2002) \n    NA \n    NA \n    274 \n  \n  \n    DaysSummer \n    500 Days of Summer (2009) \n    NA \n    NA \n    132 \n  \n  \n    Fences \n    Fences (2016) \n    NA \n    NA \n    134 \n  \n  \n    ForrestGump \n    Forrest Gump (1994) \n    NA \n    NA \n    218 \n  \n  \n    GoodWill \n    Good Will Hunting (1997) \n    NA \n    NA \n    150 \n  \n  \n    GreenMile \n    The Green Mile (1999) \n    NA \n    NA \n    239 \n  \n  \n    KingsSpeech \n    The King's Speech (2010) \n    NA \n    NA \n    425 \n  \n  \n    LadyBird \n    Lady Bird (2017) \n    NA \n    NA \n    232 \n  \n  \n    LegallyBlonde \n    Legally Blonde (2001) \n    NA \n    NA \n    414 \n  \n  \n    LittleMiss \n    Little Miss Sunshine (2006) \n    NA \n    NA \n    130 \n  \n  \n    MarriageStory \n    Marriage Story (2019) \n    NA \n    NA \n    240 \n  \n  \n    Miracle \n    Miracle (2004) \n    NA \n    NA \n    341 \n  \n  \n    Moonlight \n    Moonlight (2016) \n    NA \n    NA \n    234 \n  \n  \n    NoCountry \n    No Country for Old Men (2007) \n    NA \n    NA \n    262 \n  \n  \n    ParentTrap \n    The Parent Trap (1998) \n    NA \n    NA \n    425 \n  \n  \n    PulpFiction \n    Pulp Fiction (1994) \n    NA \n    NA \n    233 \n  \n  \n    PursuitHappyness \n    The Pursuit of Happyness (2006) \n    NA \n    NA \n    237 \n  \n  \n    Silence \n    Silence (2016) \n    NA \n    NA \n    274 \n  \n  \n    SocialNetwork \n    The Social Network (2010) \n    NA \n    NA \n    294 \n  \n  \n    Zodiac \n    Zodiac (2007) \n    NA \n    NA \n    315"
+  },
+  {
+    "objectID": "overview.html#valence-ratings",
+    "href": "overview.html#valence-ratings",
+    "title": "Database Overview",
+    "section": "Valence Ratings",
+    "text": "Valence Ratings\n\n\n\nEach clip was continuously rated on its emotional valence at a frequency of 1 Hz and using a scale ranging from -4 (very negative) to 4 (very positive). The number of participants rating each clip ranged from 27 to 36 (Mdn=30, MAD=1.5). The table below provides the number of raters and duration per clip as well as a summary of the valence ratings distribution across raters (i.e., mean, standard deviation, and quartiles).\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n \n  \n    Abbrev \n    Raters \n    Mean \n    SD \n    p0 \n    p25 \n    p50 \n    p75 \n    p100 \n  \n \n\n  \n    AkeelahBee \n    33 \n    1.66 \n    1.52 \n    -2.03 \n    0.40 \n    1.60 \n    2.81 \n    4.00 \n  \n  \n    BealeStreet \n    30 \n    0.57 \n    1.35 \n    -4.00 \n    -0.20 \n    0.55 \n    1.42 \n    4.00 \n  \n  \n    CatchMe \n    36 \n    0.33 \n    1.45 \n    -3.20 \n    -0.80 \n    0.44 \n    1.40 \n    4.00 \n  \n  \n    DaysSummer \n    31 \n    0.38 \n    1.25 \n    -3.40 \n    -0.40 \n    0.35 \n    1.20 \n    3.60 \n  \n  \n    Fences \n    30 \n    -2.09 \n    1.39 \n    -4.00 \n    -3.22 \n    -2.28 \n    -1.02 \n    2.00 \n  \n  \n    ForrestGump \n    32 \n    -0.44 \n    1.61 \n    -4.00 \n    -1.60 \n    -0.60 \n    0.81 \n    4.00 \n  \n  \n    GoodWill \n    29 \n    0.12 \n    1.50 \n    -4.00 \n    -0.75 \n    0.23 \n    1.01 \n    4.00 \n  \n  \n    GreenMile \n    30 \n    -2.71 \n    1.42 \n    -4.00 \n    -4.00 \n    -3.19 \n    -2.14 \n    3.00 \n  \n  \n    KingsSpeech \n    29 \n    0.77 \n    1.75 \n    -4.00 \n    -0.60 \n    0.99 \n    2.09 \n    4.00 \n  \n  \n    LadyBird \n    29 \n    0.23 \n    1.44 \n    -4.00 \n    -0.80 \n    0.00 \n    1.12 \n    4.00 \n  \n  \n    LegallyBlonde \n    30 \n    1.33 \n    1.35 \n    -3.10 \n    0.46 \n    1.38 \n    2.25 \n    4.00 \n  \n  \n    LittleMiss \n    29 \n    -0.17 \n    1.50 \n    -4.00 \n    -1.11 \n    -0.24 \n    0.77 \n    4.00 \n  \n  \n    MarriageStory \n    29 \n    -1.97 \n    1.76 \n    -4.00 \n    -3.36 \n    -2.35 \n    -1.00 \n    4.00 \n  \n  \n    Miracle \n    30 \n    1.16 \n    1.57 \n    -2.15 \n    0.00 \n    1.03 \n    2.55 \n    4.00 \n  \n  \n    Moonlight \n    30 \n    1.41 \n    1.27 \n    -1.80 \n    0.40 \n    1.20 \n    2.40 \n    4.00 \n  \n  \n    NoCountry \n    29 \n    -1.08 \n    1.35 \n    -4.00 \n    -2.04 \n    -1.17 \n    -0.33 \n    4.00 \n  \n  \n    ParentTrap \n    33 \n    2.06 \n    1.28 \n    -2.41 \n    1.20 \n    2.20 \n    3.00 \n    4.00 \n  \n  \n    PulpFiction \n    32 \n    0.44 \n    1.38 \n    -2.80 \n    -0.60 \n    0.40 \n    1.36 \n    4.00 \n  \n  \n    PursuitHappyness \n    32 \n    1.50 \n    1.52 \n    -2.91 \n    0.43 \n    1.52 \n    2.72 \n    4.00 \n  \n  \n    Silence \n    31 \n    -1.14 \n    1.42 \n    -4.00 \n    -2.16 \n    -1.04 \n    -0.02 \n    3.20 \n  \n  \n    SocialNetwork \n    27 \n    -0.33 \n    1.79 \n    -4.00 \n    -1.70 \n    -0.40 \n    1.13 \n    4.00 \n  \n  \n    Zodiac \n    29 \n    -0.75 \n    1.58 \n    -4.00 \n    -1.96 \n    -0.60 \n    0.20 \n    3.80 \n  \n\n\n\n\n\n\n\n\n\n\nExamine distribution of ratings per video (across seconds and raters)"
+  },
+  {
+    "objectID": "prep_ratings.html",
+    "href": "prep_ratings.html",
+    "title": "Prepare Ratings",
+    "section": "",
+    "text": "library(tidyverse)\nlibrary(readxl)"
+  },
+  {
+    "objectID": "prep_ratings.html#prepare-continuous-carma-ratings",
+    "href": "prep_ratings.html#prepare-continuous-carma-ratings",
+    "title": "Prepare Ratings",
+    "section": "Prepare continuous (CARMA) ratings",
+    "text": "Prepare continuous (CARMA) ratings\n\n# Find all rating files\ncarma_files <- \n  dir(\n    path = \"./data/Carma_Rating_Results\", \n    pattern = \"*.xlsx\", \n    full.names = TRUE\n  )\n\n\n# Read in all rating files\ncarma_raw <- \n  map_dfr(\n    .x = carma_files, \n    .f = read_xlsx, \n    skip = 7, \n    .name_repair = ~str_remove_all(., \"[:space:]\"), \n    .id = \"Video\"\n  ) |> \n  select(\n    Video, \n    Second, \n    starts_with(\"MW\")\n  ) |> \n  mutate(\n    Video = parse_integer(Video),\n    Second = as.integer(Second),\n    Abbrev = factor(\n      Video, \n      levels = seq_along(carma_files), \n      labels = str_extract(\n        string = basename(carma_files), \n        pattern = \"[^_]+\"\n      )\n    ),\n    .before = 1\n  )\n\n\n# Reshape and sort data\ncarma_tidy <- \n  carma_raw |> \n  pivot_longer(\n    cols = starts_with(\"MW\"), \n    names_to = \"Rater\", \n    values_to = \"Rating\",\n    names_transform = parse_number\n  ) |> \n  mutate(Rater = as.integer(Rater)) |> \n  arrange(Video, Rater, Second) |> \n  select(Abbrev, Rater, Second, Rating) |> \n  print()\n\n# A tibble: 199,044 × 4\n   Abbrev     Rater Second Rating\n   <fct>      <int>  <int>  <dbl>\n 1 AkeelahBee     1      1   -0.4\n 2 AkeelahBee     1      2   -0.4\n 3 AkeelahBee     1      3   -0.4\n 4 AkeelahBee     1      4    0  \n 5 AkeelahBee     1      5    0  \n 6 AkeelahBee     1      6    0  \n 7 AkeelahBee     1      7    0  \n 8 AkeelahBee     1      8    0  \n 9 AkeelahBee     1      9    0  \n10 AkeelahBee     1     10    0  \n# … with 199,034 more rows\n\n\n\n# Write data as a compressed RDS file\nwrite_rds(carma_tidy, file = \"./data/valence_ratings.rds\", compress = \"gz\")"
+  },
+  {
+    "objectID": "prep_ratings.html#prepare-holistic-ratings",
+    "href": "prep_ratings.html#prepare-holistic-ratings",
+    "title": "Prepare Ratings",
+    "section": "Prepare holistic ratings",
+    "text": "Prepare holistic ratings\n\nredcap_raw <- \n  read_xlsx(\"./data/holistic_ratings_raw.xlsx\") |>\n  separate(\n    participant_id, \n    into = c(\"Rater\", \"Session\"), \n    sep = \"[_\\\\s]\", \n    extra = \"merge\"\n  ) |> \n  select(-starts_with(\"clip\")) |> \n  pivot_longer(\n    -c(Rater, Session), \n    names_to = \"var\", \n    values_to = \"Rating\"\n  ) |> \n  separate(\n    var, \n    into = c(\"Abbrev\", \"Scale\"), \n    sep = \"_\", \n    extra = \"merge\"\n  ) |> \n  filter(\n    Scale %in% c(\n      \"inspired\", \"alert\", \"excited\", \"enthusiastic\", \"determined\", \n      \"afraid\", \"upset\", \"nervous\", \"scared\", \"distressed\"\n    )\n  ) |> \n  group_by(Rater, Abbrev, Scale) |> \n  summarize(\n    Rating = do.call(\"coalesce\", as.list(Rating)),\n    .groups = \"drop\"\n  ) |> \n  mutate(\n    Rater = as.integer(parse_number(Rater)),\n    Scale = str_to_title(Scale),\n    Abbrev = factor(Abbrev, levels = c(\"aatb\", \"bs\", \"cmiyc\", \"dos\", \"f\", \"fg\", \"gm\", \"gwh\", \"ks\", \"lb\", \"lb2\", \"lms\", \"m\", \"mi\", \"ms\", \"ncom\", \"pf\", \"poh\", \"pt\", \"sn\", \"sotl\", \"z\"),\n                  labels = c(\"AkeelahBee\", \"BealeStreet\", \"CatchMe\", \"DaysSummer\", \"Fences\", \"ForrestGump\", \"GreenMile\", \"GoodWill\", \"KingsSpeech\", \"LadyBird\", \"LegallyBlonde\", \"LittleMiss\", \"Moonlight\", \"Miracle\", \"MarriageStory\", \"NoCountry\", \"PulpFiction\", \"PursuitHappyness\", \"ParentTrap\", \"SocialNetwork\", \"Silence\", \"Zodiac\")),\n    Rating = Rating - 1\n  ) |> \n  select(Abbrev, Rater, Scale, Rating) |> \n  print()\n\n# A tibble: 7,920 × 4\n   Abbrev     Rater Scale        Rating\n   <fct>      <int> <chr>         <dbl>\n 1 AkeelahBee     1 Afraid            0\n 2 AkeelahBee     1 Alert             3\n 3 AkeelahBee     1 Determined        3\n 4 AkeelahBee     1 Distressed        0\n 5 AkeelahBee     1 Enthusiastic      3\n 6 AkeelahBee     1 Excited           3\n 7 AkeelahBee     1 Inspired          4\n 8 AkeelahBee     1 Nervous           0\n 9 AkeelahBee     1 Scared            0\n10 AkeelahBee     1 Upset             0\n# … with 7,910 more rows\n\n\n\n# Write data as a compressed RDS file\nwrite_rds(redcap_raw, file = \"./data/holistic_ratings.rds\", compress = \"gz\")"
+  },
+  {
     "objectID": "PursuitHappyness.html#film-information",
     "href": "PursuitHappyness.html#film-information",
     "title": "The Pursuit of Happyness",
