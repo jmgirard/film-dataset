@@ -24,7 +24,7 @@ The credits for the film read, "A Lionsgate, 2929 Productions and Starbucks Ente
 :::
 ::: {.column width="10%"}
 :::
-::: {.column width="20%"}
+::: {.column width="20%" .poster}
 ![](./img/AkeelahBee_poster.jpg)
 :::
 :::

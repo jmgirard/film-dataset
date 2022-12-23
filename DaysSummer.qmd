@@ -1,7 +1,7 @@
 ---
-title: "If Beale Street Could Talk"
+title: "500 Days of Summer"
 params:
-  abbrev: "BealeStreet"
+  abbrev: "DaysSummer"
 ---
 
 ```{r}
@@ -18,16 +18,16 @@ source("./R/functions.R")
 
 ::: columns
 ::: {.column width="70%"}
-***If Beale Street Could Talk*** is a 2018 American romantic drama film written and directed by Barry Jenkins and based on James Baldwin's 1974 novel of the same name. It stars an ensemble cast that includes KiKi Layne, Stephan James, Colman Domingo, Teyonah Parris, Michael Beach, Dave Franco, Diego Luna, Pedro Pascal, Ed Skrein, Brian Tyree Henry, and Regina King. The film follows a young woman who, with her family's support, seeks to clear the name of her wrongly charged lover and prove his innocence before the birth of their child. 
+***500 Days of Summer*** is a 2009 American romantic comedy-drama film directed by Marc Webb from a screenplay written by Scott Neustadter and Michael H. Weber, and produced by Mark Waters. The film stars Joseph Gordon-Levitt and Zooey Deschanel and employs a nonlinear narrative structure, with the story based upon its male protagonist and his memories of a failed relationship.
 :::
 ::: {.column width="10%"}
 :::
 ::: {.column width="20%" .poster}
-![](./img/BealeStreet_poster.png)
+![](./img/DaysSummer_poster.jpg)
 :::
 :::
 
-> All information in this section came directly from [Wikipedia](https://en.wikipedia.org/wiki/If_Beale_Street_Could_Talk_(film)).
+> All information in this section came directly from [Wikipedia](https://en.wikipedia.org/wiki/500_Days_of_Summer).
 
 ## Clip Information
 

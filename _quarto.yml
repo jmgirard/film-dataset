@@ -10,10 +10,14 @@ website:
         href: overview.qmd
       - text: "Film Clips"
         menu:
-          - text: "Akeelah and the Bee"
+          - text: "[AkeelahBee] Akeelah and the Bee"
             href: AkeelahBee.qmd
-          - text: "If Beale Street Could Talk"
+          - text: "[BealeStreet] If Beale Street Could Talk"
             href: BealeStreet.qmd
+          - text: "[CatchMe] Catch Me If You Can"
+            href: CatchMe.qmd
+          - text: "[DaysSummer] 500 Days of Summer"
+            href: DaysSummer.qmd
 format:
   html:
     theme: cosmo

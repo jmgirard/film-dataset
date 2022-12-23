@@ -70,6 +70,62 @@
     "text": "Continuous Ratings\nA total of 30 participants watched this film clip and used the CARMA software to provide continuous (i.e., second-by-second) ratings of how it made them feel. These continuous ratings were made on a single emotional valence scale ranging from -4 (very negative) to 4 (very positive).\n\nInter-Rater Reliability\n\n\n\nA Bayesian generalizability study was used to decompose the variance in ratings of this video clip into the following components: timepoint variance (in average ratings of each second, across raters), rater variance (in average ratings from each rater, across seconds), and residual variance (including second-by-rater interactions and measurement error). Timepoint variance was estimated at 0.2, 95% ETI: [0.15, 0.26]; rater variance was estimated at 0.59 [0.39, 1.15]; and residual variance was estimated at 1.04 [1, 1.08]. See the figure below for the posterior distributions of each component.\n\n\n\n\n\nFrom these variance components, we can estimate inter-rater reliability of the ratings. There are many formulations of the two-way intraclass correlation (ICC), but the most relevant to our purposes here is the balanced average-measures consistency formulation or ICC(C,k). Inter-rater reliability under this formulation was estimated as 0.853, 95% ETI: [0.816, 0.882]. See the middle of the second row in the figure below for the posterior distribution of this formulation.\n\n\n\n\n\n\n\nTime Series\nWe can plot the distribution of all valence ratings per second of the film clip to get a sense of how its emotional tone changes over time. The solid black line represents the mean of all ratings and the yellow, green, and purple ribbons represent the central 50%, 70%, and 90% of the ratings, respectively."
   },
   {
+    "objectID": "CatchMe.html#film-information",
+    "href": "CatchMe.html#film-information",
+    "title": "Catch Me If You Can",
+    "section": "Film Information",
+    "text": "Film Information\n\n\nCatch Me If You Can is a 2002 American biographical crime comedy-drama film directed and produced by Steven Spielberg and starring Leonardo DiCaprio and Tom Hanks with Christopher Walken, Martin Sheen, Nathalie Baye, Amy Adams and James Brolin in supporting roles. The screenplay by Jeff Nathanson is based on the “autobiography” of Frank Abagnale, who claims that before his 19th birthday, he successfully performed cons worth millions of dollars by posing as a Pan American World Airways pilot, a Georgia doctor, and a Louisiana parish prosecutor. The truth of his story is questionable.\n\n\n\n\n\n\n\nAll information in this section came directly from Wikipedia."
+  },
+  {
+    "objectID": "CatchMe.html#clip-information",
+    "href": "CatchMe.html#clip-information",
+    "title": "Catch Me If You Can",
+    "section": "Clip Information",
+    "text": "Clip Information\nTextual description of what happens in the clip…\n\n\n\n\n\n\n\n \n  \n    Abbrev \n    Film \n    Clip_Start \n    Clip_Stop \n    Duration \n  \n \n\n  \n    CatchMe \n    Catch Me If You Can (2002) \n    NA \n    NA \n    274"
+  },
+  {
+    "objectID": "CatchMe.html#holistic-ratings",
+    "href": "CatchMe.html#holistic-ratings",
+    "title": "Catch Me If You Can",
+    "section": "Holistic Ratings",
+    "text": "Holistic Ratings\nA total of 36 participants watched this film clip and then provided holistic ratings on how the entire clip made them feel. These holistic ratings were completed using five positive emotion scales (i.e., alert, determined, enthusiastic, excited, inspired) and five negative emotion scales (i.e., afraid, distressed, nervous, scared, upset), each rated on an ordinal scale from 0 to 4."
+  },
+  {
+    "objectID": "CatchMe.html#continuous-ratings",
+    "href": "CatchMe.html#continuous-ratings",
+    "title": "Catch Me If You Can",
+    "section": "Continuous Ratings",
+    "text": "Continuous Ratings\nA total of 36 participants watched this film clip and used the CARMA software to provide continuous (i.e., second-by-second) ratings of how it made them feel. These continuous ratings were made on a single emotional valence scale ranging from -4 (very negative) to 4 (very positive).\n\nInter-Rater Reliability\n\n\n\nA Bayesian generalizability study was used to decompose the variance in ratings of this video clip into the following components: timepoint variance (in average ratings of each second, across raters), rater variance (in average ratings from each rater, across seconds), and residual variance (including second-by-rater interactions and measurement error). Timepoint variance was estimated at 0.76, 95% ETI: [0.65, 0.92]; rater variance was estimated at 0.36 [0.24, 0.64]; and residual variance was estimated at 0.99 [0.96, 1.02]. See the figure below for the posterior distributions of each component.\n\n\n\n\n\nFrom these variance components, we can estimate inter-rater reliability of the ratings. There are many formulations of the two-way intraclass correlation (ICC), but the most relevant to our purposes here is the balanced average-measures consistency formulation or ICC(C,k). Inter-rater reliability under this formulation was estimated as 0.966, 95% ETI: [0.959, 0.971]. See the middle of the second row in the figure below for the posterior distribution of this formulation.\n\n\n\n\n\n\n\nTime Series\nWe can plot the distribution of all valence ratings per second of the film clip to get a sense of how its emotional tone changes over time. The solid black line represents the mean of all ratings and the yellow, green, and purple ribbons represent the central 50%, 70%, and 90% of the ratings, respectively."
+  },
+  {
+    "objectID": "DaysSummer.html#film-information",
+    "href": "DaysSummer.html#film-information",
+    "title": "500 Days of Summer",
+    "section": "Film Information",
+    "text": "Film Information\n\n\n500 Days of Summer is a 2009 American romantic comedy-drama film directed by Marc Webb from a screenplay written by Scott Neustadter and Michael H. Weber, and produced by Mark Waters. The film stars Joseph Gordon-Levitt and Zooey Deschanel and employs a nonlinear narrative structure, with the story based upon its male protagonist and his memories of a failed relationship.\n\n\n\n\n\n\n\nAll information in this section came directly from Wikipedia."
+  },
+  {
+    "objectID": "DaysSummer.html#clip-information",
+    "href": "DaysSummer.html#clip-information",
+    "title": "500 Days of Summer",
+    "section": "Clip Information",
+    "text": "Clip Information\nTextual description of what happens in the clip…\n\n\n\n\n\n\n\n \n  \n    Abbrev \n    Film \n    Clip_Start \n    Clip_Stop \n    Duration \n  \n \n\n  \n    DaysSummer \n    500 Days of Summer (2009) \n    NA \n    NA \n    132"
+  },
+  {
+    "objectID": "DaysSummer.html#holistic-ratings",
+    "href": "DaysSummer.html#holistic-ratings",
+    "title": "500 Days of Summer",
+    "section": "Holistic Ratings",
+    "text": "Holistic Ratings\nA total of 34 participants watched this film clip and then provided holistic ratings on how the entire clip made them feel. These holistic ratings were completed using five positive emotion scales (i.e., alert, determined, enthusiastic, excited, inspired) and five negative emotion scales (i.e., afraid, distressed, nervous, scared, upset), each rated on an ordinal scale from 0 to 4."
+  },
+  {
+    "objectID": "DaysSummer.html#continuous-ratings",
+    "href": "DaysSummer.html#continuous-ratings",
+    "title": "500 Days of Summer",
+    "section": "Continuous Ratings",
+    "text": "Continuous Ratings\nA total of 31 participants watched this film clip and used the CARMA software to provide continuous (i.e., second-by-second) ratings of how it made them feel. These continuous ratings were made on a single emotional valence scale ranging from -4 (very negative) to 4 (very positive).\n\nInter-Rater Reliability\n\n\n\nA Bayesian generalizability study was used to decompose the variance in ratings of this video clip into the following components: timepoint variance (in average ratings of each second, across raters), rater variance (in average ratings from each rater, across seconds), and residual variance (including second-by-rater interactions and measurement error). Timepoint variance was estimated at 0.18, 95% ETI: [0.15, 0.26]; rater variance was estimated at 0.58 [0.37, 1.06]; and residual variance was estimated at 0.82 [0.79, 0.86]. See the figure below for the posterior distributions of each component.\n\n\n\n\n\nFrom these variance components, we can estimate inter-rater reliability of the ratings. There are many formulations of the two-way intraclass correlation (ICC), but the most relevant to our purposes here is the balanced average-measures consistency formulation or ICC(C,k). Inter-rater reliability under this formulation was estimated as 0.883, 95% ETI: [0.846, 0.906]. See the middle of the second row in the figure below for the posterior distribution of this formulation.\n\n\n\n\n\n\n\nTime Series\nWe can plot the distribution of all valence ratings per second of the film clip to get a sense of how its emotional tone changes over time. The solid black line represents the mean of all ratings and the yellow, green, and purple ribbons represent the central 50%, 70%, and 90% of the ratings, respectively."
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "film-dataset",

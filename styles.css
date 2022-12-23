@@ -1,1 +1,6 @@
 /* css styles */
+
+.poster img {
+  outline: 1px solid #dee2e6;
+  border: 2px solid white;
+}

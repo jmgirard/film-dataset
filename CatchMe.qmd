@@ -1,7 +1,7 @@
 ---
-title: "If Beale Street Could Talk"
+title: "Catch Me If You Can"
 params:
-  abbrev: "BealeStreet"
+  abbrev: "CatchMe"
 ---
 
 ```{r}
@@ -18,16 +18,16 @@ source("./R/functions.R")
 
 ::: columns
 ::: {.column width="70%"}
-***If Beale Street Could Talk*** is a 2018 American romantic drama film written and directed by Barry Jenkins and based on James Baldwin's 1974 novel of the same name. It stars an ensemble cast that includes KiKi Layne, Stephan James, Colman Domingo, Teyonah Parris, Michael Beach, Dave Franco, Diego Luna, Pedro Pascal, Ed Skrein, Brian Tyree Henry, and Regina King. The film follows a young woman who, with her family's support, seeks to clear the name of her wrongly charged lover and prove his innocence before the birth of their child. 
+***Catch Me If You Can*** is a 2002 American biographical crime comedy-drama film directed and produced by Steven Spielberg and starring Leonardo DiCaprio and Tom Hanks with Christopher Walken, Martin Sheen, Nathalie Baye, Amy Adams and James Brolin in supporting roles. The screenplay by Jeff Nathanson is based on the "autobiography" of Frank Abagnale, who claims that before his 19th birthday, he successfully performed cons worth millions of dollars by posing as a Pan American World Airways pilot, a Georgia doctor, and a Louisiana parish prosecutor. The truth of his story is questionable.
 :::
 ::: {.column width="10%"}
 :::
 ::: {.column width="20%" .poster}
-![](./img/BealeStreet_poster.png)
+![](./img/CatchMe_poster.jpg)
 :::
 :::
 
-> All information in this section came directly from [Wikipedia](https://en.wikipedia.org/wiki/If_Beale_Street_Could_Talk_(film)).
+> All information in this section came directly from [Wikipedia](https://en.wikipedia.org/wiki/Catch_Me_If_You_Can).
 
 ## Clip Information
 
