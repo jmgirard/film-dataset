@@ -208,8 +208,32 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
  <span class="dropdown-text">[Miracle] Miracle</span></a>
   </li>  
         <li>
+    <a class="dropdown-item" href="./Moonlight.html">
+ <span class="dropdown-text">[Moonlight] Moonlight</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./NoCountry.html">
+ <span class="dropdown-text">[NoCountry] No Country for Old Men</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./ParentTrap.html">
+ <span class="dropdown-text">[ParentTrap] The Parent Trap</span></a>
+  </li>  
+        <li>
     <a class="dropdown-item" href="./PursuitHappyness.html">
  <span class="dropdown-text">[PursuitHappyness] The Pursuit of Happyness</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./SilenceLambs.html">
+ <span class="dropdown-text">[SilenceLambs] The Silence of the Lambs</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./SocialNetwork.html">
+ <span class="dropdown-text">[SocialNetwork] The Social Network</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./Zodiac.html">
+ <span class="dropdown-text">[Zodiac] Zodiac</span></a>
   </li>  
     </ul>
   </li>
@@ -371,7 +395,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb7-33"><a href="#cb7-33" aria-hidden="true" tabindex="-1"></a>    <span class="at">Rater =</span> <span class="fu">as.integer</span>(<span class="fu">parse_number</span>(Rater)),</span>
 <span id="cb7-34"><a href="#cb7-34" aria-hidden="true" tabindex="-1"></a>    <span class="at">Scale =</span> <span class="fu">str_to_title</span>(Scale),</span>
 <span id="cb7-35"><a href="#cb7-35" aria-hidden="true" tabindex="-1"></a>    <span class="at">Abbrev =</span> <span class="fu">factor</span>(Abbrev, <span class="at">levels =</span> <span class="fu">c</span>(<span class="st">"aatb"</span>, <span class="st">"bs"</span>, <span class="st">"cmiyc"</span>, <span class="st">"dos"</span>, <span class="st">"f"</span>, <span class="st">"fg"</span>, <span class="st">"gm"</span>, <span class="st">"gwh"</span>, <span class="st">"ks"</span>, <span class="st">"lb"</span>, <span class="st">"lb2"</span>, <span class="st">"lms"</span>, <span class="st">"m"</span>, <span class="st">"mi"</span>, <span class="st">"ms"</span>, <span class="st">"ncom"</span>, <span class="st">"pf"</span>, <span class="st">"poh"</span>, <span class="st">"pt"</span>, <span class="st">"sn"</span>, <span class="st">"sotl"</span>, <span class="st">"z"</span>),</span>
-<span id="cb7-36"><a href="#cb7-36" aria-hidden="true" tabindex="-1"></a>                  <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"AkeelahBee"</span>, <span class="st">"BealeStreet"</span>, <span class="st">"CatchMe"</span>, <span class="st">"DaysSummer"</span>, <span class="st">"Fences"</span>, <span class="st">"ForrestGump"</span>, <span class="st">"GreenMile"</span>, <span class="st">"GoodWill"</span>, <span class="st">"KingsSpeech"</span>, <span class="st">"LadyBird"</span>, <span class="st">"LegallyBlonde"</span>, <span class="st">"LittleMiss"</span>, <span class="st">"Moonlight"</span>, <span class="st">"Miracle"</span>, <span class="st">"MarriageStory"</span>, <span class="st">"NoCountry"</span>, <span class="st">"PulpFiction"</span>, <span class="st">"PursuitHappyness"</span>, <span class="st">"ParentTrap"</span>, <span class="st">"SocialNetwork"</span>, <span class="st">"Silence"</span>, <span class="st">"Zodiac"</span>)),</span>
+<span id="cb7-36"><a href="#cb7-36" aria-hidden="true" tabindex="-1"></a>                  <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"AkeelahBee"</span>, <span class="st">"BealeStreet"</span>, <span class="st">"CatchMe"</span>, <span class="st">"DaysSummer"</span>, <span class="st">"Fences"</span>, <span class="st">"ForrestGump"</span>, <span class="st">"GreenMile"</span>, <span class="st">"GoodWill"</span>, <span class="st">"KingsSpeech"</span>, <span class="st">"LadyBird"</span>, <span class="st">"LegallyBlonde"</span>, <span class="st">"LittleMiss"</span>, <span class="st">"Moonlight"</span>, <span class="st">"Miracle"</span>, <span class="st">"MarriageStory"</span>, <span class="st">"NoCountry"</span>, <span class="st">"PulpFiction"</span>, <span class="st">"PursuitHappyness"</span>, <span class="st">"ParentTrap"</span>, <span class="st">"SocialNetwork"</span>, <span class="st">"SilenceLambs"</span>, <span class="st">"Zodiac"</span>)),</span>
 <span id="cb7-37"><a href="#cb7-37" aria-hidden="true" tabindex="-1"></a>    <span class="at">Rating =</span> Rating <span class="sc">-</span> <span class="dv">1</span></span>
 <span id="cb7-38"><a href="#cb7-38" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span> </span>
 <span id="cb7-39"><a href="#cb7-39" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(Abbrev, Rater, Scale, Rating) <span class="sc">|&gt;</span> </span>

@@ -19,6 +19,9 @@ source("./R/functions.R")
 ::: columns
 ::: {.column width="70%"}
 ***Forrest Gump*** is a 1994 American comedy-drama film directed by Robert Zemeckis and written by Eric Roth. It is based on the 1986 novel of the same name by Winston Groom and stars Tom Hanks, Robin Wright, Gary Sinise, Mykelti Williamson and Sally Field. The film follows several decades in the life of a slow-witted and kindhearted Alabama man named Forrest Gump (Hanks) and his experiences in the 20th-century United States. The film differs substantially from the novel.
+
+> All information in this section came directly from [Wikipedia](https://en.wikipedia.org/wiki/Forrest_Gump).
+
 :::
 ::: {.column width="10%"}
 :::
@@ -26,8 +29,6 @@ source("./R/functions.R")
 ![](./img/ForrestGump_poster.jpg)
 :::
 :::
-
-> All information in this section came directly from [Wikipedia](https://en.wikipedia.org/wiki/Forrest_Gump).
 
 ## Clip Information
 

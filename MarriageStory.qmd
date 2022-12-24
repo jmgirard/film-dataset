@@ -19,6 +19,9 @@ source("./R/functions.R")
 ::: columns
 ::: {.column width="70%"}
 ***Marriage Story*** is a 2019 drama film written and directed by Noah Baumbach, who also produced the film with David Heyman. It stars Scarlett Johansson and Adam Driver as a warring couple going through a coast-to-coast divorce. Laura Dern, Alan Alda, Ray Liotta, Julie Hagerty, and Merritt Wever appear in supporting roles. 
+
+> All information in this section came directly from [Wikipedia](https://en.wikipedia.org/wiki/Marriage_Story).
+
 :::
 ::: {.column width="10%"}
 :::
@@ -26,8 +29,6 @@ source("./R/functions.R")
 ![](./img/MarriageStory_poster.png)
 :::
 :::
-
-> All information in this section came directly from [Wikipedia](https://en.wikipedia.org/wiki/Marriage_Story).
 
 ## Clip Information
 

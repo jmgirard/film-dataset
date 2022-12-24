@@ -51,6 +51,39 @@
         "promises"
       ]
     },
+    "Formula": {
+      "Package": "Formula",
+      "Version": "1.2-4",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "cc8c8c4d61346cde1ca60030ff9c241f",
+      "Requirements": []
+    },
+    "Hmisc": {
+      "Package": "Hmisc",
+      "Version": "4.7-2",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "38d81aab48fd9587c47c8dd20d8498cd",
+      "Requirements": [
+        "Formula",
+        "base64enc",
+        "cluster",
+        "data.table",
+        "foreign",
+        "ggplot2",
+        "gridExtra",
+        "gtable",
+        "htmlTable",
+        "htmltools",
+        "lattice",
+        "latticeExtra",
+        "nnet",
+        "rpart",
+        "survival",
+        "viridis"
+      ]
+    },
     "MASS": {
       "Package": "MASS",
       "Version": "7.3-58.1",
@@ -387,6 +420,14 @@
       "Hash": "3f038e5ac7f41d4ac41ce658c85e3042",
       "Requirements": []
     },
+    "cluster": {
+      "Package": "cluster",
+      "Version": "2.1.4",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "5edbbabab6ce0bf7900a74fd4358628e",
+      "Requirements": []
+    },
     "coda": {
       "Package": "coda",
       "Version": "0.19-4",
@@ -506,6 +547,14 @@
         "vctrs",
         "withr"
       ]
+    },
+    "deldir": {
+      "Package": "deldir",
+      "Version": "1.0-6",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "65a3d4e2a1619bb85ae0fb64628da972",
+      "Requirements": []
     },
     "desc": {
       "Package": "desc",
@@ -676,6 +725,14 @@
         "tibble",
         "withr"
       ]
+    },
+    "foreign": {
+      "Package": "foreign",
+      "Version": "0.8-84",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "467ec0ca895d4e61a22cfbac9bccddf8",
+      "Requirements": []
     },
     "fs": {
       "Package": "fs",
@@ -905,10 +962,10 @@
     },
     "highr": {
       "Package": "highr",
-      "Version": "0.9",
+      "Version": "0.10",
       "Source": "Repository",
       "Repository": "CRAN",
-      "Hash": "8eb36c8125038e648e5d111c0d7b2ed4",
+      "Hash": "06230136b2d2b9ba5805e1963fa6e890",
       "Requirements": [
         "xfun"
       ]
@@ -925,6 +982,22 @@
         "pkgconfig",
         "rlang",
         "vctrs"
+      ]
+    },
+    "htmlTable": {
+      "Package": "htmlTable",
+      "Version": "2.4.1",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "d5b485330dcfe241b50db157bf898e97",
+      "Requirements": [
+        "checkmate",
+        "htmltools",
+        "htmlwidgets",
+        "knitr",
+        "magrittr",
+        "rstudioapi",
+        "stringr"
       ]
     },
     "htmltools": {
@@ -1014,12 +1087,32 @@
       "Hash": "1deaf1de3eac7e1d3377954b3a283652",
       "Requirements": []
     },
+    "interp": {
+      "Package": "interp",
+      "Version": "1.1-3",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "593dde779b230c60c4b589fd306bcd3e",
+      "Requirements": [
+        "Rcpp",
+        "RcppEigen",
+        "deldir"
+      ]
+    },
     "isoband": {
       "Package": "isoband",
       "Version": "0.2.7",
       "Source": "Repository",
       "Repository": "CRAN",
       "Hash": "0080607b4a1a7b28979aecef976d8bc2",
+      "Requirements": []
+    },
+    "jpeg": {
+      "Package": "jpeg",
+      "Version": "0.1-10",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "031a0b683d001a7519202f0628fc0358",
       "Requirements": []
     },
     "jquerylib": {
@@ -1103,6 +1196,21 @@
       "Repository": "CRAN",
       "Hash": "b64cdbb2b340437c4ee047a1f4c4377b",
       "Requirements": []
+    },
+    "latticeExtra": {
+      "Package": "latticeExtra",
+      "Version": "0.6-30",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "0857b103442b4657416508733c8c6678",
+      "Requirements": [
+        "MASS",
+        "RColorBrewer",
+        "interp",
+        "jpeg",
+        "lattice",
+        "png"
+      ]
     },
     "lazyeval": {
       "Package": "lazyeval",
@@ -1314,6 +1422,14 @@
         "testthat"
       ]
     },
+    "nnet": {
+      "Package": "nnet",
+      "Version": "7.3-18",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "170da2130d5332bea7d6ede01875ba1d",
+      "Requirements": []
+    },
     "numDeriv": {
       "Package": "numDeriv",
       "Version": "2016.8-1.1",
@@ -1408,6 +1524,14 @@
       "Requirements": [
         "Rcpp"
       ]
+    },
+    "png": {
+      "Package": "png",
+      "Version": "0.1-8",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "bd54ba8a0a5faded999a7aab6e46b374",
+      "Requirements": []
     },
     "polyclip": {
       "Package": "polyclip",
@@ -1637,6 +1761,14 @@
         "yaml"
       ]
     },
+    "rpart": {
+      "Package": "rpart",
+      "Version": "4.1.19",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "b3c892a81783376cc2204af0f5805a80",
+      "Requirements": []
+    },
     "rprojroot": {
       "Package": "rprojroot",
       "Version": "2.0.3",
@@ -1852,6 +1984,16 @@
         "rlang",
         "stringi",
         "vctrs"
+      ]
+    },
+    "survival": {
+      "Package": "survival",
+      "Version": "3.4-0",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "04411ae66ab4659230c067c32966fc20",
+      "Requirements": [
+        "Matrix"
       ]
     },
     "svglite": {
@@ -2089,8 +2231,8 @@
       "RemoteUsername": "jmgirard",
       "RemoteRepo": "varde",
       "RemoteRef": "master",
-      "RemoteSha": "cf298bf3333f37e5efedf4f777fac7603d361762",
-      "Hash": "7e1471aaa0954c32dd3d76fe61fd7175",
+      "RemoteSha": "5cfa7b874d1e4ada9acedb5ec7afd353e463e6aa",
+      "Hash": "2cc7a1a9e8e6fd863dccd40593b04539",
       "Requirements": [
         "assertthat",
         "brms",
@@ -2124,6 +2266,18 @@
       "Repository": "CRAN",
       "Hash": "ea85683da7f2bfa63a98dc6416892591",
       "Requirements": []
+    },
+    "viridis": {
+      "Package": "viridis",
+      "Version": "0.6.2",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "ee96aee95a7a563e5496f8991e9fde4b",
+      "Requirements": [
+        "ggplot2",
+        "gridExtra",
+        "viridisLite"
+      ]
     },
     "viridisLite": {
       "Package": "viridisLite",
@@ -2194,10 +2348,10 @@
     },
     "xfun": {
       "Package": "xfun",
-      "Version": "0.35",
+      "Version": "0.36",
       "Source": "Repository",
       "Repository": "CRAN",
-      "Hash": "f576593107bdf9aa7db48ef75a8c05fb",
+      "Hash": "f5baec54606751aa53ac9c0e05848ed6",
       "Requirements": []
     },
     "xml2": {

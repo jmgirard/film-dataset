@@ -18,7 +18,10 @@ source("./R/functions.R")
 
 ::: columns
 ::: {.column width="70%"}
-***The Green Mile*** is a 1999 American fantasy drama film written and directed by Frank Darabont and based on Stephen King's 1996 novel of the same name. It stars Tom Hanks as a death row prison guard during the Great Depression who witnesses supernatural events following the arrival of an enigmatic convict (Michael Clarke Duncan) at his facility. David Morse, Bonnie Hunt, Sam Rockwell, and James Cromwell appear in supporting roles. 
+***The Green Mile*** is a 1999 American fantasy drama film written and directed by Frank Darabont and based on Stephen King's 1996 novel of the same name. It stars Tom Hanks as a death row prison guard during the Great Depression who witnesses supernatural events following the arrival of an enigmatic convict (Michael Clarke Duncan) at his facility. David Morse, Bonnie Hunt, Sam Rockwell, and James Cromwell appear in supporting roles.
+
+> All information in this section came directly from [Wikipedia](https://en.wikipedia.org/wiki/The_Green_Mile_(film)).
+
 :::
 ::: {.column width="10%"}
 :::
@@ -26,8 +29,6 @@ source("./R/functions.R")
 ![](./img/GreenMile_poster.jpg)
 :::
 :::
-
-> All information in this section came directly from [Wikipedia](https://en.wikipedia.org/wiki/The_Green_Mile_(film)).
 
 ## Clip Information
 

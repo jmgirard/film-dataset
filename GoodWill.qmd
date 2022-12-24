@@ -19,6 +19,8 @@ source("./R/functions.R")
 ::: columns
 ::: {.column width="70%"}
 ***Good Will Hunting*** is a 1997 American psychological drama film directed by Gus Van Sant, and written by Ben Affleck and Matt Damon. It stars Robin Williams, Damon, Affleck, Stellan Skarsgård and Minnie Driver. 
+> All information in this section came directly from [Wikipedia](https://en.wikipedia.org/wiki/Good_Will_Hunting).
+
 :::
 ::: {.column width="10%"}
 :::
@@ -26,8 +28,6 @@ source("./R/functions.R")
 ![](./img/GoodWill_poster.png)
 :::
 :::
-
-> All information in this section came directly from [Wikipedia](https://en.wikipedia.org/wiki/Good_Will_Hunting).
 
 ## Clip Information
 

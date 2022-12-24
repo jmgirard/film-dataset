@@ -38,8 +38,20 @@ website:
             href: MarriageStory.qmd
           - text: "[Miracle] Miracle"
             href: Miracle.qmd
+          - text: "[Moonlight] Moonlight"
+            href: Moonlight.qmd
+          - text: "[NoCountry] No Country for Old Men"
+            href: NoCountry.qmd
+          - text: "[ParentTrap] The Parent Trap"
+            href: ParentTrap.qmd
           - text: "[PursuitHappyness] The Pursuit of Happyness"
             href: PursuitHappyness.qmd
+          - text: "[SilenceLambs] The Silence of the Lambs"
+            href: SilenceLambs.qmd
+          - text: "[SocialNetwork] The Social Network"
+            href: SocialNetwork.qmd
+          - text: "[Zodiac] Zodiac"
+            href: Zodiac.qmd
 format:
   html:
     theme: cosmo

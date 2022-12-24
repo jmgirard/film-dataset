@@ -20,7 +20,8 @@ source("./R/functions.R")
 ::: {.column width="70%"}
 ***Akeelah and the Bee*** is a 2006 American drama film written and directed by Doug Atchison. It tells the story of Akeelah Anderson (Keke Palmer), an 11-year-old girl who participates in the Scripps National Spelling Bee, her mother (Angela Bassett), her schoolmates, and her coach, Dr. Joshua Larabee (Laurence Fishburne). The cast also features Curtis Armstrong, J.R. Villarreal, Sean Michael Afable, Erica Hubbard, Lee Thompson Young, Julito McCullum, Sahara Garey, Eddie Steeples, and Tzi Ma.\
 
-The credits for the film read, "A Lionsgate, 2929 Productions and Starbucks Entertainment presentation of an Out of the Blue and Reactor Films production in association with Cinema Gypsy Productions."
+> All information in this section came directly from [Wikipedia](https://en.wikipedia.org/wiki/Akeelah_and_the_Bee).
+
 :::
 ::: {.column width="10%"}
 :::
@@ -28,8 +29,6 @@ The credits for the film read, "A Lionsgate, 2929 Productions and Starbucks Ente
 ![](./img/AkeelahBee_poster.jpg)
 :::
 :::
-
-> All information in this section came directly from [Wikipedia](https://en.wikipedia.org/wiki/Akeelah_and_the_Bee).
 
 ## Clip Information
 

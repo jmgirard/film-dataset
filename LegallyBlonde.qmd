@@ -19,6 +19,9 @@ source("./R/functions.R")
 ::: columns
 ::: {.column width="70%"}
 ***Legally Blonde*** is a 2001 American comedy film directed by Robert Luketic in his feature-length directorial debut, and scripted by Karen McCullah Lutz and Kirsten Smith from Amanda Brown's 2001 novel of the same name. It stars Reese Witherspoon, Luke Wilson, Selma Blair, Matthew Davis, Victor Garber, and Jennifer Coolidge. The story follows Elle Woods (Witherspoon), a sorority girl who attempts to win back her ex-boyfriend Warner Huntington III (Davis) by getting a Juris Doctor degree at Harvard Law School, and in the process, overcomes stereotypes against blondes and triumphs as a successful lawyer. 
+
+> All information in this section came directly from [Wikipedia](https://en.wikipedia.org/wiki/Legally_Blonde).
+
 :::
 ::: {.column width="10%"}
 :::
@@ -26,8 +29,6 @@ source("./R/functions.R")
 ![](./img/LegallyBlonde_poster.png)
 :::
 :::
-
-> All information in this section came directly from [Wikipedia](https://en.wikipedia.org/wiki/Legally_Blonde).
 
 ## Clip Information
 

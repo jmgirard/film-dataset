@@ -8,24 +8,33 @@ s_to_mmss <- function(s) {
 # Get clip-specific information tibble ------------------------------------
 
 get_info_df <- function(abbrev) {
-  readxl::read_xlsx("./data/film_info.xlsx") |> 
-    dplyr::filter(Abbrev == abbrev)
+  df <- readxl::read_xlsx("./data/film_info.xlsx")
+  if (!missing(abbrev)) {
+    df <- df |> dplyr::filter(Abbrev == abbrev)
+  }
+  df
 }
 
 # Get clip-specific holistic ratings tibble -------------------------------
 
 get_holistic_df <- function(abbrev) {
-  readr::read_rds("./data/holistic_ratings.rds") |> 
-    tidyr::drop_na(Rating) |> 
-    dplyr::filter(Abbrev == abbrev)
+  df <- readr::read_rds("./data/holistic_ratings.rds") |> 
+    tidyr::drop_na(Rating)
+  if (!missing(abbrev)) {
+    df <- df |> dplyr::filter(Abbrev == abbrev)
+  }
+  df 
 }
 
 # Get clip-specific valence ratings tibble --------------------------------
 
 get_valence_df <- function(abbrev) {
-  readr::read_rds("./data/valence_ratings.rds") |>
-    tidyr::drop_na(Rating) |> 
-    dplyr::filter(Abbrev == abbrev)
+  df <- readr::read_rds("./data/valence_ratings.rds") |>
+    tidyr::drop_na(Rating)
+  if (!missing(abbrev)) {
+    df <- df |> dplyr::filter(Abbrev == abbrev)
+  }
+  df
 }
 
 

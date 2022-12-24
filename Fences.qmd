@@ -19,6 +19,9 @@ source("./R/functions.R")
 ::: columns
 ::: {.column width="70%"}
 ***Fences*** is a 2016 American period drama film starring, produced and directed by Denzel Washington and written by August Wilson, based on his Pulitzer Prize-winning 1985 play of the same name. Wilson was in Pittsburgh, Pennsylvania, and originally wanted to pursue being a poet, but later found passion for being a playwright. In addition to Washington, the film also stars Viola Davis, Stephen McKinley Henderson, Jovan Adepo, Russell Hornsby, Mykelti Williamson, and Saniyya Sidney. 
+
+> All information in this section came directly from [Wikipedia](https://en.wikipedia.org/wiki/Fences_(film)).
+
 :::
 ::: {.column width="10%"}
 :::
@@ -26,8 +29,6 @@ source("./R/functions.R")
 ![](./img/Fences_poster.png)
 :::
 :::
-
-> All information in this section came directly from [Wikipedia](https://en.wikipedia.org/wiki/Fences_(film)).
 
 ## Clip Information
 

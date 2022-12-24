@@ -120,7 +120,7 @@ redcap_raw <-
     Rater = as.integer(parse_number(Rater)),
     Scale = str_to_title(Scale),
     Abbrev = factor(Abbrev, levels = c("aatb", "bs", "cmiyc", "dos", "f", "fg", "gm", "gwh", "ks", "lb", "lb2", "lms", "m", "mi", "ms", "ncom", "pf", "poh", "pt", "sn", "sotl", "z"),
-                  labels = c("AkeelahBee", "BealeStreet", "CatchMe", "DaysSummer", "Fences", "ForrestGump", "GreenMile", "GoodWill", "KingsSpeech", "LadyBird", "LegallyBlonde", "LittleMiss", "Moonlight", "Miracle", "MarriageStory", "NoCountry", "PulpFiction", "PursuitHappyness", "ParentTrap", "SocialNetwork", "Silence", "Zodiac")),
+                  labels = c("AkeelahBee", "BealeStreet", "CatchMe", "DaysSummer", "Fences", "ForrestGump", "GreenMile", "GoodWill", "KingsSpeech", "LadyBird", "LegallyBlonde", "LittleMiss", "Moonlight", "Miracle", "MarriageStory", "NoCountry", "PulpFiction", "PursuitHappyness", "ParentTrap", "SocialNetwork", "SilenceLambs", "Zodiac")),
     Rating = Rating - 1
   ) |> 
   select(Abbrev, Rater, Scale, Rating) |> 

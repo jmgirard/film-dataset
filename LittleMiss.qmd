@@ -19,6 +19,9 @@ source("./R/functions.R")
 ::: columns
 ::: {.column width="70%"}
 ***Little Miss Sunshine*** is a 2006 American tragicomedy road film and the feature film directorial debut of the husband–wife team of Jonathan Dayton and Valerie Faris. The screenplay was written by first-time writer Michael Arndt. The film stars Greg Kinnear, Steve Carell, Toni Collette, Paul Dano, Abigail Breslin, and Alan Arkin, as members of a family taking the youngest to compete in a child beauty pageant.
+
+> All information in this section came directly from [Wikipedia](https://en.wikipedia.org/wiki/Little_Miss_Sunshine).
+
 :::
 ::: {.column width="10%"}
 :::
@@ -26,8 +29,6 @@ source("./R/functions.R")
 ![](./img/LittleMiss_poster.jpg)
 :::
 :::
-
-> All information in this section came directly from [Wikipedia](https://en.wikipedia.org/wiki/Little_Miss_Sunshine).
 
 ## Clip Information
 

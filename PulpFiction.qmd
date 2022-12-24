@@ -1,0 +1,113 @@
+---
+title: "Pulp Fiction"
+params:
+  abbrev: "PulpFiction"
+---
+
+```{r}
+#| echo: false
+#| message: false
+
+library(knitr)
+library(kableExtra)
+
+source("./R/functions.R")
+```
+
+## Film Information
+
+::: columns
+::: {.column width="70%"}
+***Pulp Fiction*** is a 1994 American crime film written and directed by Quentin Tarantino, who conceived it with Roger Avary.[4] Starring John Travolta, Samuel L. Jackson, Bruce Willis, Tim Roth, Ving Rhames, and Uma Thurman, it tells several stories of crime in Los Angeles, California. The title refers to the pulp magazines and hardboiled crime novels popular during the mid-20th century, known for their graphic violence and punchy dialogue. 
+
+> All information in this section came directly from [Wikipedia](https://en.wikipedia.org/wiki/Pulp_Fiction).
+
+:::
+::: {.column width="10%"}
+:::
+::: {.column width="20%" .poster}
+![](./img/PulpFiction_poster.jpg)
+:::
+:::
+
+## Clip Information
+
+Textual description of what happens in the clip...
+
+```{r}
+#| echo: false
+
+valence_df <- get_valence_df(params$abbrev)
+holistic_df <- get_holistic_df(params$abbrev)
+info_df <- get_info_df(params$abbrev)
+```
+
+```{r}
+#| echo: false
+
+info_df |> 
+  kable() |> 
+  kable_styling()
+```
+
+## Holistic Ratings
+
+A total of `r length(unique(holistic_df$Rater))` participants watched this film clip and then provided holistic ratings on how the entire clip made them feel. These holistic ratings were completed using five positive emotion scales (i.e., *alert*, *determined*, *enthusiastic*, *excited*, *inspired*) and five negative emotion scales (i.e., *afraid*, *distressed*, *nervous*, *scared*, *upset*), each rated on an ordinal scale from 0 to 4.
+
+```{r}
+#| echo: false
+#| message: false
+#| fig-width: 7
+#| fig-height: 4
+#| out-width: "100%"
+
+create_holistic_plot(holistic_df)
+```
+
+## Continuous Ratings
+
+A total of `r length(unique(valence_df$Rater))` participants watched this film clip and used the [CARMA software](https://carma.jmgirard.com) to provide continuous (i.e., second-by-second) ratings of how it made them feel. These continuous ratings were made on a single emotional *valence* scale ranging from -4 (very negative) to 4 (very positive).
+
+### Time Series
+
+We can plot the distribution of all valence ratings per second of the film clip to get a sense of how its emotional tone changes over time. The solid black line represents the mean of all ratings and the yellow, green, and purple ribbons represent the central 50%, 70%, and 90% of the ratings, respectively.
+
+```{r}
+#| echo: false
+#| fig-width: 7
+#| fig-height: 5
+#| out-width: "100%"
+
+create_valence_plot(valence_df)
+```
+
+### Inter-Rater Reliability
+
+```{r}
+#| echo: false
+#| message: false
+
+icc_res <- estimate_valence_icc_clip(valence_df, info_df)
+```
+
+A Bayesian generalizability study was used to decompose the variance in ratings of this video clip into the following components: timepoint variance (in average ratings of each second, across raters), rater variance (in average ratings from each rater, across seconds), and residual variance (including second-by-rater interactions and measurement error). Timepoint variance was estimated at `r round(icc_res$summary$est[1], 2)`, 95\% ETI: [`r round(icc_res$summary$lower[1], 2)`, `r round(icc_res$summary$upper[1], 2)`]; rater variance was estimated at `r round(icc_res$summary$est[2], 2)` [`r round(icc_res$summary$lower[2], 2)`, `r round(icc_res$summary$upper[2], 2)`]; and residual variance was estimated at `r round(icc_res$summary$est[3], 2)`  [`r round(icc_res$summary$lower[3], 2)`, `r round(icc_res$summary$upper[3], 2)`]. See the figure below for the posterior distributions of each component.
+
+```{r}
+#| echo: false
+#| fig-width: 7
+#| fig-height: 2
+#| out-width: "100%"
+
+plot(icc_res, components = "var")
+```
+
+From these variance components, we can estimate inter-rater reliability of the ratings. There are many formulations of the two-way intraclass correlation (ICC), but the most relevant to our purposes here is the balanced average-measures consistency formulation or ICC(C,k). Inter-rater reliability under this formulation was estimated as `r round(icc_res$summary$est[8], 3)`, 95% ETI: [`r round(icc_res$summary$lower[8], 3)`, `r round(icc_res$summary$upper[8], 3)`]. See the middle of the second row in the figure below for the posterior distribution of this formulation.
+
+```{r}
+#| echo: false
+#| fig-width: 7
+#| fig-height: 4
+#| out-width: "100%"
+
+plot(icc_res, components = "icc")
+```

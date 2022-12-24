@@ -19,6 +19,9 @@ source("./R/functions.R")
 ::: columns
 ::: {.column width="70%"}
 ***If Beale Street Could Talk*** is a 2018 American romantic drama film written and directed by Barry Jenkins and based on James Baldwin's 1974 novel of the same name. It stars an ensemble cast that includes KiKi Layne, Stephan James, Colman Domingo, Teyonah Parris, Michael Beach, Dave Franco, Diego Luna, Pedro Pascal, Ed Skrein, Brian Tyree Henry, and Regina King. The film follows a young woman who, with her family's support, seeks to clear the name of her wrongly charged lover and prove his innocence before the birth of their child. 
+
+> All information in this section came directly from [Wikipedia](https://en.wikipedia.org/wiki/If_Beale_Street_Could_Talk_(film)).
+
 :::
 ::: {.column width="10%"}
 :::
@@ -26,8 +29,6 @@ source("./R/functions.R")
 ![](./img/BealeStreet_poster.png)
 :::
 :::
-
-> All information in this section came directly from [Wikipedia](https://en.wikipedia.org/wiki/If_Beale_Street_Could_Talk_(film)).
 
 ## Clip Information
 
