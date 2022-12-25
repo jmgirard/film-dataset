@@ -1,5 +1,8 @@
 ---
 title: "If Beale Street Could Talk"
+filters:
+  - lightbox
+lightbox: auto
 params:
   abbrev: "BealeStreet"
 ---
@@ -48,6 +51,37 @@ info_df <- get_info_df(params$abbrev)
 info_df |> 
   kable() |> 
   kable_styling()
+```
+### Screenshots
+
+```{r}
+#| echo: false
+#| output: asis
+
+cat(glue::glue('
+<div class="container">
+<div class="row">
+<div class="col"><img src="./img/screenshots/{params$abbrev}_01.jpg" class="lightbox"></div>
+<div class="col"><img src="./img/screenshots/{params$abbrev}_02.jpg" class="lightbox"></div>
+<div class="col"><img src="./img/screenshots/{params$abbrev}_03.jpg" class="lightbox"></div>
+</div>
+<div class="row">
+<div class="col"><img src="./img/screenshots/{params$abbrev}_04.jpg" class="lightbox"></div>
+<div class="col"><img src="./img/screenshots/{params$abbrev}_05.jpg" class="lightbox"></div>
+<div class="col"><img src="./img/screenshots/{params$abbrev}_06.jpg" class="lightbox"></div>
+</div>
+<div class="row">
+<div class="col"><img src="./img/screenshots/{params$abbrev}_07.jpg" class="lightbox"></div>
+<div class="col"><img src="./img/screenshots/{params$abbrev}_08.jpg" class="lightbox"></div>
+<div class="col"><img src="./img/screenshots/{params$abbrev}_09.jpg" class="lightbox"></div>
+</div>
+<div class="row">
+<div class="col"><img src="./img/screenshots/{params$abbrev}_10.jpg" class="lightbox"></div>
+<div class="col"><img src="./img/screenshots/{params$abbrev}_11.jpg" class="lightbox"></div>
+<div class="col"><img src="./img/screenshots/{params$abbrev}_12.jpg" class="lightbox"></div>
+</div>
+</div>
+'))
 ```
 
 ## Holistic Ratings
