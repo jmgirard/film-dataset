@@ -73,7 +73,7 @@ create_holistic_plot <- function(holistic_df) {
     ggplot2::scale_x_continuous(limits = c(0, 4)) +
     ggplot2::labs(
       y = NULL, 
-      x = "Average Rating with 95% CI", 
+      x = "Average Rating with 95% Confidence Interval", 
       fill = "Scale"
     ) +
     ggplot2::theme(legend.position = "top")

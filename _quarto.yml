@@ -52,6 +52,8 @@ website:
             href: SocialNetwork.qmd
           - text: "[Zodiac] Zodiac"
             href: Zodiac.qmd
+      - text: "Baselines"
+        href: index.qmd
 format:
   html:
     theme: cosmo

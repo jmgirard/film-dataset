@@ -11,6 +11,7 @@ library(readxl)
 library(ggbeeswarm)
 library(knitr)
 library(kableExtra)
+library(varde)
 ```
 
 ```{r}
@@ -132,4 +133,3 @@ valence_df |>
   labs(y = NULL)
 ```
 
-Examine distribution of ratings per video (across seconds and raters)

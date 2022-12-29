@@ -13,8 +13,8 @@ pull_screenshots <- function(info_df, n_images) {
     ts_i <- seq(0, info_i$Duration, length.out = n_images + 2)[2:(n_images+1)]
     for (j in seq_along(ts_i)) {
       ts_ij <- ts_i[[j]]
-      out_ij <- file.path("./img/screenshots", glue('{info_i$Abbrev}_{pad_integers(j, 2)}.jpg'))
-      cmd_ij <- glue('-ss {ts_ij} -i "{in_i}" -qmin 1 -q:v 1 -qscale:v 2 -frames:v 1 -huffman optimal "{out_ij}"')
+      out_ij <- file.path("./img/screenshots", glue('{info_i$Abbrev}_{pad_integers(j, 2)}.webp'))
+      cmd_ij <- glue('-ss {ts_ij} -i "{in_i}" -qmin 1 -q:v 1 -qscale:v 2 -frames:v 1 -huffman optimal -c:v libwebp "{out_ij}"')
       ffmpeg(cmd_ij)
     }
   }
