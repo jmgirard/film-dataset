@@ -9,6 +9,7 @@ title: "Database Overview"
 library(tidyverse)
 library(readxl)
 library(ggbeeswarm)
+library(brms)
 library(knitr)
 library(kableExtra)
 library(varde)
@@ -56,6 +57,7 @@ info_df |>
 
 info_df |> 
   arrange(Abbrev) |> 
+  select(Abbrev:Duration) |> 
   kable(digits = 2) |> 
   kable_styling()
 ```
@@ -131,5 +133,40 @@ valence_df |>
   ggplot(aes(x = Rating, y = Abbrev)) + 
   geom_boxplot() +
   labs(y = NULL)
+```
+
+```{r}
+#| echo: false
+
+icc_files <- dir(pattern = "^icc_.*.csv$")
+icc_df <- 
+  lapply(X = icc_files, FUN = readr::read_csv, show_col_types = FALSE) |> 
+  bind_rows()
+icc_df |> 
+  kable(digits = 3) |> 
+  kable_styling()
+icc_df |> 
+  summarize(mean_cl_boot(Estimate)) |> 
+  rename(
+    Mean = y,
+    Lower = ymin,
+    Upper = ymax
+  ) |> 
+  kable(digits = 3) |> 
+  kable_styling()
+```
+
+```{r}
+gstudy <- brm(
+  formula = Rating ~ 1 + (1 | Abbrev) + (1 | Rater) + (1 | Abbrev:Second) + (1 | Abbrev:Rater),
+  data = valence_df,
+  chains = 4,
+  cores = 4,
+  init = "random",
+  warmup = 5000,
+  iter = 10000,
+  seed = 2022,
+  file = "gstudy"
+)
 ```
 

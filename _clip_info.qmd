@@ -131,7 +131,7 @@ A Bayesian generalizability study was used to decompose the variance in ratings 
 
 summary(icc_res, which = "variances") |> 
   dplyr::rename_all(.funs = stringr::str_to_title) |> 
-  knitr::kable(digits = 2) |> 
+  knitr::kable(digits = 3) |> 
   kableExtra::kable_styling()
 ```
 
