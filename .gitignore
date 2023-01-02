@@ -3,4 +3,5 @@
 .RData
 .Ruserdata
 icc_*.rds
+gstudy.rds
 /.quarto/

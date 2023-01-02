@@ -18,7 +18,7 @@ info_df <- get_info_df(params$abbrev)
 
 cat(info_df$Summary)
 
-cat(glue::glue('> All information in this section came from [Wikipedia]({info_df$Wikipedia}).'))
+cat(glue::glue('<p><blockquote>All information in this section came from [Wikipedia]({info_df$Wikipedia}).</blockquote></p>'))
 ```
 
 :::
