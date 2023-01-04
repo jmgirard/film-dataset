@@ -83,14 +83,13 @@ create_holistic_plot <- function(holistic_df) {
 
 estimate_valence_icc_clip <- function(valence_df, info_df, iter = 10000) {
   varde::calc_icc(
-    .data = valence_df, 
-    subject = "Second", 
+    .data = dplyr::rename(valence_df, Timepoint = Second), 
+    subject = "Timepoint", 
     rater = "Rater", 
-    score = "Rating",
+    scores = "Rating",
     iter = iter,
     file = paste0("icc_", info_df$Abbrev),
-    silent = 2,
-    subject_label = "Timepoint"
+    silent = 2
   )
 }
 

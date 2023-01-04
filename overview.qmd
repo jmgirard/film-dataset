@@ -155,3 +155,51 @@ icc_df |>
   kable(digits = 3) |> 
   kable_styling()
 ```
+
+## Holistic Ratings
+
+```{r}
+#| echo: false
+
+holistic_dfw <-  
+  holistic_df |> 
+  tidyr::pivot_wider(
+    names_from = Scale,
+    values_from = Rating
+  )
+
+holistic_iccs <- 
+  varde::calc_icc(
+    .data = holistic_dfw,
+    subject = "Abbrev", 
+    rater = "Rater", 
+    scores = c(
+      "Afraid", "Alert", "Determined", "Distressed", "Enthusiastic",
+      "Excited", "Inspired", "Nervous", "Scared", "Upset"
+    ),
+    iter = 10000,
+    file = "icc_holistic",
+    silent = 2
+  )
+
+hicc_df <- 
+  holistic_iccs |> 
+  summary() |> 
+  filter(term == "ICC(Q,khat)") |> 
+  rename_all(str_to_title)
+
+hicc_df |> 
+  kable(digits = 3) |> 
+  kable_styling()
+
+hicc_df |> 
+  summarize(mean_cl_boot(Estimate)) |> 
+  rename(
+    Mean = y,
+    Lower = ymin,
+    Upper = ymax
+  ) |> 
+  kable(digits = 3) |> 
+  kable_styling()
+```
+
