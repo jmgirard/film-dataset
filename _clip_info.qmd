@@ -108,6 +108,7 @@ We can plot the distribution of all valence ratings per second of the film clip 
 
 ```{r}
 #| echo: false
+#| message: false
 #| fig-width: 7
 #| fig-height: 5
 #| out-width: "100%"
