@@ -58,11 +58,115 @@ info_df |>
 info_df |> 
   arrange(Abbrev) |> 
   select(Abbrev:Duration) |> 
+  rename_all(str_replace, pattern = "_", replacement = " ") |> 
   kable(digits = 2) |> 
   kable_styling()
 ```
 
-## Valence Ratings
+## Holistic Ratings
+
+After watching each clip, participants provided holistic ratings on how the entire clip made them feel. These holistic ratings were completed using five Positive Affect items (i.e., *alert*, *determined*, *enthusiastic*, *excited*, *inspired*) and five Negative Affect items (i.e., *afraid*, *distressed*, *nervous*, *scared*, *upset*), each rated on an ordinal scale from 0 to 4. The plot below shows the distributions of the mean scale scores (across all clips and raters).
+
+```{r}
+#| echo: false
+
+holistic_dfw <-  
+  holistic_df |> 
+  tidyr::pivot_wider(
+    names_from = Scale,
+    values_from = Rating
+  ) |> 
+  mutate(
+    "Positive Affect" = rowMeans(across(c(Alert, Determined, Enthusiastic, Excited, Inspired)), na.rm = TRUE),
+    "Negative Affect" = rowMeans(across(c(Afraid, Distressed, Nervous, Scared, Upset)), na.rm = TRUE)
+  )
+```
+
+```{r}
+#| echo: false
+#| fig.height: 6
+#| fig.width: 7
+#| out-width: "100%"
+
+holistic_dfw |> 
+  ggplot(aes(x = `Positive Affect`, y = fct_reorder(Abbrev, .x = `Positive Affect`))) +
+  geom_boxplot() +
+  labs(y = NULL)
+```
+
+```{r}
+#| echo: false
+#| fig.height: 6
+#| fig.width: 7
+#| out-width: "100%"
+
+holistic_dfw |> 
+  ggplot(aes(x = `Negative Affect`, y = fct_reorder(Abbrev, .x = `Negative Affect`))) +
+  geom_boxplot() +
+  labs(y = NULL)
+```
+
+The table below shows the estimated inter-rater reliability (i.e., unbalanced average-measures consistency intraclass correlation) for the holistic ratings of each clip (first item-level and then scale-level). These were derived from Bayesian generalizability studies using the [varde](https://github.com/jmgirard/varde) package. The lower and upper columns represent the boundaries of the 95% equal-tail credible interval.
+
+```{r}
+#| echo: false
+
+hitem_iccs <- 
+  varde::calc_icc(
+    .data = holistic_dfw,
+    subject = "Abbrev", 
+    rater = "Rater", 
+    scores = c(
+      "Afraid", "Alert", "Determined", "Distressed", "Enthusiastic",
+      "Excited", "Inspired", "Nervous", "Scared", "Upset"
+    ),
+    iter = 10000,
+    file = "data/icc_holistic_item",
+    silent = 2
+  )
+
+hitem_df <- 
+  hitem_iccs |> 
+  summary() |> 
+  filter(term == "ICC(Q,khat)") |> 
+  rename_all(str_to_title)
+
+hitem_df |> 
+  kable(digits = 3) |> 
+  kable_styling()
+```
+
+```{r}
+#| echo: false
+
+holistic_dfw2 <- 
+  holistic_dfw |> 
+  rename_all(.funs = str_replace, pattern = " ", replacement = "")
+
+hscale_iccs <- 
+  varde::calc_icc(
+    .data = holistic_dfw2,
+    subject = "Abbrev", 
+    rater = "Rater", 
+    scores = c("NegativeAffect", "PositiveAffect"),
+    iter = 10000,
+    file = "data/icc_holistic_scale",
+    silent = 2
+  )
+
+hscale_df <- 
+  hscale_iccs |> 
+  summary() |> 
+  filter(term == "ICC(Q,khat)") |> 
+  rename_all(str_to_title)
+
+hscale_df |> 
+  kable(digits = 3) |> 
+  kable_styling()
+```
+
+
+## Continuous Ratings
 
 ```{r}
 #| echo: false
@@ -82,7 +186,9 @@ clip_summary <-
   ) 
 ```
 
-Each clip was continuously rated on its emotional valence at a frequency of 1 Hz and using a scale ranging from -4 (very negative) to 4 (very positive). The number of participants rating each clip ranged from `r min(clip_summary$Raters)` to `r max(clip_summary$Raters)` (Mdn=`r median(clip_summary$Raters)`, MAD=`r round(mad(clip_summary$Raters), digits = 1)`). The table below provides the number of raters and duration per clip as well as a summary of the valence ratings distribution across raters (i.e., mean, standard deviation, and quartiles).
+A total of `r length(unique(valence_df$Rater))` participants watched this film clip and used the [CARMA software](https://carma.jmgirard.com) to provide continuous (i.e., second-by-second) ratings of how it made them feel. These continuous ratings were made on a single emotional *valence* scale ranging from -4 (very negative) to 4 (very positive).
+
+Each clip was watched by participants who used the [CARMA software](https://carma.jmgirard.com) to provide continuous (i.e., second-by-second) ratings of how it made them feel. These continuous ratings were made on a single emotional *valence* scale ranging from -4 (very negative) to 4 (very positive). The number of participants rating each clip ranged from `r min(clip_summary$Raters)` to `r max(clip_summary$Raters)` (Mdn=`r median(clip_summary$Raters)`, MAD=`r round(mad(clip_summary$Raters), digits = 1)`). The table below provides the number of raters and duration per clip as well as a summary of the valence ratings distribution across raters (i.e., mean, standard deviation, and quartiles).
 
 ```{r}
 #| echo: false
@@ -132,74 +238,21 @@ valence_df |>
   mutate(Abbrev = fct_reorder(.f = factor(Abbrev), .x = Rating, .fun = median, na.rm = TRUE)) |> 
   ggplot(aes(x = Rating, y = Abbrev)) + 
   geom_boxplot() +
-  labs(y = NULL)
+  labs(y = NULL, x = NULL, title = "Boxplots of Continuous Valence Ratings per Clip")
 ```
+
+The table below shows the estimated inter-rater reliability (i.e., balanced average-measures consistency intraclass correlation) for the continuous valence ratings of each clip. These were derived from a Bayesian generalizability study using the [varde](https://github.com/jmgirard/varde) package. The lower and upper columns in the table below represent the boundaries of the 95% equal-tail credible interval.
 
 ```{r}
 #| echo: false
+#| message: false
 
-icc_files <- dir(pattern = "^icc_.*.csv$")
+icc_files <- dir(path = "data", pattern = "^icc_.*.csv$", full.names = TRUE)
 icc_df <- 
   lapply(X = icc_files, FUN = readr::read_csv, show_col_types = FALSE) |> 
   bind_rows()
 icc_df |> 
-  kable(digits = 3) |> 
-  kable_styling()
-icc_df |> 
-  summarize(mean_cl_boot(Estimate)) |> 
-  rename(
-    Mean = y,
-    Lower = ymin,
-    Upper = ymax
-  ) |> 
+  select(-Score) |> 
   kable(digits = 3) |> 
   kable_styling()
 ```
-
-## Holistic Ratings
-
-```{r}
-#| echo: false
-
-holistic_dfw <-  
-  holistic_df |> 
-  tidyr::pivot_wider(
-    names_from = Scale,
-    values_from = Rating
-  )
-
-holistic_iccs <- 
-  varde::calc_icc(
-    .data = holistic_dfw,
-    subject = "Abbrev", 
-    rater = "Rater", 
-    scores = c(
-      "Afraid", "Alert", "Determined", "Distressed", "Enthusiastic",
-      "Excited", "Inspired", "Nervous", "Scared", "Upset"
-    ),
-    iter = 10000,
-    file = "icc_holistic",
-    silent = 2
-  )
-
-hicc_df <- 
-  holistic_iccs |> 
-  summary() |> 
-  filter(term == "ICC(Q,khat)") |> 
-  rename_all(str_to_title)
-
-hicc_df |> 
-  kable(digits = 3) |> 
-  kable_styling()
-
-hicc_df |> 
-  summarize(mean_cl_boot(Estimate)) |> 
-  rename(
-    Mean = y,
-    Lower = ymin,
-    Upper = ymax
-  ) |> 
-  kable(digits = 3) |> 
-  kable_styling()
-```
-

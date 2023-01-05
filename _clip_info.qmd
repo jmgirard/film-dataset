@@ -86,7 +86,7 @@ cat(glue::glue('
 
 ## Holistic Ratings
 
-A total of `r length(unique(holistic_df$Rater))` participants watched this film clip and then provided holistic ratings on how the entire clip made them feel. These holistic ratings were completed using five positive emotion scales (i.e., *alert*, *determined*, *enthusiastic*, *excited*, *inspired*) and five negative emotion scales (i.e., *afraid*, *distressed*, *nervous*, *scared*, *upset*), each rated on an ordinal scale from 0 to 4. The plot below shows the average ratings on each emotion scale with the error bars representing the bootstrapped 95% confidence interval.
+A total of `r length(unique(holistic_df$Rater))` participants watched this film clip and then provided holistic ratings on how the entire clip made them feel. These holistic ratings were completed using five Positive Affect items (i.e., *alert*, *determined*, *enthusiastic*, *excited*, *inspired*) and five Negative Affect items (i.e., *afraid*, *distressed*, *nervous*, *scared*, *upset*), each rated on an ordinal scale from 0 to 4. The plot below shows the 
 
 ```{r}
 #| echo: false
@@ -147,7 +147,7 @@ icc_summary <-
 
 icc_summary |> 
   dplyr::mutate(Abbrev = params$abbrev, .before = 1) |> 
-  readr::write_csv(glue::glue("icc_{params$abbrev}.csv"))
+  readr::write_csv(glue::glue("data/icc_{params$abbrev}.csv"))
 
 icc_summary |> 
   knitr::kable(digits = 3) |> 

@@ -332,7 +332,7 @@ All information in this section came from <a href="https://en.wikipedia.org/wiki
 </section>
 <section id="holistic-ratings" class="level2">
 <h2 class="anchored" data-anchor-id="holistic-ratings">Holistic Ratings</h2>
-<p>A total of 34 participants watched this film clip and then provided holistic ratings on how the entire clip made them feel. These holistic ratings were completed using five positive emotion scales (i.e., <em>alert</em>, <em>determined</em>, <em>enthusiastic</em>, <em>excited</em>, <em>inspired</em>) and five negative emotion scales (i.e., <em>afraid</em>, <em>distressed</em>, <em>nervous</em>, <em>scared</em>, <em>upset</em>), each rated on an ordinal scale from 0 to 4. The plot below shows the average ratings on each emotion scale with the error bars representing the bootstrapped 95% confidence interval.</p>
+<p>A total of 34 participants watched this film clip and then provided holistic ratings on how the entire clip made them feel. These holistic ratings were completed using five Positive Affect items (i.e., <em>alert</em>, <em>determined</em>, <em>enthusiastic</em>, <em>excited</em>, <em>inspired</em>) and five Negative Affect items (i.e., <em>afraid</em>, <em>distressed</em>, <em>nervous</em>, <em>scared</em>, <em>upset</em>), each rated on an ordinal scale from 0 to 4. The plot below shows the</p>
 <div class="cell">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
@@ -350,6 +350,30 @@ All information in this section came from <a href="https://en.wikipedia.org/wiki
 <h3 class="anchored" data-anchor-id="time-series">Time Series</h3>
 <p>We can plot the distribution of all valence ratings per second of the film clip to get a sense of how its emotional tone changes over time. The solid black line represents the mean of all ratings and the yellow, green, and purple ribbons represent the central 50%, 70%, and 90% of the ratings, respectively.</p>
 <div class="cell">
+<div class="cell-output cell-output-stderr">
+<pre><code>Loading required package: Hmisc</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Loading required package: lattice</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Loading required package: survival</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Loading required package: Formula</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Loading required package: ggplot2</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>
+Attaching package: 'Hmisc'</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>The following objects are masked from 'package:base':
+
+    format.pval, units</code></pre>
+</div>
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -381,28 +405,28 @@ All information in this section came from <a href="https://en.wikipedia.org/wiki
  </thead>
 <tbody>
   <tr>
-   <td style="text-align:left;"> Timepoint </td>
-   <td style="text-align:left;"> Variance </td>
-   <td style="text-align:right;"> 0.778 </td>
-   <td style="text-align:right;"> 0.523 </td>
-   <td style="text-align:right;"> 1.491 </td>
-   <td style="text-align:right;"> 0.404 </td>
-  </tr>
-  <tr>
    <td style="text-align:left;"> Rater </td>
    <td style="text-align:left;"> Variance </td>
-   <td style="text-align:right;"> 0.559 </td>
-   <td style="text-align:right;"> 0.449 </td>
-   <td style="text-align:right;"> 0.734 </td>
-   <td style="text-align:right;"> 0.290 </td>
+   <td style="text-align:right;"> 0.743 </td>
+   <td style="text-align:right;"> 0.516 </td>
+   <td style="text-align:right;"> 1.535 </td>
+   <td style="text-align:right;"> 0.393 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Timepoint </td>
+   <td style="text-align:left;"> Variance </td>
+   <td style="text-align:right;"> 0.561 </td>
+   <td style="text-align:right;"> 0.448 </td>
+   <td style="text-align:right;"> 0.749 </td>
+   <td style="text-align:right;"> 0.296 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> Residual </td>
    <td style="text-align:left;"> Variance </td>
-   <td style="text-align:right;"> 0.589 </td>
-   <td style="text-align:right;"> 0.564 </td>
+   <td style="text-align:right;"> 0.588 </td>
+   <td style="text-align:right;"> 0.563 </td>
    <td style="text-align:right;"> 0.616 </td>
-   <td style="text-align:right;"> 0.306 </td>
+   <td style="text-align:right;"> 0.311 </td>
   </tr>
 </tbody>
 </table>
@@ -416,6 +440,7 @@ All information in this section came from <a href="https://en.wikipedia.org/wiki
 <table class="table" style="margin-left: auto; margin-right: auto;">
  <thead>
   <tr>
+   <th style="text-align:left;"> Score </th>
    <th style="text-align:left;"> Term </th>
    <th style="text-align:right;"> Estimate </th>
    <th style="text-align:right;"> Lower </th>
@@ -426,10 +451,11 @@ All information in this section came from <a href="https://en.wikipedia.org/wiki
  </thead>
 <tbody>
   <tr>
+   <td style="text-align:left;"> Rating </td>
    <td style="text-align:left;"> ICC(C,k) </td>
-   <td style="text-align:right;"> 0.977 </td>
-   <td style="text-align:right;"> 0.964 </td>
-   <td style="text-align:right;"> 0.987 </td>
+   <td style="text-align:right;"> 0.968 </td>
+   <td style="text-align:right;"> 0.958 </td>
+   <td style="text-align:right;"> 0.975 </td>
    <td style="text-align:right;"> 30 </td>
    <td style="text-align:left;"> Relative </td>
   </tr>
@@ -588,7 +614,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"loop":true,"closeEffect":"zoom","selector":".lightbox","openEffect":"zoom","descPosition":"bottom"});</script>
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","selector":".lightbox","loop":true,"descPosition":"bottom","openEffect":"zoom"});</script>
 
 
 

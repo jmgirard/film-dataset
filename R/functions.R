@@ -29,7 +29,9 @@ get_holistic_df <- function(abbrev) {
 # Get clip-specific valence ratings tibble --------------------------------
 
 get_valence_df <- function(abbrev) {
-  df <- readr::read_rds("./data/valence_ratings.rds") |>
+  df <- 
+    readr::read_rds("./data/valence_ratings.rds") |>
+    dplyr::rename(Timepoint = Second) |> 
     tidyr::drop_na(Rating)
   if (!missing(abbrev)) {
     df <- df |> dplyr::filter(Abbrev == abbrev)
@@ -41,54 +43,52 @@ get_valence_df <- function(abbrev) {
 # Create clip-specific holistic ratings plot ------------------------------
 
 create_holistic_plot <- function(holistic_df) {
-  require("Hmisc")
-  
-  pa <- c("Inspired", "Excited", "Enthusiastic", "Determined", "Alert")
-  na <- c("Nervous", "Afraid", "Distressed", "Scared", "Upset")
-  
-  holistic_df |> 
+
+    holistic_df |> 
+    tidyr::pivot_wider(
+      names_from = Scale,
+      values_from = Rating
+    ) |> 
     dplyr::mutate(
-      Valence = dplyr::case_when(
-        Scale %in% pa ~ "Positive",
-        Scale %in% na ~ "Negative"
+      "Positive Affect" = rowMeans(
+        dplyr::across(c(Alert, Determined, Enthusiastic, Excited, Inspired)), 
+        na.rm = TRUE
+      ),
+      "Negative Affect" = rowMeans(
+        dplyr::across(c(Afraid, Distressed, Nervous, Scared, Upset)), 
+        na.rm = TRUE
       )
+    ) |> 
+    tidyr::pivot_longer(
+      cols = c("Positive Affect", "Negative Affect"),
+      names_to = "Scale", 
+      values_to = "Mean"
     ) |> 
     ggplot2::ggplot(
       ggplot2::aes(
-        x = Rating, 
-        y = forcats::fct_reorder(Scale, Rating, .fun = mean), 
-        fill = Valence
+        x = Mean, 
+        y = Scale
       )
     ) + 
-    ggplot2::stat_summary(
-      geom = "col", 
-      fun = mean, 
-      orientation = "y"
-    ) +
-    ggplot2::stat_summary(
-      geom = "pointrange", 
-      fun.data = ggplot2::mean_cl_boot, 
-      linewidth = 0.6
-    ) +
+    ggplot2::geom_boxplot() +
+    ggbeeswarm::geom_quasirandom(color = "firebrick") +
     ggplot2::scale_x_continuous(limits = c(0, 4)) +
     ggplot2::labs(
       y = NULL, 
-      x = "Average Rating with 95% Confidence Interval", 
-      fill = "Scale"
-    ) +
-    ggplot2::theme(legend.position = "top")
+      x = NULL
+    )
 }
 
 # Estimate clip-specific valence ratings ICC ------------------------------
 
 estimate_valence_icc_clip <- function(valence_df, info_df, iter = 10000) {
   varde::calc_icc(
-    .data = dplyr::rename(valence_df, Timepoint = Second), 
+    .data = valence_df, 
     subject = "Timepoint", 
     rater = "Rater", 
     scores = "Rating",
     iter = iter,
-    file = paste0("icc_", info_df$Abbrev),
+    file = paste0("data/icc_", info_df$Abbrev),
     silent = 2
   )
 }
@@ -100,7 +100,7 @@ create_valence_plot <- function(valence_df) {
   require("Hmisc")
   valence_df |> 
     ggplot2::ggplot(
-      ggplot2::aes(x = Second, y = Rating)
+      ggplot2::aes(x = Timepoint, y = Rating)
     ) +
     ggplot2::stat_summary(
       geom = "ribbon",
