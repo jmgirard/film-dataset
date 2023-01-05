@@ -151,6 +151,7 @@ icc_summary |>
   readr::write_csv(glue::glue("data/icc_{params$abbrev}.csv"))
 
 icc_summary |> 
+  dplyr::select(-Score) |> 
   knitr::kable(digits = 3) |> 
   kableExtra::kable_styling()
 ```
