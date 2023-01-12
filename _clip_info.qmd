@@ -109,6 +109,7 @@ cat(glue::glue('
 #| fig-width: 7
 #| fig-height: 4
 #| out-width: "100%"
+#| cache: true
 
 create_wordcloud_clip(subtitle_df)
 ```
@@ -124,6 +125,7 @@ A total of `r length(unique(holistic_df$Rater))` participants watched this film 
 #| fig-width: 7
 #| fig-height: 4
 #| out-width: "100%"
+#| cache: true
 
 create_holistic_plot(holistic_df)
 ```
@@ -159,6 +161,7 @@ A Bayesian generalizability study was used to decompose the variance in ratings 
 
 ```{r}
 #| echo: false
+#| cache: true
 
 summary(icc_res, which = "variances") |> 
   dplyr::rename_all(.funs = stringr::str_to_title) |> 
@@ -170,6 +173,7 @@ From these variance components, we can estimate inter-rater reliability of the r
 
 ```{r}
 #| echo: false
+#| cache: true
 
 icc_summary <- 
   summary(icc_res, which = "iccs") |> 
@@ -194,6 +198,7 @@ Below, we can also visualize the posterior distributions of each of these parame
 #| fig-width: 7
 #| fig-height: 4
 #| out-width: "100%"
+#| cache: true
 
 plot(
   icc_res, 

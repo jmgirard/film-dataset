@@ -5,3 +5,5 @@
 data/icc/icc_*.rds
 gstudy.rds
 /.quarto/
+/*_cache/
+/*_files/
