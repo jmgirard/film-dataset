@@ -17,16 +17,10 @@ library(varde)
 
 ```{r}
 #| echo: false
-
-info_df <- read_xlsx("./data/film_info.xlsx")
-
-valence_df <- 
-  read_rds("./data/valence_ratings.rds") |>
-  drop_na(Rating)
-
-holistic_df <- 
-  read_rds("./data/holistic_ratings.rds") |> 
-  drop_na(Rating)
+source("./R/functions.R")
+info_df <- get_info_df()
+valence_df <- get_valence_df()
+holistic_df <- get_holistic_df()
 ```
 
 ## Clip Information
@@ -58,6 +52,10 @@ info_df |>
 info_df |> 
   arrange(Abbrev) |> 
   select(Abbrev:Duration) |> 
+  mutate(across(
+    Clip_Start:Clip_Stop,
+    ~s_to_ts(ts_to_s(.), force_hours = TRUE, round_seconds = TRUE)
+  )) |>
   rename_all(str_replace, pattern = "_", replacement = " ") |> 
   kable(digits = 2) |> 
   kable_styling()
@@ -121,7 +119,7 @@ hitem_iccs <-
       "Excited", "Inspired", "Nervous", "Scared", "Upset"
     ),
     iter = 10000,
-    file = "data/icc_holistic_item",
+    file = "data/icc/icc_holistic_item",
     silent = 2
   )
 
@@ -150,7 +148,7 @@ hscale_iccs <-
     rater = "Rater", 
     scores = c("NegativeAffect", "PositiveAffect"),
     iter = 10000,
-    file = "data/icc_holistic_scale",
+    file = "data/icc/icc_holistic_scale",
     silent = 2
   )
 
@@ -247,7 +245,7 @@ The table below shows the estimated inter-rater reliability (i.e., balanced aver
 #| echo: false
 #| message: false
 
-icc_files <- dir(path = "data", pattern = "^icc_.*.csv$", full.names = TRUE)
+icc_files <- dir(path = "data/icc", pattern = "^icc_.*.csv$", full.names = TRUE)
 icc_df <- 
   lapply(X = icc_files, FUN = readr::read_csv, show_col_types = FALSE) |> 
   bind_rows()

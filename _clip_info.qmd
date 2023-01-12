@@ -6,6 +6,8 @@ source("./R/functions.R")
 valence_df <- get_valence_df(params$abbrev)
 holistic_df <- get_holistic_df(params$abbrev)
 info_df <- get_info_df(params$abbrev)
+mediainfo_df <- get_mediainfo_df(params$abbrev)
+subtitle_df <- get_subtitle_df(params$abbrev)
 ```
 
 ## Film Information
@@ -56,6 +58,22 @@ info_df |>
 
 ```{r}
 #| echo: false
+
+mediainfo_df |> 
+  dplyr::select(-Abbrev) |> 
+  dplyr::mutate(dplyr::across(where(is.numeric), as.character)) |> 
+  tidyr::pivot_longer(
+    dplyr::everything(), 
+    names_to = "Characteristic", 
+    values_to = "Value"
+  ) |> 
+  dplyr::mutate(Characteristic = stringr::str_replace_all(Characteristic, "_", " ")) |> 
+  knitr::kable() |> 
+  kableExtra::kable_styling()
+```
+
+```{r}
+#| echo: false
 #| output: asis
 
 cat(glue::glue('
@@ -83,6 +101,18 @@ cat(glue::glue('
 </div>
 '))
 ```
+
+## Subtitles
+
+```{r}
+#| echo: false
+#| fig-width: 7
+#| fig-height: 4
+#| out-width: "100%"
+
+create_wordcloud_clip(subtitle_df)
+```
+
 
 ## Holistic Ratings
 
@@ -148,7 +178,7 @@ icc_summary <-
 
 icc_summary |> 
   dplyr::mutate(Abbrev = params$abbrev, .before = 1) |> 
-  readr::write_csv(glue::glue("data/icc_{params$abbrev}.csv"))
+  readr::write_csv(glue::glue("data/icc/icc_{params$abbrev}.csv"))
 
 icc_summary |> 
   dplyr::select(-Score) |> 

@@ -2,6 +2,6 @@
 .Rhistory
 .RData
 .Ruserdata
-data/icc_*.rds
+data/icc/icc_*.rds
 gstudy.rds
 /.quarto/
