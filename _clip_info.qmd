@@ -48,6 +48,7 @@ cat(info_df$Description)
 
 ```{r}
 #| echo: false
+#| cache: true
 
 info_df |> 
   dplyr::select(Abbrev, Film, Clip_Start, Clip_Stop, Duration) |> 
@@ -58,6 +59,7 @@ info_df |>
 
 ```{r}
 #| echo: false
+#| cache: true
 
 mediainfo_df |> 
   dplyr::select(-Abbrev) |> 
@@ -114,6 +116,17 @@ cat(glue::glue('
 create_wordcloud_clip(subtitle_df)
 ```
 
+```{r}
+#| echo: false
+#| cache: true
+
+subtitle_df |> 
+  dplyr::select(Start = start, End = end, Subtitle = subtitle) |> 
+  knitr::kable(escape = FALSE) |> 
+  kableExtra::kable_styling() |> 
+  kableExtra::scroll_box(height = "300px")
+```
+
 
 ## Holistic Ratings
 
@@ -144,6 +157,7 @@ We can plot the distribution of all valence ratings per second of the film clip 
 #| fig-width: 7
 #| fig-height: 5
 #| out-width: "100%"
+#| cache: true
 
 create_valence_plot(valence_df)
 ```
@@ -153,6 +167,7 @@ create_valence_plot(valence_df)
 ```{r}
 #| echo: false
 #| message: false
+#| cache: true
 
 icc_res <- estimate_valence_icc_clip(valence_df, info_df)
 ```
