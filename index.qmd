@@ -1,8 +1,13 @@
 ---
 title: "film-dataset"
+filters:
+  - lightbox
+lightbox: auto
 ---
 
 This is the webpage for the film-dataset. Within you can find information about the dataset as a whole, about each film clip in the dataset, and about the dataset collection methodology. You can also download the clips and deidentified data for your own research.
+
+![](./img/screenshot_collage.jpg)
 
 **Jeffrey M. Girard**, PhD<br />
 Department of Psychology<br />
