@@ -226,7 +226,7 @@ create_wordcloud_clip <- function(subtitle_df) {
     tidytext::unnest_tokens("token", "subtitle2", token = "words") |> 
     dplyr::count(token, sort = TRUE) |> 
     dplyr::anti_join(stop_words, by = c("token" = "word")) |> 
-    dplyr::filter(n > 1) |> 
+    dplyr::top_n(n = 50, wt = n) |> 
     ggplot2::ggplot(ggplot2::aes(label = token, size = n)) +
     ggwordcloud::geom_text_wordcloud_area() +
     ggplot2::scale_size_area(max_size = 18) +
