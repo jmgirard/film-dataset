@@ -208,6 +208,8 @@ create_valence_plot <- function(valence_df) {
 create_wordcloud_clip <- function(subtitle_df) {
   data("stop_words", package = "tidytext")
   
+  bing <- tidytext::get_sentiments(lexicon = "bing")
+  
   subtitle_df |> 
     dplyr::summarize(subtitle = stringr::str_c(subtitle, collapse = " ")) |>
     dplyr::mutate(
@@ -226,10 +228,12 @@ create_wordcloud_clip <- function(subtitle_df) {
     tidytext::unnest_tokens("token", "subtitle2", token = "words") |> 
     dplyr::count(token, sort = TRUE) |> 
     dplyr::anti_join(stop_words, by = c("token" = "word")) |> 
-    dplyr::top_n(n = 50, wt = n) |> 
-    ggplot2::ggplot(ggplot2::aes(label = token, size = n)) +
+    dplyr::left_join(bing, by = c("token" = "word")) |> 
+    # dplyr::top_n(n = 50, wt = n) |> 
+    ggplot2::ggplot(ggplot2::aes(label = token, size = n, color = sentiment)) +
     ggwordcloud::geom_text_wordcloud_area() +
     ggplot2::scale_size_area(max_size = 18) +
+    ggplot2::scale_color_manual(values = c("#d95f02", "#1b9e77")) +
     ggplot2::theme_minimal()
   
 }

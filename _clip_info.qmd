@@ -106,6 +106,8 @@ cat(glue::glue('
 
 ## Subtitles
 
+The following wordcloud shows the words used in this clip, scaled by number of occurrences and colored by sentiment (orange = negative, green = positive, grey = neutral or unsure). Note that the words have been stemmed and lemmatized and stopwords have been removed.
+
 ```{r}
 #| echo: false
 #| fig-width: 7
@@ -115,6 +117,8 @@ cat(glue::glue('
 
 create_wordcloud_clip(subtitle_df)
 ```
+
+The table below shows all subtitles in this clip with the start and stop time of each subtitle's appearance in seconds.
 
 ```{r}
 #| echo: false
