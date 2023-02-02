@@ -210,7 +210,8 @@ create_wordcloud_clip <- function(subtitle_df) {
   
   bing <- tidytext::get_sentiments(lexicon = "bing")
   
-  subtitle_df |> 
+  df <- 
+    subtitle_df |> 
     dplyr::summarize(subtitle = stringr::str_c(subtitle, collapse = " ")) |>
     dplyr::mutate(
       subtitle = stringr::str_replace_all(subtitle, "\n", " "),
@@ -229,10 +230,16 @@ create_wordcloud_clip <- function(subtitle_df) {
     dplyr::count(token, sort = TRUE) |> 
     dplyr::anti_join(stop_words, by = c("token" = "word")) |> 
     dplyr::left_join(bing, by = c("token" = "word")) |> 
+    dplyr::mutate(sentiment = stringr::str_to_title(sentiment))
     # dplyr::top_n(n = 50, wt = n) |> 
-    ggplot2::ggplot(ggplot2::aes(label = token, size = n, color = sentiment)) +
-    ggwordcloud::geom_text_wordcloud_area() +
-    ggplot2::scale_size_area(max_size = 18) +
+    
+  df |> 
+    ggplot2::ggplot(
+      ggplot2::aes(label = token, size = n, color = sentiment)
+    ) +
+    ggwordcloud::geom_text_wordcloud(show.legend = TRUE) +
+    ggplot2::labs(size = "Frequency", color = "Sentiment") +
+    ggplot2::scale_size_area(max_size = 10) +
     ggplot2::scale_color_manual(values = c("#d95f02", "#1b9e77")) +
     ggplot2::theme_minimal()
   

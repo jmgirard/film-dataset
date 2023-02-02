@@ -1,7 +1,7 @@
 934
 00:44:32,633 --> 00:44:38,304
-<font color="#D900D9">(THREE-PIECE COMBO
-PLAYS SOFT JAZZ)</font>
+(THREE-PIECE COMBO
+PLAYS SOFT JAZZ)
 
 935
 00:44:38,305 --> 00:44:39,639
@@ -9,7 +9,7 @@ Daddy!
 
 936
 00:44:39,640 --> 00:44:41,041
-<font color="#D900D9">(CHUCKLING)</font>
+(CHUCKLING)
 
 937
 00:44:42,443 --> 00:44:44,444
@@ -33,7 +33,7 @@ Sit down.
 
 942
 00:44:50,818 --> 00:44:52,418
-<font color="#D900D9">(CLEARS THROAT)</font>
+(CLEARS THROAT)
 
 943
 00:44:53,821 --> 00:44:55,989
@@ -55,12 +55,12 @@ a chilled salad fork.
 
 947
 00:45:03,297 --> 00:45:07,967
-<font color="#D900D9">(WHISPERING)</font>
+(WHISPERING)
 It's a fancy restaurant, you know.
 
 948
 00:45:07,968 --> 00:45:11,337
-<font color="#D900D9">(SIGHING)</font>
+(SIGHING)
 
 949
 00:45:11,338 --> 00:45:13,774
@@ -264,7 +264,7 @@ I been fighting for us...
 
 995
 00:47:17,866 --> 00:47:19,499
-<font color="#D900D9">(GASPS QUIETLY)</font>
+(GASPS QUIETLY)
 
 996
 00:47:20,601 --> 00:47:22,302
@@ -328,11 +328,11 @@ I think that calls for a toast.
 
 1010
 00:48:03,244 --> 00:48:04,777
-<font color="#D900D9">(SOFT JAZZ PLAYING)</font>
+(SOFT JAZZ PLAYING)
 
 1011
 00:48:07,748 --> 00:48:10,817
-<font color="#D900D9">(INHALING DEEPLY)</font>
+(INHALING DEEPLY)
 
 1012
 00:48:10,818 --> 00:48:14,154
@@ -397,11 +397,11 @@ Hollywood.
 
 1026
 00:48:53,861 --> 00:48:56,696
-<font color="#D900D9">(SNIFFLES)</font>
+(SNIFFLES)
 
 1027
 00:48:56,697 --> 00:48:58,865
-<font color="#D900D9">(WHISPERING)</font>
+(WHISPERING)
 The rest of us...
 
 1028

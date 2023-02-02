@@ -1,4 +1,4 @@
-```{r}
+```{r setup}
 #| echo: false
 #| message: false
 
@@ -14,7 +14,7 @@ subtitle_df <- get_subtitle_df(params$abbrev)
 
 ::: columns
 ::: {.column width="70%"}
-```{r}
+```{r wikipedia}
 #| echo: false
 #| output: asis
 
@@ -27,7 +27,7 @@ cat(glue::glue('<p><blockquote>All information in this section came from [Wikipe
 ::: {.column width="10%"}
 :::
 ::: {.column width="20%" .poster}
-```{r}
+```{r poster}
 #| echo: false
 #| output: asis
 
@@ -39,14 +39,14 @@ cat(glue::glue('![](./img/posters/{params$abbrev}_poster.webp)'))
 
 ## Clip Information
 
-```{r}
+```{r description}
 #| echo: false
 #| output: asis
 
 cat(info_df$Description)
 ```
 
-```{r}
+```{r info}
 #| echo: false
 #| cache: true
 
@@ -57,7 +57,7 @@ info_df |>
   kableExtra::kable_styling()
 ```
 
-```{r}
+```{r mediainfo}
 #| echo: false
 #| cache: true
 
@@ -74,7 +74,7 @@ mediainfo_df |>
   kableExtra::kable_styling()
 ```
 
-```{r}
+```{r screenshots}
 #| echo: false
 #| output: asis
 
@@ -108,10 +108,10 @@ cat(glue::glue('
 
 The following wordcloud shows the words used in this clip, scaled by number of occurrences and colored by sentiment (orange = negative, green = positive, grey = neutral or unsure). Note that the words have been stemmed and lemmatized and stopwords have been removed.
 
-```{r}
+```{r wordcloud}
 #| echo: false
 #| fig-width: 7
-#| fig-height: 4
+#| fig-height: 5
 #| out-width: "100%"
 #| cache: true
 
@@ -120,7 +120,7 @@ create_wordcloud_clip(subtitle_df)
 
 The table below shows all subtitles in this clip with the start and stop time of each subtitle's appearance in seconds.
 
-```{r}
+```{r subtitle_df}
 #| echo: false
 #| cache: true
 
@@ -136,7 +136,7 @@ subtitle_df |>
 
 A total of `r length(unique(holistic_df$Rater))` participants watched this film clip and then provided holistic ratings on how the entire clip made them feel. These holistic ratings were completed using five Positive Affect items (i.e., *alert*, *determined*, *enthusiastic*, *excited*, *inspired*) and five Negative Affect items (i.e., *afraid*, *distressed*, *nervous*, *scared*, *upset*), each rated on an ordinal scale from 0 to 4. The plot below shows the 
 
-```{r}
+```{r holistic_plot}
 #| echo: false
 #| message: false
 #| fig-width: 7
@@ -155,7 +155,7 @@ A total of `r length(unique(valence_df$Rater))` participants watched this film c
 
 We can plot the distribution of all valence ratings per second of the film clip to get a sense of how its emotional tone changes over time. The solid black line represents the mean of all ratings and the yellow, green, and purple ribbons represent the central 50%, 70%, and 90% of the ratings, respectively.
 
-```{r}
+```{r valence_plot}
 #| echo: false
 #| message: false
 #| fig-width: 7
@@ -168,7 +168,7 @@ create_valence_plot(valence_df)
 
 ### Inter-Rater Reliability
 
-```{r}
+```{r icc_res}
 #| echo: false
 #| message: false
 #| cache: true
@@ -178,7 +178,7 @@ icc_res <- estimate_valence_icc_clip(valence_df, info_df)
 
 A Bayesian generalizability study was used to decompose the variance in ratings of this video clip into the following components: timepoint variance (in average ratings of each second, across raters), rater variance (in average ratings from each rater, across seconds), and residual variance (including second-by-rater interactions and measurement error). The lower and upper columns in the table below represent the boundaries of the 95% equal-tail credible interval.
 
-```{r}
+```{r var_summary}
 #| echo: false
 #| cache: true
 
@@ -190,7 +190,7 @@ summary(icc_res, which = "variances") |>
 
 From these variance components, we can estimate inter-rater reliability of the ratings. There are many formulations of the two-way intraclass correlation (ICC), but the most relevant to our purposes here is the balanced average-measures consistency formulation or ICC(C,k).
 
-```{r}
+```{r icc_summary}
 #| echo: false
 #| cache: true
 
@@ -211,7 +211,7 @@ icc_summary |>
 
 Below, we can also visualize the posterior distributions of each of these parameters. Values with higher posterior density are more probable.
 
-```{r}
+```{r icc_plot}
 #| echo: false
 #| warning: false
 #| fig-width: 7

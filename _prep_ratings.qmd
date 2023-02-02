@@ -80,6 +80,26 @@ carma_tidy <-
 write_rds(carma_tidy, file = "./data/valence_ratings.rds", compress = "gz")
 ```
 
+```{r}
+#| echo: true
+
+carma_tidy |> 
+  group_by(Abbrev, Second) |> 
+  summarize(
+    Raters = n(),
+    Mean_Rating = mean(Rating, na.rm = TRUE),
+    SD_Rating = sd(Rating, na.rm = TRUE),
+    p10_Rating = quantile(Rating, probs = 0.10, na.rm = TRUE),
+    p30_Rating = quantile(Rating, probs = 0.30, na.rm = TRUE),
+    p50_Rating = quantile(Rating, probs = 0.50, na.rm = TRUE),
+    p70_Rating = quantile(Rating, probs = 0.70, na.rm = TRUE),
+    p90_Rating = quantile(Rating, probs = 0.90, na.rm = TRUE),
+    .groups = "drop"
+  ) |> 
+  write_csv(file = "./data/valence_ratings_summary.csv")
+```
+
+
 ## Prepare holistic ratings
 
 ```{r}
