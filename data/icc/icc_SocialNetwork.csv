@@ -1,2 +1,2 @@
 Abbrev,Score,Term,Estimate,Lower,Upper,Raters,Error
-SocialNetwork,Rating,"ICC(C,k)",0.8447265053737444,0.8168344473522217,0.8678609477702701,27,Relative
+SocialNetwork,Rating,"ICC(C,k)",0.9302735404440717,0.9176120528196681,0.9403564142498506,75,Relative

@@ -1,0 +1,27 @@
+---
+title: "Analyze Subtitles"
+---
+
+```{r}
+#| message: false
+
+library(tidyverse)
+library(vader)
+
+source("./R/functions.R")
+subtitle_df <- get_subtitle_df()
+```
+
+```{r}
+df <- 
+    subtitle_df |> 
+    mutate(vader = map(.x = subtitle, .f = get_vader)) |> 
+    unnest_wider(col = vader) |> 
+    mutate(across(compound:but_count, parse_number))
+df
+```
+
+```{r}
+write_rds(df, "data/vader_tidy.rds")
+```
+

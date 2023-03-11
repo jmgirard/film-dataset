@@ -62,7 +62,7 @@ get_mediainfo_df <- function(abbrev) {
 # Get clip-specific holistic ratings tibble -------------------------------
 
 get_holistic_df <- function(abbrev) {
-  df <- readr::read_rds("./data/holistic_ratings.rds") |> 
+  df <- readr::read_rds("./data/holistic_tidy.rds") |> 
     tidyr::drop_na(Rating)
   if (!missing(abbrev)) {
     df <- df |> dplyr::filter(Abbrev == abbrev)
@@ -74,7 +74,7 @@ get_holistic_df <- function(abbrev) {
 
 get_valence_df <- function(abbrev) {
   df <- 
-    readr::read_rds("./data/valence_ratings.rds") |>
+    readr::read_rds("./data/valence_tidy.rds") |>
     dplyr::rename(Timepoint = Second) |> 
     tidyr::drop_na(Rating)
   if (!missing(abbrev)) {
@@ -135,13 +135,21 @@ create_holistic_plot <- function(holistic_df) {
 
 # Estimate clip-specific valence ratings ICC ------------------------------
 
-estimate_valence_icc_clip <- function(valence_df, info_df, iter = 10000) {
+estimate_valence_icc_clip <- function(
+    valence_df, 
+    info_df, 
+    iter = 30000,
+    warmup = 15000,
+    thin = 2) {
+  
   varde::calc_icc(
     .data = valence_df, 
     subject = "Timepoint", 
     rater = "Rater", 
     scores = "Rating",
     iter = iter,
+    warmup = warmup,
+    thin = thin,
     file = paste0("data/icc/icc_", info_df$Abbrev),
     silent = 2
   )
@@ -244,4 +252,3 @@ create_wordcloud_clip <- function(subtitle_df) {
     ggplot2::theme_minimal()
   
 }
-

@@ -199,11 +199,15 @@ clip_summary |>
   geom_quasirandom(color = "firebrick") +
   scale_y_discrete() +
   scale_x_continuous(
-    limits = c(25, 37),
-    breaks = seq(0, 40, 2),
+    limits = c(71, 85),
+    breaks = seq(0, 100, 2),
     expand = c(0, 0)
   ) +
-  labs(title = "Distribution of the Number of Raters per Clip", y = NULL, x = NULL) +
+  labs(
+    title = "Distribution of the Number of Raters per Clip", 
+    y = NULL, 
+    x = NULL
+  ) +
   theme(panel.grid.major.y = element_blank(), axis.ticks.y = element_blank())
 ```
 
@@ -235,7 +239,7 @@ clip_summary |>
 valence_df |> 
   mutate(Abbrev = fct_reorder(.f = factor(Abbrev), .x = Rating, .fun = median, na.rm = TRUE)) |> 
   ggplot(aes(x = Rating, y = Abbrev)) + 
-  geom_boxplot() +
+  geom_boxplot(outlier.alpha = 1/4) +
   labs(y = NULL, x = NULL, title = "Boxplots of Continuous Valence Ratings per Clip")
 ```
 
