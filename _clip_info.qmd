@@ -147,7 +147,7 @@ A total of `r length(unique(holistic_df$Rater))` participants watched this film 
 create_holistic_plot(holistic_df)
 ```
 
-## Continuous Ratings
+## Dynamic Ratings
 
 A total of `r length(unique(valence_df$Rater))` participants watched this film clip and used the [CARMA software](https://carma.jmgirard.com) to provide continuous (i.e., second-by-second) ratings of how it made them feel. These continuous ratings were made on a single emotional *valence* scale ranging from -4 (very negative) to 4 (very positive).
 
@@ -176,7 +176,7 @@ create_valence_plot(valence_df)
 icc_res <- estimate_valence_icc_clip(valence_df, info_df)
 ```
 
-A Bayesian generalizability study was used to decompose the variance in ratings of this video clip into the following components: timepoint variance (in average ratings of each second, across raters), rater variance (in average ratings from each rater, across seconds), and residual variance (including second-by-rater interactions and measurement error). The lower and upper columns in the table below represent the boundaries of the 95% equal-tail credible interval.
+A Bayesian generalizability study was used to decompose the variance in ratings of this video clip into the following components: timepoint variance (in average ratings of each second, across raters), rater variance (in average ratings from each rater, across seconds), and residual variance (including second-by-rater interactions and measurement error). The lower and upper columns in the table below represent the boundaries of the 95% equal-tail credible interval. Note that we dropped the first 10 seconds of each clip (as rater "warmup" time).
 
 ```{r var_summary}
 #| echo: false

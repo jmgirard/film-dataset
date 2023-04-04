@@ -1,2 +1,2 @@
 Abbrev,Score,Term,Estimate,Lower,Upper,Raters,Error
-MarriageStory,Rating,"ICC(C,k)",0.9770268934507943,0.9723123974167207,0.9807439025897382,77,Relative
+MarriageStory,Rating,"ICC(C,k)",0.9648905188416954,0.9583382230012576,0.9711787232935151,76,Relative

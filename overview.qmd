@@ -2,7 +2,7 @@
 title: "Database Overview"
 ---
 
-```{r}
+```{r setup}
 #| echo: false
 #| message: false
 
@@ -70,26 +70,48 @@ After watching each clip, participants provided holistic ratings on how the enti
 
 holistic_dfw <-  
   holistic_df |> 
+  dplyr::select(-Scale) |> 
   tidyr::pivot_wider(
-    names_from = Scale,
+    names_from = Item,
     values_from = Rating
   ) |> 
-  mutate(
-    "Positive Affect" = rowMeans(across(c(Alert, Determined, Enthusiastic, Excited, Inspired)), na.rm = TRUE),
-    "Negative Affect" = rowMeans(across(c(Afraid, Distressed, Nervous, Scared, Upset)), na.rm = TRUE)
+  dplyr::mutate(
+    "Positive Affect" = rowMeans(dplyr::pick(c(Alert, Determined, Enthusiastic, Excited, Inspired)), na.rm = TRUE),
+    "Negative Affect" = rowMeans(dplyr::pick(c(Afraid, Distressed, Nervous, Scared, Upset)), na.rm = TRUE)
   )
 ```
 
 ```{r}
 #| echo: false
+
+holistic_summary <- 
+  holistic_dfw |>
+  dplyr::group_by(Abbrev) |> 
+  dplyr::summarize(
+    Raters    = dplyr::n_distinct(Rater),
+    "PA Mean" = mean(`Positive Affect`),
+    "PA SD"   = sd(`Positive Affect`),
+    "NA Mean" = mean(`Negative Affect`),
+    "NA SD"   = sd(`Negative Affect`)
+  ) 
+
+holistic_summary |> 
+  dplyr::mutate(dplyr::across(-c(Abbrev, Raters), ~sprintf("%.02f", .))) |> 
+  knitr::kable(digits = 2, align = c("l", rep("r", 5))) |> 
+  kableExtra::kable_styling()
+```
+
+
+```{r}
+#| echo: false
 #| fig.height: 6
 #| fig.width: 7
 #| out-width: "100%"
 
 holistic_dfw |> 
-  ggplot(aes(x = `Positive Affect`, y = fct_reorder(Abbrev, .x = `Positive Affect`))) +
-  geom_boxplot() +
-  labs(y = NULL)
+  ggplot2::ggplot(ggplot2::aes(x = `Positive Affect`, y = forcats::fct_reorder(Abbrev, .x = `Positive Affect`))) +
+  ggplot2::geom_boxplot() +
+  ggplot2::labs(y = NULL)
 ```
 
 ```{r}
@@ -99,9 +121,9 @@ holistic_dfw |>
 #| out-width: "100%"
 
 holistic_dfw |> 
-  ggplot(aes(x = `Negative Affect`, y = fct_reorder(Abbrev, .x = `Negative Affect`))) +
-  geom_boxplot() +
-  labs(y = NULL)
+  ggplot2::ggplot(ggplot2::aes(x = `Negative Affect`, y = forcats::fct_reorder(Abbrev, .x = `Negative Affect`))) +
+  ggplot2::geom_boxplot() +
+  ggplot2::labs(y = NULL)
 ```
 
 The table below shows the estimated inter-rater reliability (i.e., unbalanced average-measures consistency intraclass correlation) for the holistic ratings of each clip (first item-level and then scale-level). These were derived from Bayesian generalizability studies using the [varde](https://github.com/jmgirard/varde) package. The lower and upper columns represent the boundaries of the 95% equal-tail credible interval.
@@ -139,7 +161,7 @@ hitem_df |>
 
 holistic_dfw2 <- 
   holistic_dfw |> 
-  rename_all(.funs = str_replace, pattern = " ", replacement = "")
+  dplyr::rename_all(.funs = str_replace, pattern = " ", replacement = "")
 
 hscale_iccs <- 
   varde::calc_icc(
@@ -155,32 +177,32 @@ hscale_iccs <-
 hscale_df <- 
   hscale_iccs |> 
   summary() |> 
-  filter(term == "ICC(Q,khat)") |> 
-  rename_all(str_to_title)
+  dplyr::filter(term == "ICC(Q,khat)") |> 
+  dplyr::rename_all(str_to_title)
 
 hscale_df |> 
-  kable(digits = 3) |> 
-  kable_styling()
+  knitr::kable(digits = 3) |> 
+  kableExtra::kable_styling()
 ```
 
 
-## Continuous Ratings
+## Dynamic Ratings
 
 ```{r}
 #| echo: false
 
 clip_summary <- 
   valence_df |>
-  group_by(Abbrev) |> 
   dplyr::summarize(
-    Raters = n_distinct(Rater),
+    Raters = dplyr::n_distinct(Rater),
     Mean = mean(Rating),
     SD   = sd(Rating),
     p0   = min(Rating),
     p25  = quantile(Rating, probs = 0.25),
     p50  = median(Rating),
     p75  = quantile(Rating, probs = 0.75),
-    p100 = max(Rating)
+    p100 = max(Rating),
+    .by = Abbrev
   ) 
 ```
 

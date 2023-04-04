@@ -99,8 +99,9 @@ get_subtitle_df <- function(abbrev) {
 create_holistic_plot <- function(holistic_df) {
 
     holistic_df |> 
+    dplyr::select(-Scale) |> 
     tidyr::pivot_wider(
-      names_from = Scale,
+      names_from = Item,
       values_from = Rating
     ) |> 
     dplyr::mutate(
@@ -143,7 +144,7 @@ estimate_valence_icc_clip <- function(
     thin = 2) {
   
   varde::calc_icc(
-    .data = valence_df, 
+    .data = valence_df |> dplyr::filter(Timepoint > 10), 
     subject = "Timepoint", 
     rater = "Rater", 
     scores = "Rating",
